@@ -17,6 +17,7 @@ declare module '@emotion/react' {
 			primary: string
 			bgColor: string
 			lineColor: string
+			gray_77: string
 		}
 		deviceSizes: {
 			mobileS: string

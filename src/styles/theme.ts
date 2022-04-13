@@ -24,7 +24,8 @@ const deviceSizes = {
 const colors = {
 	primary: '#6C5CE7',
 	bgColor: '#F8F9FD',
-	lineColor: '#F1F3F7'
+	lineColor: '#F1F3F7',
+	gray_77: '#777777'
 }
 
 const device = {

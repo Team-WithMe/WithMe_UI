@@ -1,5 +1,5 @@
 import AppLayout from '@layouts/AppLayout'
 
-const HomePage = () => <AppLayout>HomePage</AppLayout>
+const HomePage = () => <AppLayout>Home</AppLayout>
 
 export default HomePage
