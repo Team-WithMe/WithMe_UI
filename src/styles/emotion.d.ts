@@ -12,12 +12,14 @@ declare module '@emotion/react' {
 			big: string
 			subTitleSize: string
 			titleSize: string
+			bigTitleSize: string
 		}
 		colors: {
 			primary: string
 			bgColor: string
 			lineColor: string
 			gray_77: string
+			gray_55: string
 		}
 		deviceSizes: {
 			mobileS: string

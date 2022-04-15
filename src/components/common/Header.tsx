@@ -46,7 +46,9 @@ const Header = () => {
 					</Menu>
 				))}
 			</div>
-			<Button bgColor="primary">로그인 | 회원가입</Button>
+			<Button bgColor="primary" fontSize="lg">
+				로그인 | 회원가입
+			</Button>
 		</Container>
 	)
 }
