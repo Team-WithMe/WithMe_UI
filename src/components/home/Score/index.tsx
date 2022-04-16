@@ -1,4 +1,5 @@
 import { ScoreContainer } from '@components/home/Score/styles'
+import { itsInfoDatas } from '@lib/staticData'
 
 const Score = () => (
 	<ScoreContainer>
@@ -11,6 +12,24 @@ const Score = () => (
 				진행했어요.
 			</span>
 			<span className="text_size_20">(2022년 4월 1일 기준)</span>
+		</div>
+		<div className="score__list">
+			{itsInfoDatas.map(v => (
+				<div key={v.id} className="list_item">
+					<img src={v.img} alt={v.name} />
+					<h1>
+						{v.name !== 'liker' ? (
+							`${v.data.toLocaleString('ko-KR')}+`
+						) : (
+							<>
+								{v.data}
+								<span className="small_text">/5.0</span>
+							</>
+						)}
+					</h1>
+					<span>{v.description}</span>
+				</div>
+			))}
 		</div>
 	</ScoreContainer>
 )

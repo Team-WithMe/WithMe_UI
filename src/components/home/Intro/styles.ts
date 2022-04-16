@@ -6,7 +6,6 @@ export const IntroContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 200px;
 	@media ${({ theme }) => theme.device.tablet} {
 		flex-direction: column-reverse;
 		gap: 20px;

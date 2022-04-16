@@ -5,11 +5,13 @@
 			"@src/*": ["src/*"],
 			"@assets/*": ["src/assets/*"],
 			"@components/*": ["src/components/*"],
+			"@hooks/*": ["src/hooks/*"],
 			"@layouts/*": ["src/layouts/*"],
 			"@lib/*": ["src/lib/*"],
 			"@pages/*": ["src/pages/*"],
 			"@router/*": ["src/router/*"],
-			"@styles/*": ["src/styles/*"]
+			"@styles/*": ["src/styles/*"],
+			"@typings/*": ["src/typings/*"]
 		}
 	}
 }

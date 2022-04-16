@@ -6,7 +6,7 @@ const fontSizes = {
 	lg: calcRem(18),
 	xl: calcRem(20),
 	xxl: calcRem(22),
-	xxxl: calcRem(25),
+	xxxl: calcRem(24),
 	big: calcRem(30),
 	subTitleSize: calcRem(35),
 	titleSize: calcRem(40),
@@ -26,8 +26,9 @@ const colors = {
 	primary: '#6C5CE7',
 	bgColor: '#F8F9FD',
 	lineColor: '#F1F3F7',
-	gray_77: '#777777',
-	gray_55: '#555555'
+	gray_77: '#777',
+	gray_55: '#555',
+	gray_aa: '#aaa'
 }
 
 const device = {

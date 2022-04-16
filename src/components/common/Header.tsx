@@ -6,6 +6,7 @@ import Button from '@components/common/Button'
 import { navMenus } from '@lib/staticData'
 
 const Container = styled.header`
+	width: 100%;
 	padding: 25px 14.5%;
 	background-color: white;
 	border-bottom: 1px solid ${({ theme }) => theme.colors.lineColor};

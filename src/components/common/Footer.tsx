@@ -19,7 +19,9 @@ const Container = styled.footer`
 
 const Footer = () => (
 	<Container>
-		<span>Copyright &copy; {nowYear}. It study All Rights Reserved.</span>
+		<span>
+			Copyright &copy; {nowYear}. It&apos;s (It study) All Rights Reserved.
+		</span>
 	</Container>
 )
 
