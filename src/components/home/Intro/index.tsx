@@ -1,7 +1,11 @@
 import mainIntroImg from '@assets/images/main_intro.png'
-import Button from '@components/common/Button'
+
 import StartModal from '@components/modal/start/StartModal'
-import { ArrowIcon, IntroContainer } from '@components/home/Intro/styles'
+import {
+	ArrowIcon,
+	IntroContainer,
+	StartButton
+} from '@components/home/Intro/styles'
 import useModal from '@hooks/useModal'
 
 const Intro = () => {
@@ -24,9 +28,9 @@ const Intro = () => {
 					<span className="text_primary">이츠</span>로 함께 할 팀원을
 					찾아보세요!
 				</span>
-				<Button onClick={onModalEvent(true)} bgColor="primary" fontSize="xl">
+				<StartButton onClick={onModalEvent(true)} bgColor="primary">
 					서비스 시작하기 <ArrowIcon />
-				</Button>
+				</StartButton>
 			</div>
 			<div className="intro__right">
 				<img src={mainIntroImg} />

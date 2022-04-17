@@ -12,6 +12,9 @@ const Container = styled.div`
 	align-items: center;
 	.layout__body {
 		padding: 0 14.5%;
+		@media ${({ theme }) => theme.device.tabletL} {
+			padding: 0 10%;
+		}
 	}
 `
 

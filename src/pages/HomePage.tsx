@@ -6,10 +6,20 @@ import Score from '@components/home/Score'
 import AppLayout from '@layouts/AppLayout'
 
 const Container = styled.div`
-	padding: 200px 0;
+	padding: 150px 0;
 	display: flex;
 	flex-direction: column;
 	gap: 150px;
+	> img {
+		width: 100%;
+	}
+	@media ${({ theme }) => theme.device.tablet} {
+		padding: 100px 0 150px;
+	}
+	@media ${({ theme }) => theme.device.mobileL} {
+		padding: 80px 0;
+		gap: 80px;
+	}
 `
 
 const HomePage = () => (

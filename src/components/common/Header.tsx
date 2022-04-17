@@ -7,7 +7,7 @@ import { navMenus } from '@lib/staticData'
 
 const Container = styled.header`
 	width: 100%;
-	padding: 25px 14.5%;
+	padding: 20px 14.5%;
 	background-color: white;
 	border-bottom: 1px solid ${({ theme }) => theme.colors.lineColor};
 	display: flex;
@@ -16,6 +16,18 @@ const Container = styled.header`
 	.menus__item {
 		display: flex;
 		gap: 25px;
+	}
+	@media ${({ theme }) => theme.device.tabletL} {
+		padding: 15px 10%;
+		.menus__item {
+			gap: 15px;
+		}
+	}
+	@media ${({ theme }) => theme.device.mobileL} {
+		padding: 12px 10%;
+		.menus__item {
+			gap: 10px;
+		}
 	}
 `
 
@@ -47,9 +59,7 @@ const Header = () => {
 					</Menu>
 				))}
 			</div>
-			<Button bgColor="primary" fontSize="lg">
-				로그인 | 회원가입
-			</Button>
+			<Button bgColor="primary">로그인 | 회원가입</Button>
 		</Container>
 	)
 }

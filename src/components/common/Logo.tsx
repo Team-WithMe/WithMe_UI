@@ -19,10 +19,23 @@ const Container = styled.div`
 			color: ${({ theme }) => theme.colors.primary};
 		}
 	}
+	@media ${({ theme }) => theme.device.tablet} {
+		a {
+			gap: 5px;
+			span {
+			}
+		}
+	}
 `
 
 const LogoIcon = styled(ReactComponent)`
 	fill: ${({ theme }) => theme.colors.primary};
+	@media ${({ theme }) => theme.device.tablet} {
+		width: 25px;
+	}
+	@media ${({ theme }) => theme.device.mobileL} {
+		width: 18px;
+	}
 `
 
 const Logo = () => (

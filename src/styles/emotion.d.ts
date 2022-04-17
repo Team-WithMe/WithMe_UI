@@ -12,7 +12,6 @@ declare module '@emotion/react' {
 			big: string
 			subTitleSize: string
 			titleSize: string
-			bigTitleSize: string
 		}
 		colors: {
 			primary: string
