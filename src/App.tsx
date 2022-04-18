@@ -2,7 +2,7 @@ import { Suspense } from 'react'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from '@emotion/react'
 
-import RouterConfig from '@router/index'
+import RouterConfig from '@routes/RouterConfig'
 import GlobalStyle from '@styles/GlobalStyle'
 import theme from '@styles/theme'
 

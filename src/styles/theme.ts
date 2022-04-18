@@ -23,11 +23,13 @@ const deviceSizes = {
 
 const colors = {
 	primary: '#6C5CE7',
+	secondary: '#A29BFE',
 	bgColor: '#F8F9FD',
 	lineColor: '#F1F3F7',
 	gray_77: '#777',
 	gray_55: '#555',
-	gray_aa: '#aaa'
+	gray_aa: '#aaa',
+	gray_ee: '#eee'
 }
 
 const device = {

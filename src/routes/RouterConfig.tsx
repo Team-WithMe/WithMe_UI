@@ -9,7 +9,7 @@ const Community = lazy(() => import('@src/pages/CommunityPage'))
 const RouterConfig = () => {
 	const routes = useRoutes([
 		{ path: '/', element: <Home /> },
-		{ path: '/host', element: <Host /> },
+		{ path: '/host/*', element: <Host /> },
 		{ path: '/list', element: <List /> },
 		{ path: '/community', element: <Community /> }
 	])

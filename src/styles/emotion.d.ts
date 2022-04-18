@@ -15,11 +15,13 @@ declare module '@emotion/react' {
 		}
 		colors: {
 			primary: string
+			secondary: string
 			bgColor: string
 			lineColor: string
 			gray_77: string
 			gray_55: string
 			gray_aa: string
+			gray_ee: string
 		}
 		deviceSizes: {
 			mobileS: string

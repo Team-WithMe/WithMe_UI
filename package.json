@@ -22,6 +22,7 @@
 			"import/prefer-default-export": 0,
 			"import/no-unresolved": 0,
 			"no-use-before-define": 0,
+			"no-nested-ternary": 0,
 			"jsx-a11y/alt-text": 0,
 			"global-require": 0
 		}
