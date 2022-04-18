@@ -1,51 +1,16 @@
 import { FC, useCallback } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
-import styled from '@emotion/styled'
 
 import Logo from '@components/common/Logo'
 import ProgressBar from '@components/host/ProgressBar'
-import Button from '@components/common/Button'
+import {
+	HostBox,
+	HostLayoutContainer,
+	HostMoveButton
+} from '@layouts/HostLayout/styles'
 import { hostLink, hostTitle } from '@lib/staticData'
 import { ReactProps } from '@typings/common'
-import { HostPageNameType } from '@typings/hostpage'
-
-type ButtonType = 'prev' | 'next'
-
-const Container = styled.div`
-	width: 80%;
-	max-width: 812px;
-	margin: auto;
-	padding-top: 50px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 25px;
-	> h2 {
-		font-size: ${({ theme }) => theme.fontSizes.big};
-		font-weight: 500;
-	}
-	.button_group {
-		width: 100%;
-		display: flex;
-		gap: 15px;
-	}
-`
-
-const HostBox = styled.div`
-	background-color: white;
-	width: 100%;
-	border-radius: 5px;
-	border: ${({ theme }) => theme.colors.lineColor};
-`
-
-const MoveButton = styled(Button)<{ btnType: ButtonType }>`
-	width: 100%;
-	background-color: ${({ btnType, theme }) =>
-		btnType === 'prev' ? theme.colors.gray_ee : theme.colors.primary};
-	color: ${({ btnType }) => (btnType === 'prev' ? '#333' : 'white')};
-	font-size: ${({ theme }) => theme.fontSizes.xl};
-	font-weight: 500;
-`
+import { HostButtonType, HostPageNameType } from '@typings/hostpage'
 
 const HostLayout: FC<ReactProps> = ({ children }) => {
 	const { pathname } = useLocation() as { pathname: HostPageNameType }
@@ -69,40 +34,39 @@ const HostLayout: FC<ReactProps> = ({ children }) => {
 	}, [pathname])()
 
 	const buttonText = useCallback(
-		(isType: ButtonType) => {
+		(isType: HostButtonType) => {
 			const isPrev = isType === 'prev'
-			const test = pathname !== '/host/goal' && pathname !== '/host/success'
-			return test
-				? `${isPrev ? '전 단계' : '다음 단계'}로 돌아가기`
+			const isNotGoalAndSuccess =
+				pathname !== '/host/goal' && pathname !== '/host/success'
+			return isNotGoalAndSuccess
+				? `${isPrev ? '전 단계로 돌아가기' : '다음 단계로 넘어가기'}`
 				: pathname === '/host/goal'
-				? `${isPrev ? '홈으' : '다음 단계'}로 돌아가기`
+				? `${isPrev ? '홈으로 돌아가기' : '다음 단계로 넘어가기'}`
 				: `${isPrev ? '팀 페이지로 이동하기' : '모집중인 팀 등록하기'}`
 		},
 		[pathname]
 	)
 
-	console.log(pathname, pathname !== `/host/${'init' || 'success'}`)
-
 	const onToMovePage = useCallback(
-		(type: ButtonType) => () => navigate(routerData.to[type]),
+		(type: HostButtonType) => () => navigate(routerData.to[type]),
 		[navigate, routerData.to]
 	)
 
 	return (
-		<Container>
+		<HostLayoutContainer>
 			<Logo />
 			<h2>{routerData.title}</h2>
 			<ProgressBar percent={routerData.percent} />
 			<HostBox>{children}</HostBox>
 			<div className="button_group">
-				<MoveButton btnType="prev" onClick={onToMovePage('prev')}>
+				<HostMoveButton btnType="prev" onClick={onToMovePage('prev')}>
 					{buttonText('prev')}
-				</MoveButton>
-				<MoveButton btnType="next" onClick={onToMovePage('next')}>
+				</HostMoveButton>
+				<HostMoveButton btnType="next" onClick={onToMovePage('next')}>
 					{buttonText('next')}
-				</MoveButton>
+				</HostMoveButton>
 			</div>
-		</Container>
+		</HostLayoutContainer>
 	)
 }
 

@@ -4,3 +4,5 @@ export type HostPageNameType =
 	| '/host/name'
 	| '/host/description'
 	| '/host/success'
+
+export type HostButtonType = 'prev' | 'next'
