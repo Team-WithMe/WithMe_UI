@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from 'react-router-dom'
 import Logo from '@components/common/Logo'
 import ProgressBar from '@components/host/ProgressBar'
 import {
-	HostBox,
+	HostWrapper,
 	HostLayoutContainer,
 	HostMoveButton
 } from '@layouts/HostLayout/styles'
@@ -16,6 +16,7 @@ const HostLayout: FC<ReactProps> = ({ children }) => {
 	const { pathname } = useLocation() as { pathname: HostPageNameType }
 	const navigate = useNavigate()
 
+	//* router pathname 마다 분기처리해서 데이터 가공
 	const routerData = useCallback(() => {
 		switch (pathname) {
 			case '/host/goal':
@@ -33,6 +34,7 @@ const HostLayout: FC<ReactProps> = ({ children }) => {
 		}
 	}, [pathname])()
 
+	//* step 마다 버튼 내용 분기처리
 	const buttonText = useCallback(
 		(isType: HostButtonType) => {
 			const isPrev = isType === 'prev'
@@ -47,6 +49,7 @@ const HostLayout: FC<ReactProps> = ({ children }) => {
 		[pathname]
 	)
 
+	//* 해당 버튼에 이동할 경로를 정해주고 이동
 	const onToMovePage = useCallback(
 		(type: HostButtonType) => () => navigate(routerData.to[type]),
 		[navigate, routerData.to]
@@ -57,7 +60,7 @@ const HostLayout: FC<ReactProps> = ({ children }) => {
 			<Logo />
 			<h2>{routerData.title}</h2>
 			<ProgressBar percent={routerData.percent} />
-			<HostBox>{children}</HostBox>
+			<HostWrapper>{children}</HostWrapper>
 			<div className="button_group">
 				<HostMoveButton btnType="prev" onClick={onToMovePage('prev')}>
 					{buttonText('prev')}

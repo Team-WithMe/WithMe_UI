@@ -23,7 +23,7 @@ export const HostLayoutContainer = styled.div`
 	}
 `
 
-export const HostBox = styled.div`
+export const HostWrapper = styled.div`
 	background-color: white;
 	width: 100%;
 	border-radius: 5px;
