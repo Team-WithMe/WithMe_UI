@@ -8,7 +8,7 @@ import {
 	HostLayoutContainer,
 	HostMoveButton
 } from '@layouts/HostLayout/styles'
-import { hostLink, hostTitle } from '@lib/staticData'
+import { hostLink, hostTitle } from '@lib/data/staticData'
 import { ReactProps } from '@typings/common'
 import { HostButtonType, HostPageNameType } from '@typings/hostpage'
 

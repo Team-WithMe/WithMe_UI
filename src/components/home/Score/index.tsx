@@ -1,5 +1,5 @@
 import { ScoreContainer } from '@components/home/Score/styles'
-import { itsInfoDatas } from '@lib/staticData'
+import { itsInfoDatas } from '@lib/data/staticData'
 
 const Score = () => (
 	<ScoreContainer>

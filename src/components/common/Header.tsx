@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 
 import Logo from '@components/common/Logo'
 import Button from '@components/common/Button'
-import { navMenus } from '@lib/staticData'
+import { navMenus } from '@lib/data/staticData'
 
 const Container = styled.header`
 	width: 100%;

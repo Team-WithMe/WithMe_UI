@@ -21,7 +21,7 @@ const SelectBox: FC<{ isLeader: boolean }> = ({ isLeader }) => {
 				<span>
 					{isLeader
 						? '팀페이지를 만들 수 있어요!'
-						: '모집중인 팀 페이지에서 팀을 찾아보세요!'}
+						: '나에게 맞는 팀을 찾아보세요!'}
 				</span>
 			</div>
 			<SelectButton onClick={onMovePage(isLeader ? '/host' : '/list')}>
