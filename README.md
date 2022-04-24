@@ -21,3 +21,4 @@
 ---
 
 - [ ] stateData 파일 정리
+- [x] vite 도입
