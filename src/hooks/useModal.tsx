@@ -42,10 +42,6 @@ const useModal = () => {
 			}
 		}, [])
 
-		console.log('ref.current', ref.current)
-		console.log('mounted', mounted)
-		console.log('modalOpened', modalOpened)
-
 		if (ref.current && mounted && modalOpened) {
 			return createPortal(
 				<Container>

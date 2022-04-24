@@ -1,4 +1,4 @@
-import { FC, useCallback } from 'react'
+import { FC, useCallback, useMemo } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import Logo from '@components/common/Logo'
@@ -17,22 +17,20 @@ const HostLayout: FC<ReactProps> = ({ children }) => {
 	const navigate = useNavigate()
 
 	//* router pathname 마다 분기처리해서 데이터 가공
-	const routerData = useCallback(() => {
-		switch (pathname) {
-			case '/host/goal':
-				return { title: hostTitle[0], percent: 20, to: hostLink[0] }
-			case '/host/skils':
-				return { title: hostTitle[1], percent: 40, to: hostLink[1] }
-			case '/host/name':
-				return { title: hostTitle[2], percent: 60, to: hostLink[2] }
-			case '/host/description':
-				return { title: hostTitle[3], percent: 80, to: hostLink[3] }
-			case '/host/success':
-				return { title: hostTitle[4], percent: 100, to: hostLink[4] }
-			default:
-				return { title: '404 Not Found', percent: 0, to: hostLink[5] }
-		}
-	}, [pathname])()
+	const routerData = useMemo(
+		() => ({
+			'/host/goal': { title: hostTitle[0], percent: 20, to: hostLink[0] },
+			'/host/skils': { title: hostTitle[1], percent: 40, to: hostLink[1] },
+			'/host/name': { title: hostTitle[2], percent: 60, to: hostLink[2] },
+			'/host/description': {
+				title: hostTitle[3],
+				percent: 80,
+				to: hostLink[3]
+			},
+			'/host/success': { title: hostTitle[4], percent: 100, to: hostLink[4] }
+		}),
+		[]
+	)
 
 	//* step 마다 버튼 내용 분기처리
 	const buttonText = useCallback(
@@ -51,15 +49,15 @@ const HostLayout: FC<ReactProps> = ({ children }) => {
 
 	//* 해당 버튼에 이동할 경로를 정해주고 이동
 	const onToMovePage = useCallback(
-		(type: HostButtonType) => () => navigate(routerData.to[type]),
-		[navigate, routerData.to]
+		(type: HostButtonType) => () => navigate(routerData[pathname].to[type]),
+		[navigate, pathname, routerData]
 	)
 
 	return (
 		<HostLayoutContainer>
 			<Logo />
-			<h2>{routerData.title}</h2>
-			<ProgressBar percent={routerData.percent} />
+			<h2>{routerData[pathname].title}</h2>
+			<ProgressBar percent={routerData[pathname].percent} />
 			<HostWrapper>{children}</HostWrapper>
 			<div className="button_group">
 				<HostMoveButton btnType="prev" onClick={onToMovePage('prev')}>

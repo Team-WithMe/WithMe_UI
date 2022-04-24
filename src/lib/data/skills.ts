@@ -1,152 +1,63 @@
 import { ReactComponent as AndroidIcon } from '@assets/svg/skills/android.svg'
 import { ReactComponent as AngularIcon } from '@assets/svg/skills/angular.svg'
 import { ReactComponent as AwsIcon } from '@assets/svg/skills/aws.svg'
+import { ReactComponent as CIcon } from '@assets/svg/skills/c.svg'
 import { ReactComponent as CppIcon } from '@assets/svg/skills/cpp.svg'
+import { ReactComponent as CsIcon } from '@assets/svg/skills/cs.svg'
 import { ReactComponent as CssIcon } from '@assets/svg/skills/css.svg'
+import { ReactComponent as DenoIcon } from '@assets/svg/skills/deno.svg'
 import { ReactComponent as DjangoIcon } from '@assets/svg/skills/django.svg'
 import { ReactComponent as DockerIcon } from '@assets/svg/skills/docker.svg'
 import { ReactComponent as FlutterIcon } from '@assets/svg/skills/flutter.svg'
 import { ReactComponent as GoIcon } from '@assets/svg/skills/go.svg'
 import { ReactComponent as HtmlIcon } from '@assets/svg/skills/html.svg'
 import { ReactComponent as JavascriptIcon } from '@assets/svg/skills/javascript.svg'
+import { ReactComponent as KotlinIcon } from '@assets/svg/skills/kotlin.svg'
 import { ReactComponent as KubernetesIcon } from '@assets/svg/skills/kubernetes.svg'
 import { ReactComponent as LaravelIcon } from '@assets/svg/skills/laravel.svg'
 import { ReactComponent as LinuxIcon } from '@assets/svg/skills/linux.svg'
 import { ReactComponent as NodejsIcon } from '@assets/svg/skills/nodejs.svg'
 import { ReactComponent as PhpIcon } from '@assets/svg/skills/php.svg'
 import { ReactComponent as PythonIcon } from '@assets/svg/skills/python.svg'
+import { ReactComponent as RIcon } from '@assets/svg/skills/r.svg'
 import { ReactComponent as RubyIcon } from '@assets/svg/skills/ruby.svg'
 import { ReactComponent as SassIcon } from '@assets/svg/skills/sass.svg'
 import { ReactComponent as SpringIcon } from '@assets/svg/skills/spring.svg'
+import { ReactComponent as SqlIcon } from '@assets/svg/skills/sql.svg'
 import { ReactComponent as SvelteIcon } from '@assets/svg/skills/svelte.svg'
 import { ReactComponent as SwiftIcon } from '@assets/svg/skills/swift.svg'
 import { ReactComponent as TypescriptIcon } from '@assets/svg/skills/typescript.svg'
 import { ReactComponent as UbuntuIcon } from '@assets/svg/skills/ubuntu.svg'
 
 export default [
-	{
-		id: 1,
-		name: 'react',
-		Icon: AndroidIcon
-	},
-	{
-		id: 2,
-		name: 'react',
-		Icon: AngularIcon
-	},
-	{
-		id: 3,
-		name: 'typescript',
-		Icon: AwsIcon
-	},
-	{
-		id: 4,
-		name: 'vue',
-		Icon: CppIcon
-	},
-	{
-		id: 5,
-		name: 'react',
-		Icon: CssIcon
-	},
-	{
-		id: 6,
-		name: 'typescript',
-		Icon: DjangoIcon
-	},
-	{
-		id: 7,
-		name: 'vue',
-		Icon: DockerIcon
-	},
-	{
-		id: 8,
-		name: 'react',
-		Icon: FlutterIcon
-	},
-	{
-		id: 9,
-		name: 'typescript',
-		Icon: GoIcon
-	},
-	{
-		id: 10,
-		name: 'vue',
-		Icon: HtmlIcon
-	},
-	{
-		id: 11,
-		name: 'react',
-		Icon: JavascriptIcon
-	},
-	{
-		id: 12,
-		name: 'typescript',
-		Icon: KubernetesIcon
-	},
-	{
-		id: 13,
-		name: 'vue',
-		Icon: LaravelIcon
-	},
-	{
-		id: 14,
-		name: 'react',
-		Icon: LinuxIcon
-	},
-	{
-		id: 15,
-		name: 'typescript',
-		Icon: NodejsIcon
-	},
-	{
-		id: 16,
-		name: 'vue',
-		Icon: PhpIcon
-	},
-	{
-		id: 17,
-		name: 'react',
-		Icon: PythonIcon
-	},
-	{
-		id: 18,
-		name: 'typescript',
-		Icon: RubyIcon
-	},
-	{
-		id: 19,
-		name: 'vue',
-		Icon: AwsIcon
-	},
-	{
-		id: 20,
-		name: 'react',
-		Icon: SassIcon
-	},
-	{
-		id: 21,
-		name: 'typescript',
-		Icon: SpringIcon
-	},
-	{
-		id: 22,
-		name: 'vue',
-		Icon: SvelteIcon
-	},
-	{
-		id: 23,
-		name: 'vue',
-		Icon: SwiftIcon
-	},
-	{
-		id: 24,
-		name: 'vue',
-		Icon: TypescriptIcon
-	},
-	{
-		id: 25,
-		name: 'vue',
-		Icon: UbuntuIcon
-	}
+	{ id: 1, name: 'android', Icon: AndroidIcon },
+	{ id: 2, name: 'angular', Icon: AngularIcon },
+	{ id: 3, name: 'aws', Icon: AwsIcon },
+	{ id: 4, name: 'c', Icon: CIcon },
+	{ id: 5, name: 'c++', Icon: CppIcon },
+	{ id: 6, name: 'c#', Icon: CsIcon },
+	{ id: 7, name: 'css', Icon: CssIcon },
+	{ id: 8, name: 'deno', Icon: DenoIcon },
+	{ id: 9, name: 'django', Icon: DjangoIcon },
+	{ id: 10, name: 'docker', Icon: DockerIcon },
+	{ id: 11, name: 'flutter', Icon: FlutterIcon },
+	{ id: 12, name: 'go', Icon: GoIcon },
+	{ id: 13, name: 'html', Icon: HtmlIcon },
+	{ id: 14, name: 'javascript', Icon: JavascriptIcon },
+	{ id: 15, name: 'kotlin', Icon: KotlinIcon },
+	{ id: 16, name: 'kubernetes', Icon: KubernetesIcon },
+	{ id: 17, name: 'laravel', Icon: LaravelIcon },
+	{ id: 18, name: 'linux', Icon: LinuxIcon },
+	{ id: 19, name: 'nodejs', Icon: NodejsIcon },
+	{ id: 20, name: 'php', Icon: PhpIcon },
+	{ id: 21, name: 'python', Icon: PythonIcon },
+	{ id: 22, name: 'r', Icon: RIcon },
+	{ id: 23, name: 'ruby', Icon: RubyIcon },
+	{ id: 24, name: 'sass', Icon: SassIcon },
+	{ id: 25, name: 'spring', Icon: SpringIcon },
+	{ id: 26, name: 'sql', Icon: SqlIcon },
+	{ id: 27, name: 'svelte', Icon: SvelteIcon },
+	{ id: 28, name: 'swift', Icon: SwiftIcon },
+	{ id: 29, name: 'typescript', Icon: TypescriptIcon },
+	{ id: 30, name: 'ubuntu', Icon: UbuntuIcon }
 ]

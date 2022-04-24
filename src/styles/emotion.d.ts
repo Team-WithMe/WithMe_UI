@@ -16,6 +16,7 @@ declare module '@emotion/react' {
 		colors: {
 			primary: string
 			secondary: string
+			danger: string
 			bgColor: string
 			lineColor: string
 			gray_77: string
