@@ -1,5 +1,6 @@
 import { Alias, defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import svgrPlugin from 'vite-plugin-svgr'
 import * as fs from 'fs'
 import * as path from 'path'
 
@@ -44,7 +45,7 @@ const tsConfigAlias = (typeScriptConfig: TSConfig): Alias[] => {
 }
 
 export default defineConfig({
-	plugins: [react()],
+	plugins: [react(), svgrPlugin({ svgrOptions: { icon: true } })],
 	resolve: {
 		alias: tsConfigAlias(tsConfig)
 	}
