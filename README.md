@@ -5,7 +5,7 @@
 
 ## 이츠 (it's) \_ IT Study
 
-📚 이츠 (it's) 스터디 매칭 서비스 <br />
+📚 이츠 (it's) 스터디 매칭 서비스 입니다. <br />
 
 ## todo-list
 
