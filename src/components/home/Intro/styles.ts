@@ -26,7 +26,7 @@ export const IntroContainer = styled.div`
 		.intro__left_title {
 			display: flex;
 			flex-direction: column;
-			font-weight: 300;
+			font-weight: 400;
 			font-size: ${({ theme }) => theme.fontSizes.titleSize};
 			gap: 5px;
 			@media ${({ theme }) => theme.device.NoteBook} {

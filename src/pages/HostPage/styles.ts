@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import Button from '@components/common/Button'
 import { HostButtonType } from '@typings/hostpage'
 
-export const HostLayoutContainer = styled.div`
+export const HostPageContainer = styled.div`
 	width: 80%;
 	max-width: 812px;
 	margin: auto;

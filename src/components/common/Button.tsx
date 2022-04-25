@@ -19,6 +19,10 @@ const Wrapper = styled.button<Pick<ButtonProps, 'bgColor'>>`
 	&:hover {
 		filter: brightness(80%);
 	}
+	&:disabled {
+		background-color: ${({ theme }) => theme.colors.secondary};
+		pointer-events: none;
+	}
 	@media ${({ theme }) => theme.device.tablet} {
 		padding: 8px 12px;
 		font-size: ${({ theme }) => theme.fontSizes.small};

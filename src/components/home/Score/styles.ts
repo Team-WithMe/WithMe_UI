@@ -98,10 +98,12 @@ export const ScoreContainer = styled.div`
 				gap: 20px;
 			}
 			> svg {
-				width: 40%;
+				width: 80px;
+				height: 80px;
 				fill: ${({ theme }) => theme.colors.gray_55};
 				@media ${({ theme }) => theme.device.mobileL} {
-					width: 10%;
+					width: 40px;
+					height: 40px;
 				}
 			}
 		}

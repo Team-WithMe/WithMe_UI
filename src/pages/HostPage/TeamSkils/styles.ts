@@ -7,6 +7,7 @@ export const SelectSkillList = styled.div`
 	padding: 0 0 20px;
 	color: ${({ theme }) => theme.colors.gray_77};
 	flex-wrap: wrap;
+	width: 80%;
 `
 
 export const SkillWrapper = styled.div`

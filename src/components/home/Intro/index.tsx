@@ -21,7 +21,8 @@ const Intro = () => {
 						<span className="text_bold">프로젝트 팀</span>을 구할 수 있는
 					</span>
 					<span className="text_bold">
-						온라인 스터디 매칭 플랫폼 <span className="text_primary">It's</span>
+						온라인 스터디 매칭 플랫폼
+						<span className="text_primary">It&apos;s</span>
 					</span>
 				</div>
 				<span className="intro__left_text">

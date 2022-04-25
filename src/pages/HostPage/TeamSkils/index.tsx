@@ -24,15 +24,19 @@ const TeamSkils = () => {
 	}, [pagination])
 
 	const onSelectSkill = (skill: SkillsType) => () => {
-		selectSkillList.indexOf(skill) >= 0
-			? setSelectSkillList(prev => prev.filter(v => v !== skill))
-			: setSelectSkillList(prev => [...prev, skill])
+		if (selectSkillList.indexOf(skill) >= 0)
+			setSelectSkillList(prev => prev.filter(v => v !== skill))
+		else {
+			if (selectSkillList.length > 7)
+				return alert('최대 8개까지 선택가능합니다.')
+			setSelectSkillList(prev => [...prev, skill])
+		}
 	}
 
 	const onChangePagination = (type: 'prev' | 'next') => () => {
 		type === 'prev'
-			? setPagination(prev => (prev === 1 ? 1 : (prev -= 1)))
-			: setPagination(prev => (prev === 3 ? 3 : (prev += 1)))
+			? setPagination(prev => (prev -= 1))
+			: setPagination(prev => (prev += 1))
 	}
 
 	const onClearSkill = () => setSelectSkillList([])
@@ -49,6 +53,7 @@ const TeamSkils = () => {
 					) : (
 						<span>클릭해서 선택해보세요!</span>
 					)}
+					<ClearButton onClick={onClearSkill}>초기화</ClearButton>
 				</SelectSkillList>
 				<SkillListGrid>
 					{getSkillsData.map(({ id, name, Icon }) => (
@@ -63,11 +68,20 @@ const TeamSkils = () => {
 					))}
 				</SkillListGrid>
 				<ButtonWrapper>
-					<MoveButton onClick={onChangePagination('prev')}>이전</MoveButton>
+					<MoveButton
+						onClick={onChangePagination('prev')}
+						disabled={pagination === 1}
+					>
+						이전
+					</MoveButton>
 					<span>{pagination} / 3</span>
-					<MoveButton onClick={onChangePagination('next')}>다음</MoveButton>
+					<MoveButton
+						onClick={onChangePagination('next')}
+						disabled={pagination === 3}
+					>
+						다음
+					</MoveButton>
 				</ButtonWrapper>
-				<ClearButton onClick={onClearSkill}>초기화</ClearButton>
 			</SkillWrapper>
 		</HostBox>
 	)
