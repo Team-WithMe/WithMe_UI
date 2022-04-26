@@ -22,12 +22,11 @@
 			"@components/*": ["src/components/*"],
 			"@hooks/*": ["src/hooks/*"],
 			"@layouts/*": ["src/layouts/*"],
-			"@lib/*": ["src/lib/*"],
 			"@pages/*": ["src/pages/*"],
 			"@routes/*": ["src/routes/*"],
 			"@styles/*": ["src/styles/*"],
 			"@typings/*": ["src/typings/*"],
-			"@utils/*": ["src/utils/*"],
+			"@lib/*": ["src/lib/*"],
 			"@src/*": ["src/*"]
 		}
 	},

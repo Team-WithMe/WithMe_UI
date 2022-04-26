@@ -7,7 +7,9 @@ export type HostPageNameType =
 
 export type HostButtonType = 'prev' | 'next'
 
-export type SkillsType =
+export type HostGoalDataType = 'project' | 'study'
+
+export type HostSkillsDataType =
 	| 'android'
 	| 'angular'
 	| 'aws'

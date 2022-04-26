@@ -1,6 +1,8 @@
 import { useMemo, useState } from 'react'
+import { useRecoilState } from 'recoil'
 
 import HostBox from '@components/host/HostBox'
+import { HostSkillsState } from '@lib/atom/host'
 import skills from '@lib/data/skills'
 import {
 	ButtonWrapper,
@@ -11,11 +13,11 @@ import {
 	SkillListGrid,
 	SkillWrapper
 } from '@pages/HostPage/TeamSkils/styles'
-import { SkillsType } from '@typings/hostpage'
+import { HostButtonType, HostSkillsDataType } from '@typings/host'
 
 const TeamSkils = () => {
 	const [pagination, setPagination] = useState(1)
-	const [selectSkillList, setSelectSkillList] = useState<Array<SkillsType>>([])
+	const [selectSkillList, setSelectSkillList] = useRecoilState(HostSkillsState)
 
 	const getSkillsData = useMemo(() => {
 		const limit = [13, 25, 37]
@@ -23,7 +25,7 @@ const TeamSkils = () => {
 		return skills.slice(page[pagination - 1], limit[pagination - 1])
 	}, [pagination])
 
-	const onSelectSkill = (skill: SkillsType) => () => {
+	const onSelectSkill = (skill: HostSkillsDataType) => () => {
 		if (selectSkillList.indexOf(skill) >= 0)
 			setSelectSkillList(prev => prev.filter(v => v !== skill))
 		else {
@@ -33,7 +35,7 @@ const TeamSkils = () => {
 		}
 	}
 
-	const onChangePagination = (type: 'prev' | 'next') => () => {
+	const onChangePagination = (type: HostButtonType) => () => {
 		type === 'prev'
 			? setPagination(prev => (prev -= 1))
 			: setPagination(prev => (prev += 1))
@@ -59,8 +61,8 @@ const TeamSkils = () => {
 					{getSkillsData.map(({ id, name, Icon }) => (
 						<SkillBox
 							key={id}
-							onClick={onSelectSkill(name as SkillsType)}
-							active={selectSkillList.indexOf(name as SkillsType) >= 0}
+							onClick={onSelectSkill(name as HostSkillsDataType)}
+							active={selectSkillList.indexOf(name as HostSkillsDataType) >= 0}
 						>
 							<Icon />
 							{name}

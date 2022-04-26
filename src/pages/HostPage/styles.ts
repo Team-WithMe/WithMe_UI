@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 
 import Button from '@components/common/Button'
-import { HostButtonType } from '@typings/hostpage'
+import { HostButtonType } from '@typings/host'
 
 export const HostPageContainer = styled.div`
 	width: 80%;

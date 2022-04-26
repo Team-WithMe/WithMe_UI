@@ -1,4 +1,4 @@
-import { useCallback, useMemo } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
 
 import Logo from '@components/common/Logo'
@@ -10,11 +10,14 @@ import {
 	HostWrapper
 } from '@pages/HostPage/styles'
 import HostRouterConfig from '@routes/HostRouterConfig'
-import { HostButtonType, HostPageNameType } from '@typings/hostpage'
+import { HostButtonType, HostPageNameType } from '@typings/host'
 
 const HostPage = () => {
 	const { pathname } = useLocation() as { pathname: HostPageNameType }
 	const navigate = useNavigate()
+
+	//* recoil로 교체
+	const [nextStepValid] = useState(false)
 
 	//* router pathname 마다 분기처리해서 데이터 가공
 	const routerData = useMemo(
@@ -65,7 +68,11 @@ const HostPage = () => {
 				<HostMoveButton btnType="prev" onClick={onToMovePage('prev')}>
 					{buttonText('prev')}
 				</HostMoveButton>
-				<HostMoveButton btnType="next" onClick={onToMovePage('next')}>
+				<HostMoveButton
+					btnType="next"
+					onClick={onToMovePage('next')}
+					disabled={nextStepValid}
+				>
 					{buttonText('next')}
 				</HostMoveButton>
 			</div>

@@ -1,10 +1,12 @@
-import { useState } from 'react'
+import { useRecoilState } from 'recoil'
 import styled from '@emotion/styled'
 
 import selectImg1 from '@assets/images/team_select_1.png'
 import selectImg2 from '@assets/images/team_select_2.png'
 import HostBox from '@components/host/HostBox'
 import SelectBox from '@components/host/SelectBox'
+import { HostGoalState } from '@lib/atom/host'
+import { HostGoalDataType } from '@typings/host'
 
 const Wrapper = styled.div`
 	width: 100%;
@@ -12,12 +14,10 @@ const Wrapper = styled.div`
 	gap: 20px;
 `
 
-type IsGoalType = 'project' | 'study'
-
 const TeamGoal = () => {
-	const [isGoal, setIsGoal] = useState<IsGoalType>('project')
+	const [isGoal, setIsGoal] = useRecoilState(HostGoalState)
 
-	const onCangeIsGoal = (currnet: IsGoalType) => () => setIsGoal(currnet)
+	const onCangeIsGoal = (goal: HostGoalDataType) => () => setIsGoal(goal)
 
 	return (
 		<HostBox
