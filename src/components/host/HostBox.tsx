@@ -4,6 +4,7 @@ import styled from '@emotion/styled'
 import { ReactProps } from '@typings/common'
 
 const Container = styled.div`
+	width: 100%;
 	border: 1px solid ${({ theme }) => theme.colors.lineColor};
 	.host-box__header {
 		display: flex;

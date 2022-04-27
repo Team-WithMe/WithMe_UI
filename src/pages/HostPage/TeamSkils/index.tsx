@@ -1,8 +1,8 @@
-import { useMemo, useState } from 'react'
-import { useRecoilState } from 'recoil'
+import { useEffect, useMemo, useState } from 'react'
+import { useRecoilState, useSetRecoilState } from 'recoil'
 
 import HostBox from '@components/host/HostBox'
-import { HostSkillsState } from '@lib/atom/host'
+import { hostSkillsState, nextStepValidState } from '@lib/atom/host'
 import skills from '@lib/data/skills'
 import {
 	ButtonWrapper,
@@ -16,8 +16,16 @@ import {
 import { HostButtonType, HostSkillsDataType } from '@typings/host'
 
 const TeamSkils = () => {
+	const [selectSkillList, setSelectSkillList] = useRecoilState(hostSkillsState)
+	const setIsNextStepValid = useSetRecoilState(nextStepValidState)
+
 	const [pagination, setPagination] = useState(1)
-	const [selectSkillList, setSelectSkillList] = useRecoilState(HostSkillsState)
+
+	useEffect(() => {
+		selectSkillList.length === 0
+			? setIsNextStepValid(false)
+			: setIsNextStepValid(true)
+	}, [selectSkillList.length, setIsNextStepValid])
 
 	const getSkillsData = useMemo(() => {
 		const limit = [13, 25, 37]

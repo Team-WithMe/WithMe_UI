@@ -1,12 +1,13 @@
-import { useRecoilState } from 'recoil'
+import { useRecoilState, useSetRecoilState } from 'recoil'
 import styled from '@emotion/styled'
 
 import selectImg1 from '@assets/images/team_select_1.png'
 import selectImg2 from '@assets/images/team_select_2.png'
 import HostBox from '@components/host/HostBox'
 import SelectBox from '@components/host/SelectBox'
-import { HostGoalState } from '@lib/atom/host'
+import { hostGoalState, nextStepValidState } from '@lib/atom/host'
 import { HostGoalDataType } from '@typings/host'
+import { useEffect } from 'react'
 
 const Wrapper = styled.div`
 	width: 100%;
@@ -15,7 +16,12 @@ const Wrapper = styled.div`
 `
 
 const TeamGoal = () => {
-	const [isGoal, setIsGoal] = useRecoilState(HostGoalState)
+	const [isGoal, setIsGoal] = useRecoilState(hostGoalState)
+	const setIsNextStepValid = useSetRecoilState(nextStepValidState)
+
+	useEffect(() => {
+		setIsNextStepValid(true)
+	}, [setIsNextStepValid])
 
 	const onCangeIsGoal = (goal: HostGoalDataType) => () => setIsGoal(goal)
 

@@ -37,4 +37,11 @@ export const HostMoveButton = styled(Button)<{ btnType: HostButtonType }>`
 	color: ${({ btnType }) => (btnType === 'prev' ? '#333' : 'white')};
 	font-size: ${({ theme }) => theme.fontSizes.xl};
 	font-weight: 500;
+	&:disabled {
+		background-color: ${({ btnType, theme }) =>
+			btnType === 'prev' ? theme.colors.gray_ee : theme.colors.secondary};
+		color: ${({ btnType, theme }) =>
+			btnType === 'prev' && theme.colors.gray_aa};
+		${({ btnType }) => btnType === 'prev' && 'filter: brightness(95%);'}
+	}
 `
