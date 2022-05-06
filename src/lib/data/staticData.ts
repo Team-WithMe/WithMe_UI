@@ -34,6 +34,13 @@ export const itsInfoDatas = [
 ]
 
 //* host page
+export const checkModalData = {
+	title: '팀 만들기 취소',
+	description: `팀 만들기를 취소 하시겠습니까?
+지금까지의 내용들은 복구 할 수 없습니다.
+	`
+}
+
 export const hostTitle = [
 	'팀 목적 정하기',
 	'기술 선택하기',
@@ -43,7 +50,7 @@ export const hostTitle = [
 ]
 
 export const hostLink = [
-	{ prev: '/', next: '/host/skils' },
+	{ prev: 'openModal', next: '/host/skils' },
 	{ prev: '/host/goal', next: '/host/name' },
 	{ prev: '/host/skils', next: '/host/description' },
 	{ prev: '/host/name', next: '/host/success' },

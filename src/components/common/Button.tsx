@@ -2,7 +2,7 @@ import { ButtonHTMLAttributes, FC } from 'react'
 import styled from '@emotion/styled'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-	bgColor?: 'primary' | 'bgColor' | 'lineColor'
+	bgColor?: 'primary' | 'bgColor' | 'lineColor' | 'danger' | 'gray_aa'
 }
 
 const Wrapper = styled.button<Pick<ButtonProps, 'bgColor'>>`
