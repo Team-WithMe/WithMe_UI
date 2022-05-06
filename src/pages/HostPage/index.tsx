@@ -1,8 +1,18 @@
 import { useCallback, useMemo } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom'
+import { useRecoilValue, useResetRecoilState } from 'recoil'
 
 import Logo from '@components/common/Logo'
 import ProgressBar from '@components/host/ProgressBar'
+import CheckModal from '@components/modal/CheckModal'
+import useModal from '@hooks/useModal'
+import {
+	hostDescriptionState,
+	hostGoalState,
+	hostNameState,
+	hostSkillsState,
+	nextStepValidState
+} from '@lib/atom/host'
 import { checkModalData, hostLink, hostTitle } from '@lib/data/staticData'
 import {
 	HostMoveButton,
@@ -11,16 +21,6 @@ import {
 } from '@pages/HostPage/styles'
 import HostRouterConfig from '@routes/HostRouterConfig'
 import { HostButtonType, HostPageNameType } from '@typings/host'
-import { useRecoilValue, useResetRecoilState } from 'recoil'
-import {
-	hostDescriptionState,
-	hostGoalState,
-	hostNameState,
-	hostSkillsState,
-	nextStepValidState
-} from '@lib/atom/host'
-import useModal from '@hooks/useModal'
-import CheckModal from '@components/modal/CheckModal'
 
 const HostPage = () => {
 	const { pathname } = useLocation() as { pathname: HostPageNameType }

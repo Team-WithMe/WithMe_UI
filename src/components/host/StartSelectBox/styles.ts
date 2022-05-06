@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import Button from '@components/common/Button'
 
-export const SelectBoxContainer = styled.div`
+export const StartSelectBoxContainer = styled.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
@@ -47,7 +47,7 @@ export const SelectBoxContainer = styled.div`
 	}
 `
 
-export const SelectButton = styled(Button)`
+export const StartSelectButton = styled(Button)`
 	background-color: ${({ theme }) => theme.colors.bgColor};
 	color: ${({ theme }) => theme.colors.primary};
 	border: 2px solid ${({ theme }) => theme.colors.primary};

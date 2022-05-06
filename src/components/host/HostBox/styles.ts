@@ -1,9 +1,6 @@
-import { FC } from 'react'
 import styled from '@emotion/styled'
 
-import { ReactProps } from '@typings/common'
-
-const Container = styled.div`
+export const HostBoxContainer = styled.div`
 	width: 100%;
 	border: 1px solid ${({ theme }) => theme.colors.lineColor};
 	.host-box__header {
@@ -32,23 +29,3 @@ const Container = styled.div`
 		align-items: center;
 	}
 `
-
-interface HostBoxProps extends ReactProps {
-	title: string
-	subTitle?: string
-}
-
-const HostBox: FC<HostBoxProps> = ({ children, title, subTitle }) => (
-	<Container>
-		<div className="host-box__header">
-			<span className="host-box__header--title">{title}</span>
-			{subTitle && (
-				<span className="host-box__header--subtitle">{subTitle}</span>
-			)}
-		</div>
-		<hr />
-		<div className="host-box__wrapper">{children}</div>
-	</Container>
-)
-
-export default HostBox

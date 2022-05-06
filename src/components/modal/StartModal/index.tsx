@@ -1,16 +1,13 @@
 import { FC } from 'react'
 
 import Logo from '@components/common/Logo'
-import SelectBox from '@components/modal/start/SelectBox'
-import {
-	ModalText,
-	ModalSelect
-} from '@components/modal/start/StartModal/styles'
 import {
 	CloseIcon,
 	LogoWrapper,
 	ModalContainer
 } from '@components/modal/styles'
+import SelectBox from '@components/host/StartSelectBox'
+import { ModalSelect, ModalText } from './styles'
 
 interface StartModalProps {
 	onCloseModal: () => void

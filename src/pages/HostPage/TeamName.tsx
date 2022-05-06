@@ -1,8 +1,9 @@
+import { ChangeEvent, useState } from 'react'
+import { useRecoilState } from 'recoil'
+
 import Input from '@components/common/Input'
 import HostBox from '@components/host/HostBox'
 import { hostNameState } from '@lib/atom/host'
-import { ChangeEvent, useState } from 'react'
-import { useRecoilState } from 'recoil'
 
 const TeamName = () => {
 	const [teamName, setTeamName] = useRecoilState(hostNameState)

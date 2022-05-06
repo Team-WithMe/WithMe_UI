@@ -1,6 +1,5 @@
 import mainIntroImg from '@assets/images/main_intro.png'
-
-import StartModal from '@components/modal/start/StartModal'
+import StartModal from '@components/modal/StartModal'
 import {
 	ArrowIcon,
 	IntroContainer,
