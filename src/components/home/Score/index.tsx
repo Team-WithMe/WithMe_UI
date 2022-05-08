@@ -11,7 +11,7 @@ const Score = () => (
 				<span className="text_bold text_primary">It&apos;s&nbsp;</span>
 				에서 스터디를 진행했어요.
 			</span>
-			<span className="text_size_20">(2022년 4월 1일 기준)</span>
+			<span className="text_size_20">&#40;2022년 4월 1일 기준&#41;</span>
 		</div>
 		<div className="score__list">
 			{itsInfoDatas.map(v => (

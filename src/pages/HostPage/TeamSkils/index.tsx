@@ -17,15 +17,15 @@ import { HostButtonType, HostSkillsDataType } from '@typings/host'
 
 const TeamSkils = () => {
 	const [selectSkillList, setSelectSkillList] = useRecoilState(hostSkillsState)
-	const setIsNextStepValid = useSetRecoilState(nextStepValidState)
+	const setNextStepValid = useSetRecoilState(nextStepValidState)
 
 	const [pagination, setPagination] = useState(1)
 
 	useEffect(() => {
 		selectSkillList.length === 0
-			? setIsNextStepValid(false)
-			: setIsNextStepValid(true)
-	}, [selectSkillList.length, setIsNextStepValid])
+			? setNextStepValid(false)
+			: setNextStepValid(true)
+	}, [selectSkillList.length, setNextStepValid])
 
 	const getSkillsData = useMemo(() => {
 		const limit = [13, 25, 37]
