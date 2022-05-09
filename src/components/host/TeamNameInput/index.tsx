@@ -3,8 +3,9 @@ import { useRecoilState, useSetRecoilState } from 'recoil'
 
 import Input from '@components/common/Input'
 import { hostNameState, nextStepValidState } from '@lib/atom/host'
+import { TeamNameInputContainer } from './styles'
 
-function TeamNameInput() {
+const TeamNameInput = () => {
 	const [teamName, setTeamName] = useRecoilState(hostNameState)
 	const nextStepValid = useSetRecoilState(nextStepValidState)
 
@@ -26,13 +27,17 @@ function TeamNameInput() {
 		setTeamName(e.target.value)
 
 	return (
-		<Input
-			isValid={isValid}
-			value={teamName}
-			onChange={onChangeTeanName}
-			errorMessage="빈 칸이 없어야합니다!"
-			placeholder="팀 이름을 입력해주세요!"
-		/>
+		<TeamNameInputContainer danger={teamName.length === 30}>
+			<Input
+				isValid={isValid}
+				value={teamName}
+				onChange={onChangeTeanName}
+				maxLength={30}
+				errorMessage="빈 칸이 없어야합니다!"
+				placeholder="팀 이름을 입력해주세요!"
+			/>
+			<span>{teamName.length} / 30</span>
+		</TeamNameInputContainer>
 	)
 }
 
