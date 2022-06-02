@@ -1,0 +1,13 @@
+/* ----- body text sizes ----- */
+$body-font-size: var(--dse-body-font-size, $fs-base) !default;
+$body-font-weight: var(--dse-body-font-weight, $fw-regular) !default;
+
+/* ----- head text sizes ----- */
+$h-1-font-size: var(--dse-h-1-font-size, $h-1) !default;
+$h-2-font-size: var(--dse-h-2-font-size, $h-2) !default;
+$h-3-font-size: var(--dse-h-3-font-size, $h-3) !default;
+
+/* ----- head font weights ----- */
+$h-1-font-weight: var(--dse-h1-font-weight, $fw-bold) !default;
+$h-2-font-weight: var(--dse-h2-font-weight, $fw-bold) !default;
+$h-3-font-weight: var(--dse-h3-font-weight, $fw-bold) !default;
