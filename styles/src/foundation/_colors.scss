@@ -1,23 +1,16 @@
-//* brand colors
-$primary: "#6C5CE7";
-$secondary: "#A29BFE";
+/* global text colors */
+$body-text-color: var(--dse-body-text-color, $gray_22) !default;
+$body-bg-color: var(--dse-body-bg-color, $bg_color) !default;
 
-//* utility colors
-$danger: "#E74C3C";
-$success: "#008A05";
+/* buttons */
+$btn-primary-color: var(--dse-btn-primary-color, $white) !default;
+$btn-primary-bg: var(--dse-btn-primary-bg, $primary) !default;
+$btn-primary-bg-hover: var(--dse-btn-primary-bg-hover, $secondary) !default;
 
-//* sub colors
-$error_bg: "#FFF8F6";
-$line_color: "#F1F3F7";
-$bg_color: "#F8F9FD";
-
-//* gray colors
-$gray_22: "#222222";
-$gray_48: "#484848";
-$gray_71: "#717171";
-$gray_80: "#808080";
-$gray_aa: "#AAA";
-$gray_b0: "#B0B0B0";
-$gray_c4: "#C4C4C4";
-$gray_dd: "#DDD";
-$gray_ed: "#EDEDED";
+/* forms */
+$form-color: var(--dse-form-color, $gray_22) !default;
+$form-bg: var(--dse-form-bg, $white) !default;
+$form-error-color: var(--dse-form-error-color, $danger) !default;
+$form-error-bg: var(--dse-form-error-border, $error_bg) !default;
+$form-error-border: var(--dse-form-error-border, $danger) !default;
+$form-border-focus-color: var(--dse-form-border-focus-color, $primary) !default;
