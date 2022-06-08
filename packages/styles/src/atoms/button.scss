@@ -2,7 +2,14 @@
 
 .wm-button__container {
 	background-color: $wm-primary;
+	border: 0;
 	border-radius: 5px;
-	color: $wm-body-color;
+	color: $wm-white;
+	cursor: pointer;
 	padding: 8px 12px;
+	transition: 500ms;
+
+	&:hover {
+		filter: brightness(80%);
+	}
 }

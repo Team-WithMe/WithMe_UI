@@ -1,28 +1,28 @@
 /* -----Colors----- */
 //* brand colors
-$primary: "#6C5CE7";
-$secondary: "#A29BFE";
+$primary: #6c5ce7;
+$secondary: #a29bfe;
 
 //* utility colors
-$danger: "#E74C3C";
-$success: "#008A05";
+$danger: #e74c3c;
+$success: #008a05;
 
 //* sub colors
-$error-bg: "#FFF8F6";
-$line-color: "#F1F3F7";
-$bg-color: "#F8F9FD";
+$error-bg: #fff8f6;
+$line-color: #f1f3f7;
+$bg-color: #f8f9fd;
 
 //* gray colors
-$gray-22: "#222222";
-$gray-48: "#484848";
-$gray-71: "#717171";
-$gray-80: "#808080";
-$gray-aa: "#AAA";
-$gray-b0: "#B0B0B0";
-$gray-c4: "#C4C4C4";
-$gray-dd: "#DDD";
-$gray-ed: "#EDEDED";
-$white: "#FFF";
+$gray-22: #222;
+$gray-48: #484848;
+$gray-71: #717171;
+$gray-80: #808080;
+$gray-aa: #aaa;
+$gray-b0: #b0b0b0;
+$gray-c4: #c4c4c4;
+$gray-dd: #ddd;
+$gray-ed: #ededed;
+$white: #fff;
 
 /* -----Typoraphy----- */
 /*
@@ -30,7 +30,7 @@ $white: "#FFF";
  * 1. Noto Sans: https://fonts.googleapis.com/css?family=Noto+Sans
  * 2. Noto Sans KR: https://fonts.googleapis.com/css?family=Noto+Sans+KR
 */
-$noto-sans: "Noto Sans KR", sans-serif;
+$noto-sans: Noto Sans KR, sans-serif;
 
 //* font sizes
 $fs-sm: 0.875rem; //* 14px
