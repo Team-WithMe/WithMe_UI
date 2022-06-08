@@ -1,12 +1,12 @@
-import React, { FC, ReactNode } from "react";
-import "@wm/styles/build/button.css";
+import React, { FC, ReactNode } from 'react'
+import '@wm/styles/build/button.css'
 
 interface ButtonProps {
-	children: ReactNode;
+	children: ReactNode
 }
 
 const Button: FC<ButtonProps> = ({ children }) => {
-	return <button className="wm-button__container">{children}</button>;
-};
+	return <button className="wm-button__container">{children}</button>
+}
 
-export default Button;
+export default Button

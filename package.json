@@ -16,7 +16,14 @@
 		]
 	},
 	"lint-staged": {
-		"**/*.scss": "yarn lint:fix"
+		"**/*.scss": [
+			"yarn lint:fix",
+			"git add"
+		],
+		"**/*.{ts,tsx}": [
+			"prettier --write",
+			"git add"
+		]
 	},
 	"scripts": {
 		"lint": "stylelint '**/*.scss'",
