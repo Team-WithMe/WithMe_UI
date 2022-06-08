@@ -8,20 +8,20 @@ $danger: "#E74C3C";
 $success: "#008A05";
 
 //* sub colors
-$error_bg: "#FFF8F6";
-$line_color: "#F1F3F7";
-$bg_color: "#F8F9FD";
+$error-bg: "#FFF8F6";
+$line-color: "#F1F3F7";
+$bg-color: "#F8F9FD";
 
 //* gray colors
-$gray_22: "#222222";
-$gray_48: "#484848";
-$gray_71: "#717171";
-$gray_80: "#808080";
-$gray_aa: "#AAA";
-$gray_b0: "#B0B0B0";
-$gray_c4: "#C4C4C4";
-$gray_dd: "#DDD";
-$gray_ed: "#EDEDED";
+$gray-22: "#222222";
+$gray-48: "#484848";
+$gray-71: "#717171";
+$gray-80: "#808080";
+$gray-aa: "#AAA";
+$gray-b0: "#B0B0B0";
+$gray-c4: "#C4C4C4";
+$gray-dd: "#DDD";
+$gray-ed: "#EDEDED";
 $white: "#FFF";
 
 /* -----Typoraphy----- */
@@ -30,7 +30,7 @@ $white: "#FFF";
  * 1. Noto Sans: https://fonts.googleapis.com/css?family=Noto+Sans
  * 2. Noto Sans KR: https://fonts.googleapis.com/css?family=Noto+Sans+KR
 */
-$notoSans: "Noto Sans KR", sans-serif;
+$noto-sans: "Noto Sans KR", sans-serif;
 
 //* font sizes
 $fs-sm: 0.875rem; //* 14px
@@ -45,6 +45,9 @@ $h-1: 2.5rem; //* 40px
 $h-2: 2.1875rem; //* 35px
 $h-3: 1.875rem; //* 30px
 
+//* font h
+$fh-base: 1.5;
+
 //* font weights
 $fw-thin: 100;
 $fw-light: 300;
@@ -55,10 +58,10 @@ $fw-bold: 700;
 /* Breakpoints */
 //* 320px | 375px | 425px | 768px | 1024px | 1440px
 $breakpoints: (
-  xs: 320px,
-  sm: 375px,
-  md: 425px,
-  lg: 768px,
-  xl: 1024px,
-  xxl: 1440px,
+	xs: 320px,
+	sm: 375px,
+	md: 425px,
+	lg: 768px,
+	xl: 1024px,
+	xxl: 1440px,
 );

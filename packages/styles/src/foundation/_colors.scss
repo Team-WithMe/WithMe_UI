@@ -1,16 +1,26 @@
-/* global text colors */
-$body-text-color: var(--dse-body-text-color, $gray_22) !default;
-$body-bg-color: var(--dse-body-bg-color, $bg_color) !default;
+//* brand colors
+$wm-primary: var(--wm-primary, $primary) !default;
+$wm-secondary: var(--wm-secondary, $secondary) !default;
 
-/* buttons */
-$btn-primary-color: var(--dse-btn-primary-color, $white) !default;
-$btn-primary-bg: var(--dse-btn-primary-bg, $primary) !default;
-$btn-primary-bg-hover: var(--dse-btn-primary-bg-hover, $secondary) !default;
+//* utility colors
+$wm-danger: var(--wm-danger, $danger) !default;
+$wm-success: var(--wm-success, $success) !default;
 
-/* forms */
-$form-color: var(--dse-form-color, $gray_22) !default;
-$form-bg: var(--dse-form-bg, $white) !default;
-$form-error-color: var(--dse-form-error-color, $danger) !default;
-$form-error-bg: var(--dse-form-error-border, $error_bg) !default;
-$form-error-border: var(--dse-form-error-border, $danger) !default;
-$form-border-focus-color: var(--dse-form-border-focus-color, $primary) !default;
+//* sub colors
+$wm-error-bg: var(--wm-error-bg, $error-bg) !default;
+$wm-line-color: var(--wm-line-color, $line-color) !default;
+$wm-body-color: var(--wm-bg-color, $gray-22) !default;
+$wm-body-bg: var(--wm-bg-color, $bg-color) !default;
+
+//* gray colors
+$wm-gray-100: var(--wm-gray-100, $gray-22) !default;
+$wm-gray-200: var(--wm-gray-200, $gray-48) !default;
+$wm-gray-300: var(--wm-gray-300, $gray-71) !default;
+$wm-gray-400: var(--wm-gray-400, $gray-80) !default;
+$wm-gray-500: var(--wm-gray-500, $gray-aa) !default;
+$wm-gray-600: var(--wm-gray-600, $gray-b0) !default;
+$wm-gray-700: var(--wm-gray-700, $gray-c4) !default;
+$wm-gray-800: var(--wm-gray-800, $gray-dd) !default;
+$wm-gray-900: var(--wm-gray-900, $gray-ed) !default;
+
+$wm-white: var(--wm-white, $white) !default;
