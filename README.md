@@ -1,6 +1,7 @@
-# With Me 다지인 시스템
+# 📚 With Me design-system
 
-with me design-system
+with me 디자인 시스템 <br />
+모노레포를 이용해 구현 중...
 
 <br />
 
@@ -17,3 +18,24 @@ with me design-system
 | style    | (코드의 수정 없이) 스타일(style)만 변경<br />(들여쓰기 같은 포맷이나 세미콜론을 빼먹은 경우) |
 
 <br />
+
+## ⚙ settings
+
+dev server
+
+```
+// root 에서
+yarn dev
+```
+
+node -v
+
+```
+v16.14.2
+```
+
+git hooks 동작 안될 때 해결법
+
+```
+chmod +x .husky/pre-commit
+```
