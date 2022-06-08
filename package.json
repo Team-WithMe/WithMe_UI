@@ -1,0 +1,37 @@
+{
+	"name": "@wm/core",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "changyuyeo <wry5533@gmail.com>",
+	"license": "MIT",
+	"private": true,
+	"workspaces": {
+		"packages": [
+			"packages/*",
+			"playground"
+		],
+		"nohoist": [
+			"**/normalize-scss"
+		]
+	},
+	"lint-staged": {
+		"**/*.scss": "yarn lint:fix"
+	},
+	"scripts": {
+		"lint": "stylelint '**/*.scss'",
+		"lint:fix": "yarn lint --fix",
+		"prepare": "husky install",
+		"dev": "yarn lerna run dev",
+		"build": "yarn lerna run build"
+	},
+	"devDependencies": {
+		"husky": "^8.0.1",
+		"lerna": "^5.1.0",
+		"lint-staged": "^13.0.0",
+		"postcss": "^8.4.14",
+		"prettier": "^2.6.2",
+		"stylelint-config-prettier": "^9.0.3",
+		"stylelint-config-sass-guidelines": "^9.0.1",
+		"stylelint-prettier": "^2.0.0"
+	}
+}
