@@ -11,7 +11,8 @@
 			"playground"
 		],
 		"nohoist": [
-			"**/normalize-scss"
+			"**/normalize-scss",
+			"**/styled-components"
 		]
 	},
 	"lint-staged": {

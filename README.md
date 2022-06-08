@@ -31,7 +31,7 @@ yarn dev
 node -v
 
 ```
-v16.14.2
+v16.15.1
 ```
 
 git hooks 동작 안될 때 해결법

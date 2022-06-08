@@ -1,0 +1,23 @@
+{
+	"name": "@wm/playground",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"dev": "parcel --hmr-port 3000 src/index.html -p 8080"
+	},
+	"dependencies": {},
+	"devDependencies": {
+		"@emotion/css": "^11.9.0",
+		"@emotion/react": "^11.9.0",
+		"@emotion/styled": "^11.8.1",
+		"@types/react": "^18.0.12",
+		"@types/react-dom": "^18.0.5",
+		"@types/styled-components": "^5.1.25",
+		"parcel-bundler": "^1.12.5",
+		"react": "^18.1.0",
+		"react-dom": "^18.1.0",
+		"styled-components": "^5.3.5",
+		"typescript": "^4.7.3"
+	}
+}
