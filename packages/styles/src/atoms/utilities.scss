@@ -1,0 +1,11 @@
+@import 'foundation/all';
+
+@each $size, $value in $spacing {
+	.wm-width-#{$size} {
+		width: $value;
+	}
+
+	.wm-height-#{$size} {
+		height: $value;
+	}
+}

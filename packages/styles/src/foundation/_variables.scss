@@ -1,4 +1,4 @@
-/* -----Colors----- */
+/* ----- Colors ----- */
 //* brand colors
 $primary: #6c5ce7;
 $secondary: #a29bfe;
@@ -24,7 +24,7 @@ $gray-dd: #ddd;
 $gray-ed: #ededed;
 $white: #fff;
 
-/* -----Typoraphy----- */
+/* ----- Typoraphy ----- */
 /*
  * font families
  * 1. Noto Sans: https://fonts.googleapis.com/css?family=Noto+Sans
@@ -55,7 +55,7 @@ $fw-regular: 400;
 $fw-medium: 500;
 $fw-bold: 700;
 
-/* Breakpoints */
+/* ----- Breakpoints ----- */
 //* 320px | 375px | 425px | 768px | 1024px | 1440px
 $breakpoints: (
 	xs: 320px,
@@ -63,5 +63,20 @@ $breakpoints: (
 	md: 425px,
 	lg: 768px,
 	xl: 1024px,
-	xxl: 1440px,
+	xxl: 1440px
 );
+
+/* ----- Spacing ----- */
+//* 4px | 8px | 12px | 16px | 24px | 32px | 48px | 72px | 96px
+$spacing: (
+	none: 0,
+	xxxs: 0.25rem,
+	xxs: 0.5rem,
+	xs: 0.75rem,
+	sm: 1rem,
+	md: 1.5rem,
+	lg: 2rem,
+	xl: 3rem,
+	xxl: 4.5rem,
+	xxxl: 6rem
+) !default;

@@ -1,3 +1,6 @@
-import Button from './components/Button'
+import Button from './atom/Button'
+import Color from './atom/Color'
 
-export { Button }
+import spacing from './foundation/spacing'
+
+export { Button, Color, spacing }
