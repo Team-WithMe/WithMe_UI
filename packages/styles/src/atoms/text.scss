@@ -1,0 +1,11 @@
+@import 'foundation/all';
+
+.wm-text {
+	margin: 0;
+}
+
+@each $size, $value in $fs {
+	.wm-test-#{$size} {
+		font-size: $value;
+	}
+}

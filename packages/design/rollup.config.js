@@ -4,7 +4,9 @@ export default {
 	input: [
 		'src/index.ts',
 		'src/atom/Button/index.ts',
-		'src/atom/Color/index.ts'
+		'src/atom/Color/index.ts',
+		'src/atom/Margin/index.ts',
+		'src/atom/Text/index.ts'
 	],
 	output: {
 		dir: 'build',
@@ -13,5 +15,5 @@ export default {
 	},
 	plugins: [typescript()],
 	preserveModules: true,
-	external: ['react']
+	external: ['react', '@wm/foundation']
 }

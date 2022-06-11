@@ -9,6 +9,6 @@ const spaces = {
 	xl: 'xl',
 	xxl: 'xxl',
 	xxxl: 'xxxl'
-}
+} as const
 
 export default Object.freeze(spaces)

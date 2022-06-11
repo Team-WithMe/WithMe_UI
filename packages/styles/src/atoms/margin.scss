@@ -1,0 +1,15 @@
+@import 'foundation/all';
+
+$sides: left, right, top, bottom;
+
+@each $space, $value in $spacing {
+	.wm-margin-#{$space} {
+		margin: $value;
+	}
+
+	@each $side in $sides {
+		.wm-margin-#{$side}-#{$space} {
+			margin-#{$side}: $value;
+		}
+	}
+}

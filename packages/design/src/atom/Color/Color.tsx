@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import spacing from '../../foundation/spacing'
+import { spacing } from '@wm/foundation'
 import '@wm/styles/build/utilities.css'
 
 interface ColorProps {

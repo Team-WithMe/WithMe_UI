@@ -1,35 +1,35 @@
 @mixin mobile-s {
-	@media (min-width: map-get($breakpoints, "xs")) {
+	@media (min-width: map-get($breakpoints, 'xs')) {
 		@content;
 	}
 }
 
 @mixin mobile-m {
-	@media (min-width: map-get($breakpoints, "sm")) {
+	@media (min-width: map-get($breakpoints, 'sm')) {
 		@content;
 	}
 }
 
 @mixin mobile-l {
-	@media (min-width: map-get($breakpoints, "md")) {
+	@media (min-width: map-get($breakpoints, 'md')) {
 		@content;
 	}
 }
 
 @mixin tablet {
-	@media (min-width: map-get($breakpoints, "lg")) {
+	@media (min-width: map-get($breakpoints, 'lg')) {
 		@content;
 	}
 }
 
 @mixin tablet-l {
-	@media (min-width: map-get($breakpoints, "xl")) {
+	@media (min-width: map-get($breakpoints, 'xl')) {
 		@content;
 	}
 }
 
 @mixin note-book {
-	@media (min-width: map-get($breakpoints, "xxl")) {
+	@media (min-width: map-get($breakpoints, 'xxl')) {
 		@content;
 	}
 }
