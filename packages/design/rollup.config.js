@@ -3,10 +3,11 @@ import typescript from 'rollup-plugin-typescript2'
 export default {
 	input: [
 		'src/index.ts',
-		'src/atom/Button/index.ts',
-		'src/atom/Color/index.ts',
-		'src/atom/Margin/index.ts',
-		'src/atom/Text/index.ts'
+		'src/atoms/Button/index.ts',
+		'src/atoms/Color/index.ts',
+		'src/atoms/Margin/index.ts',
+		'src/atoms/Text/index.ts',
+		'src/molecules/Select/index.ts'
 	],
 	output: {
 		dir: 'build',

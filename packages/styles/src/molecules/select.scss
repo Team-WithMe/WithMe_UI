@@ -1,0 +1,23 @@
+@import 'foundation/all';
+
+.wm-select {
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	&__label {
+		@include padding('xs');
+		align-items: center;
+		background-color: $wm-form-bg-color;
+		border: 1px solid $wm-form-border-color;
+		cursor: pointer;
+		display: flex;
+		font-family: $wm-body-font-family;
+		justify-content: space-between;
+	}
+
+	&__overlay {
+		position: absolute;
+		top: 100%;
+	}
+}

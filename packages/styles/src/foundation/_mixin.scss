@@ -1,3 +1,7 @@
+@mixin padding($space) {
+	padding: map-get($spacing, $space);
+}
+
 @mixin mobile-s {
 	@media (min-width: map-get($breakpoints, 'xs')) {
 		@content;

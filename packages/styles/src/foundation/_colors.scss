@@ -24,3 +24,7 @@ $wm-gray-800: var(--wm-gray-800, $gray-dd) !default;
 $wm-gray-900: var(--wm-gray-900, $gray-ed) !default;
 
 $wm-white: var(--wm-white, $white) !default;
+
+//* forms colors
+$wm-form-bg-color: var(--wm-form-bg-color, $white) !default;
+$wm-form-border-color: var(--wm-form-border-color, $line-color) !default;

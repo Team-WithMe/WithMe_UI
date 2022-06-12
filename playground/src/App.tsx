@@ -1,4 +1,19 @@
-import { Button, Color, Margin, Text } from '@wm/design'
+import { Button, Color, Margin, Text, Select } from '@wm/design'
+
+const options = [
+	{
+		label: 'jebong',
+		value: 'jabong'
+	},
+	{
+		label: 'hosu',
+		value: 'hosu'
+	},
+	{
+		label: 'changyu',
+		value: 'changyu'
+	}
+]
 
 const App = () => {
 	return (
@@ -14,10 +29,7 @@ const App = () => {
 		>
 			<Button>App</Button>
 			<Color hexCode="#333" width="lg" height="lg" />
-			<Margin left space="lg">
-				<Text size="xxl">test</Text>
-			</Margin>
-			<Text size="sm">test</Text>
+			<Select options={options} />
 		</div>
 	)
 }
