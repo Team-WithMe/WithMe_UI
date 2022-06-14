@@ -26,5 +26,8 @@ $wm-gray-900: var(--wm-gray-900, $gray-ed) !default;
 $wm-white: var(--wm-white, $white) !default;
 
 //* forms colors
-$wm-form-bg-color: var(--wm-form-bg-color, $white) !default;
-$wm-form-border-color: var(--wm-form-border-color, $line-color) !default;
+$form-bg-color: var(--form-bg-color, $white) !default;
+$form-bg-color-hover: var(--form-bg-color-hover, $bg-color) !default;
+$form-bg-option-active: var(--form-bg-option-active, $secondary) !default;
+$form-color-option-active: var(--form-color-option-active, $secondary) !default;
+$form-border-color: var(--form-border-color, $line-color) !default;
