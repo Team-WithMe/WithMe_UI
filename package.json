@@ -28,7 +28,8 @@
 		"lint:fix": "yarn lint --fix",
 		"prepare": "husky install",
 		"dev": "yarn lerna run dev",
-		"build": "yarn lerna run build"
+		"build": "yarn lerna run build",
+		"test": "yarn lerna run test"
 	},
 	"devDependencies": {
 		"husky": "^8.0.1",
