@@ -1,7 +1,7 @@
 import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react'
 import '@wm/styles/build/button.css'
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	disable?: boolean // 버튼 비활성화
 
 	children: ReactNode
