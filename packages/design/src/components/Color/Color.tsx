@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { spacing } from '@wm/foundation'
 import '@wm/styles/build/utilities.css'
 
-interface ColorProps {
+export interface ColorProps {
 	hexCode: string
 	width?: keyof typeof spacing
 	height?: keyof typeof spacing
