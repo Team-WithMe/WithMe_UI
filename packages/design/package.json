@@ -26,6 +26,8 @@
 		"@storybook/react": "^6.5.9",
 		"@storybook/testing-library": "^0.0.13",
 		"@types/react": "^18.0.12",
+		"@with-me/foundation": "^0.1.0",
+		"@with-me/styles": "^0.1.0",
 		"babel-loader": "^8.2.5",
 		"react": "^18.1.0",
 		"rollup": "^2.75.6",
