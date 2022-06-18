@@ -1,6 +1,6 @@
 {
 	"name": "@with-me/design",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"main": "build/index.js",
 	"license": "MIT",
 	"files": [
