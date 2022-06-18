@@ -2,7 +2,7 @@ import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react'
 import '@with-me/styles/build/button.css'
 
 export interface Props {
-	disable?: boolean // 버튼 비활성화
+	disable?: boolean // 버튼 비활성화 dd
 	children: ReactNode
 }
 

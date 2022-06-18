@@ -7,6 +7,9 @@
 		"build",
 		"src"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"build": "node ./scripts/build.js",
 		"dev": "npx nodemon --watch src --exec yarn build -e scss"
@@ -15,12 +18,8 @@
 		"normalize-scss": "^7.0.1"
 	},
 	"devDependencies": {
-		"@with-me/foundation": "^0.1.0",
 		"node-sass": "^7.0.1",
 		"nodemon": "^2.0.16"
-	},
-	"publishConfig": {
-		"access": "public"
 	},
 	"gitHead": "7a64d6b79e367ae4707f02f24197ab1b14a84e17"
 }
