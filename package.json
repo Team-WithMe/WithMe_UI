@@ -30,9 +30,17 @@
 		"dev": "yarn lerna run dev",
 		"build": "yarn lerna run build",
 		"test": "yarn lerna run test",
-		"publish": "yarn test && yarn build && yarn lerna publish"
+		"publish": "yarn test && yarn build && yarn lerna publish",
+		"commit": "git add . && yarn git-cz"
+	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
 	},
 	"devDependencies": {
+		"commitizen": "^4.2.4",
+		"cz-conventional-changelog": "^3.3.0",
 		"husky": "^8.0.1",
 		"lerna": "^5.1.0",
 		"lint-staged": "^13.0.0",
