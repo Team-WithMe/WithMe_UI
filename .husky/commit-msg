@@ -1,6 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo '커밋을 진행합니다!'
-npx lint-staged
-
+yarn commitlint --edit $1
