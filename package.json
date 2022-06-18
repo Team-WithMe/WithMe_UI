@@ -23,6 +23,11 @@
 			"prettier --write"
 		]
 	},
+	"config": {
+		"commitizen": {
+			"path": "cz-conventional-changelog"
+		}
+	},
 	"scripts": {
 		"lint": "stylelint '**/*.scss'",
 		"lint:fix": "yarn lint --fix",
@@ -32,11 +37,6 @@
 		"test": "yarn lerna run test",
 		"publish": "yarn test && yarn build && yarn lerna publish",
 		"commit": "git add . && yarn git-cz"
-	},
-	"config": {
-		"commitizen": {
-			"path": "cz-conventional-changelog"
-		}
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.2",

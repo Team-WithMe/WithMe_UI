@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react'
 import { fontSize } from '@with-me/foundation'
 import '@with-me/styles/build/text.css'
 
-interface TextProps {
+export interface TextProps {
 	children: ReactNode
 	size?: keyof typeof fontSize
 }

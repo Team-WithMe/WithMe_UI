@@ -2,7 +2,7 @@ import React, { FC, ReactNode } from 'react'
 import { spacing } from '@with-me/foundation'
 import '@with-me/styles/build/margin.css'
 
-interface MarginProps {
+export interface MarginProps {
 	children: ReactNode
 	space?: keyof typeof spacing
 	top?: boolean
