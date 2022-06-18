@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
-import { spacing } from '@wm/foundation'
-import '@wm/styles/build/utilities.css'
+import { spacing } from '@with-me/foundation'
+import '@with-me/styles/build/utilities.css'
 
 export interface ColorProps {
 	hexCode: string

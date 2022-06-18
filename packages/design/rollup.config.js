@@ -15,5 +15,5 @@ export default {
 	},
 	plugins: [typescript()],
 	preserveModules: true,
-	external: ['react', '@wm/foundation']
+	external: ['react', '@with-me/foundation']
 }

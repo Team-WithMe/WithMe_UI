@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react'
-import { fontSize } from '@wm/foundation'
-import '@wm/styles/build/text.css'
+import { fontSize } from '@with-me/foundation'
+import '@with-me/styles/build/text.css'
 
 interface TextProps {
 	children: ReactNode

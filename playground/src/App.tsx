@@ -1,4 +1,4 @@
-import { Button, Color, Margin, Text } from '@wm/design'
+import { Button, Color, Margin, Text } from '@with-me/design'
 
 const App = () => {
 	return (

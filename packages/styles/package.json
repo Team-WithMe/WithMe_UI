@@ -1,5 +1,5 @@
 {
-	"name": "@wm/styles",
+	"name": "@with-me/styles",
 	"version": "0.1.0",
 	"main": "index.js",
 	"license": "MIT",
@@ -16,5 +16,6 @@
 	},
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"gitHead": "7a64d6b79e367ae4707f02f24197ab1b14a84e17"
 }

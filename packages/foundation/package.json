@@ -1,5 +1,5 @@
 {
-	"name": "@wm/foundation",
+	"name": "@with-me/foundation",
 	"version": "0.1.0",
 	"main": "build/index.js",
 	"license": "MIT",
@@ -17,5 +17,6 @@
 	},
 	"publishConfig": {
 		"access": "public"
-	}
+	},
+	"gitHead": "7a64d6b79e367ae4707f02f24197ab1b14a84e17"
 }

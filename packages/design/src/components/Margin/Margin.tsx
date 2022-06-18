@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react'
-import { spacing } from '@wm/foundation'
-import '@wm/styles/build/margin.css'
+import { spacing } from '@with-me/foundation'
+import '@with-me/styles/build/margin.css'
 
 interface MarginProps {
 	children: ReactNode

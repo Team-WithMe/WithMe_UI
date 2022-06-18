@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react'
-import '@wm/styles/build/button.css'
+import '@with-me/styles/build/button.css'
 
 export interface Props {
 	disable?: boolean // 버튼 비활성화
