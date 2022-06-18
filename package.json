@@ -34,7 +34,7 @@
 		"prepare": "husky install",
 		"dev": "yarn lerna run dev",
 		"build": "yarn lerna run build",
-		"build:storybook": "yarn build && yarn lerna run build-storybook",
+		"build:storybook": "yarn lerna run build-storybook",
 		"test": "yarn lerna run test",
 		"publish": "yarn test && yarn build && yarn lerna publish",
 		"commit": "git add . && yarn git-cz"
