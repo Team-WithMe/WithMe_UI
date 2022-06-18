@@ -29,7 +29,8 @@
 		"prepare": "husky install",
 		"dev": "yarn lerna run dev",
 		"build": "yarn lerna run build",
-		"test": "yarn lerna run test"
+		"test": "yarn lerna run test",
+		"publish": "yarn test && yarn build && yarn lerna publish"
 	},
 	"devDependencies": {
 		"husky": "^8.0.1",
