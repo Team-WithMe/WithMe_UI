@@ -15,10 +15,6 @@
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook"
 	},
-	"dependencies": {
-		"@with-me/foundation": "^0.1.2",
-		"@with-me/styles": "^0.1.2"
-	},
 	"devDependencies": {
 		"@babel/core": "^7.18.5",
 		"@babel/preset-env": "^7.18.2",

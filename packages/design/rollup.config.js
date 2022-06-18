@@ -15,5 +15,12 @@ export default {
 	},
 	plugins: [typescript()],
 	preserveModules: true,
-	external: ['react', '@with-me/foundation']
+	external: [
+		'react',
+		'@with-me/foundation',
+		'@with-me/styles/build/margin.css',
+		'@with-me/styles/build/utilities.css',
+		'@with-me/styles/build/button.css',
+		'@with-me/styles/build/text.css'
+	]
 }
