@@ -1,0 +1,20 @@
+name: Build & Test CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  builds:
+    - uses: actions/checkout@v2
+
+    - name: Install dependencies
+      run: yarn
+    - name: Build packages
+      run: yarn build
+    - name: Automated tests
+      run: yarn test
