@@ -3,6 +3,9 @@
 	"version": "0.1.1",
 	"main": "build/index.js",
 	"license": "MIT",
+	"files": [
+		"build"
+	],
 	"scripts": {
 		"dev": "tsc-watch --onSuccess \" echo 'foundation package watch!' \" ",
 		"test": "jest --verbose"
