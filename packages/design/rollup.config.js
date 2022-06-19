@@ -4,7 +4,6 @@ export default {
 	input: [
 		'src/index.ts',
 		'src/components/Button/index.ts',
-		'src/components/Color/index.ts',
 		'src/components/Margin/index.ts',
 		'src/components/Text/index.ts'
 	],
