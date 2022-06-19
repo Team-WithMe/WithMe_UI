@@ -1,4 +1,4 @@
-name: 빌드 & 테스트 CI
+name: 빌드 CI
 
 on:
   push:
@@ -18,5 +18,3 @@ jobs:
         run: yarn
       - name: 모든 패키지 빌드
         run: yarn build
-      - name: 자동 테스트
-        run: yarn test
