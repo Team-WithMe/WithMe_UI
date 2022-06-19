@@ -1,18 +1,50 @@
 import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react'
+import classNames from 'classnames'
+
 import '@with-me/styles/build/button.css'
 
-export interface Props {
-	disable?: boolean // 버튼 비활성화 dd
+type ButtonBgColorType =
+	| 'primary'
+	| 'secondary'
+	| 'danger'
+	| 'success'
+	| 'white'
+	| 'gray'
+
+type ButtonSizeType = 'lg' | 'base' | 'sm'
+
+/* ----- Spacing ----- */
+//* 4px | 8px | 12px | 16px | 24px | 32px | 48px | 72px | 96px
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	children: ReactNode
+	bgColor?: ButtonBgColorType
+	size?: ButtonSizeType
+	fullSize?: boolean
+	loading?: boolean
+	Icon?: any
 }
 
-type ButtonProps = Props & ButtonHTMLAttributes<HTMLButtonElement>
-
-const Button: FC<ButtonProps> = ({ children, ...props }) => {
-	// let className = ``
+const Button: FC<ButtonProps> = ({
+	children,
+	bgColor = 'primary',
+	size = 'lg',
+	fullSize = false,
+	loading = false,
+	Icon,
+	...props
+}) => {
+	const base = 'wm-button__container'
+	const className = classNames(
+		base,
+		`${base}--size-${size}`,
+		`${base}--bg-${bgColor}`,
+		{
+			[`${base}--fullSize`]: fullSize
+		}
+	)
 
 	return (
-		<button className="wm-button__container" {...props}>
+		<button className={className} {...props}>
 			{children}
 		</button>
 	)

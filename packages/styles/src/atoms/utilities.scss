@@ -9,3 +9,19 @@
 		height: $value;
 	}
 }
+
+//* padding
+$sides: left, right, top, bottom;
+$directions: 'px', 'py';
+
+@each $space, $value in $spacing {
+	.wm-padding-#{$space} {
+		padding: $value;
+
+		@each $side in $sides {
+			.wm-padding-#{$side}-#{$space} {
+				padding-#{$side}: $value;
+			}
+		}
+	}
+}
