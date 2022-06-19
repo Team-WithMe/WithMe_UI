@@ -1,0 +1,22 @@
+name: 빌드 & 테스트 CI
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  builds:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: 모든 의존성 설치
+        run: yarn
+      - name: 모든 패키지 빌드
+        run: yarn build
+      - name: 자동 테스트
+        run: yarn test
