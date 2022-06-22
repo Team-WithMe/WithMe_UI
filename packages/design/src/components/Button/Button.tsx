@@ -1,4 +1,4 @@
-import React, { ButtonHTMLAttributes, FC, ReactNode } from 'react'
+import React, { ButtonHTMLAttributes, FC, ReactNode, useMemo } from 'react'
 import classNames from 'classnames'
 
 import '@with-me/styles/build/button.css'
@@ -7,45 +7,52 @@ type ButtonBgColorType =
 	| 'primary'
 	| 'secondary'
 	| 'danger'
-	| 'success'
-	| 'white'
-	| 'gray'
+	| 'default'
+	| 'greyish'
+	| 'dark'
 
-type ButtonSizeType = 'lg' | 'base' | 'sm'
-
-/* ----- Spacing ----- */
-//* 4px | 8px | 12px | 16px | 24px | 32px | 48px | 72px | 96px
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	children: ReactNode
 	bgColor?: ButtonBgColorType
-	size?: ButtonSizeType
 	fullSize?: boolean
-	loading?: boolean
-	Icon?: any
+	px?: number
+	py?: number
+	shadow?: boolean
+	Icon?: ReactNode
 }
 
 const Button: FC<ButtonProps> = ({
 	children,
 	bgColor = 'primary',
-	size = 'lg',
 	fullSize = false,
-	loading = false,
+	px,
+	py,
+	shadow,
 	Icon,
 	...props
 }) => {
-	const base = 'wm-button__container'
+	const base = 'wm-btn'
 	const className = classNames(
 		base,
-		`${base}--size-${size}`,
-		`${base}--bg-${bgColor}`,
-		{
-			[`${base}--fullSize`]: fullSize
-		}
+		`${base}--color-${bgColor}`,
+		{ [`${base}--fullSize`]: fullSize },
+		{ [`${base}--shadow`]: shadow }
 	)
 
+	const paddingStyled = useMemo(() => {
+		const style = { padding: '8px 12px' }
+
+		if (px && !py) style.padding = `8px ${px}px`
+		else if (!px && py) style.padding = `${py}px 12px`
+		else if (px && py) style.padding = `${py}px ${px}px`
+
+		return style
+	}, [])
+
 	return (
-		<button className={className} {...props}>
+		<button className={className} style={paddingStyled} {...props}>
 			{children}
+			{Icon && <div className={`${base}--icon`}>{Icon}</div>}
 		</button>
 	)
 }

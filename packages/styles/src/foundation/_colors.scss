@@ -6,6 +6,8 @@ $wm-secondary: var(--wm-secondary, $secondary) !default;
 $wm-danger: var(--wm-danger, $danger) !default;
 $wm-success: var(--wm-success, $success) !default;
 
+$wm-white: var(--wm-white, $white) !default;
+
 //* sub colors
 $wm-error-bg: var(--wm-error-bg, $error-bg) !default;
 $wm-line-color: var(--wm-line-color, $line-color) !default;
@@ -23,7 +25,20 @@ $wm-gray-700: var(--wm-gray-700, $gray-c4) !default;
 $wm-gray-800: var(--wm-gray-800, $gray-dd) !default;
 $wm-gray-900: var(--wm-gray-900, $gray-ed) !default;
 
-$wm-white: var(--wm-white, $white) !default;
+/* ----- scss use -----*/
+
+//* text colors
+$text-color-primary: var(--wm-text-color-primary, $wm-primary) !default;
+$text-color-white: var(--wm-text-color-white, $wm-white) !default;
+$text-color-base: var(--wm-text-color-base, $wm-gray-100) !default;
+
+//* button colors
+$btn-color-primary: var(--wm-btn-color-primary, $wm-primary) !default;
+$btn-color-secondary: var(--wm-btn-color-secondary, $wm-secondary) !default;
+$btn-color-danger: var(--wm-btn-color-danger, $wm-danger) !default;
+$btn-color-success: var(--wm-btn-color-success, $wm-success) !default;
+$btn-color-greyish: var(--wm-btn-color-greyish, $wm-gray-900) !default;
+$btn-color-dark: var(--wm-btn-color-dark, $gray-22) !default;
 
 //* forms colors
 $form-bg-color: var(--form-bg-color, $white) !default;

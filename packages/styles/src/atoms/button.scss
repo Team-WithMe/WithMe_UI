@@ -1,56 +1,58 @@
 @import 'foundation/all';
 
-$widths: (
-	lg: 106px,
-	base: 86px,
-	sm: 64px
-);
-
-$heights: (
-	lg: 40px,
-	base: 32px,
-	sm: 28px
-);
-
 $bg-colors: (
-	'primary': $wm-primary,
-	'secondary': $wm-secondary,
-	'danger': $wm-danger,
-	'success': $wm-success,
-	'white': $wm-white,
-	'gray': $wm-gray-900
+	primary: $btn-color-primary,
+	secondary: $btn-color-secondary,
+	danger: $btn-color-danger,
+	success: $btn-color-success,
+	default: transparent,
+	greyish: $btn-color-greyish,
+	dark: $btn-color-dark
 );
 
-.wm-button__container {
-	border: 0;
-	border-radius: 5px;
-	color: $wm-white;
+.wm-btn {
+	border-radius: 4px;
 	cursor: pointer;
-	transition: 500ms;
+	font-weight: 400;
+	padding: 8px 12px;
+	position: relative;
+	transition: all 300ms ease;
+
+	&--icon {
+		display: flex;
+		left: 8px;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	&--fullSize {
+		width: 100%;
+	}
+
+	&--shadow {
+		box-shadow: 3px 3px 6px 0 $gray-c4;
+	}
 
 	&:hover {
-		filter: brightness(80%);
+		filter: brightness(85%);
 	}
 
-	//* 버튼 사이즈별 styles
-	@each $size, $value in $widths {
-		&--size-#{$size} {
-			font-size: if($size == 'lg', $fs-base, $fs-sm);
-			height: map-get($heights, $size);
-			width: $value;
-		}
+	&:active {
+		filter: brightness(85%);
+		transform: scale(1.025);
 	}
+}
 
-	//* 버튼 배경 styles
-	@each $color, $value in $bg-colors {
-		&--bg-#{$color} {
-			background-color: $value;
-			border: if($color == 'white', 1px solid $wm-primary, 0);
-			color: if(
-				$color == 'white',
-				$wm-primary,
-				if($color == 'gray', $wm-gray-100, $wm-white)
-			);
-		}
+//* 버튼 색상 설정
+@each $color, $value in $bg-colors {
+	.wm-btn--color-#{$color} {
+		background-color: $value;
+		border: if($color == 'default', 1px solid $text-color-primary, 0);
+		color: if(
+			$color == 'default',
+			$text-color-primary,
+			if($color == 'greyish', $text-color-base, $text-color-white)
+		);
 	}
 }
