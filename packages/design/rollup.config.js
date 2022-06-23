@@ -4,7 +4,6 @@ export default {
 	input: [
 		'src/index.ts',
 		'src/components/Button/index.ts',
-		'src/components/Margin/index.ts',
 		'src/components/Text/index.ts'
 	],
 	output: {
@@ -16,8 +15,6 @@ export default {
 	preserveModules: true,
 	external: [
 		'react',
-		'@with-me/foundation',
-		'@with-me/styles/build/margin.css',
 		'@with-me/styles/build/utilities.css',
 		'@with-me/styles/build/button.css',
 		'@with-me/styles/build/text.css'
