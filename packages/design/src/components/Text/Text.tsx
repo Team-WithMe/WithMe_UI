@@ -1,5 +1,5 @@
 import React, { FC, ReactNode } from 'react'
-import { fontSize } from '../../foundtion'
+import { fontSize } from '../../foundation'
 import '@with-me/styles/build/text.css'
 
 export interface TextProps {

@@ -1,4 +1,4 @@
-import { Button, Margin, Text } from '@with-me/design'
+import { Button, Text } from '@with-me/design'
 import styled from 'styled-components'
 import GithubIcon from './GithubIcon'
 
