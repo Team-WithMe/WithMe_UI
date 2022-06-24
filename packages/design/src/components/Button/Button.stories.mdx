@@ -1,0 +1,161 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import GithubIcon from '../../assets/GithubIcon'
+import Button, { ButtonProps } from './Button'
+
+<Meta title="components/button" component={Button} />
+
+export const Template = args => (
+	<Button {...args}>{args.children || 'Normal'}</Button>
+)
+
+# 버튼
+
+&lt;Button /&gt; 컴포넌트 사용법 정리
+
+<br />
+<br />
+
+## 형태 (color)
+
+- 버튼의 형태를 `bgColor` 으로 지정해 줄 수 있습니다.
+- bgColor = `primary` | `secondary` | `danger` | `default` | `greyish` | `dark`
+
+<Canvas>
+	<Story name="bgColor">
+		<Button bgColor="primary">Normal</Button>
+		<Button bgColor="secondary">Normal</Button>
+		<Button bgColor="danger">Normal</Button>
+		<Button bgColor="default">Normal</Button>
+		<Button bgColor="greyish">Normal</Button>
+		<Button bgColor="dark">Normal</Button>
+	</Story>
+</Canvas>
+
+<br />
+
+## 위아래 패딩 (px)
+
+- 버튼의 패딩을 자유롭게 조절할 수 있습니다.
+- px단위로 계산됩니다.
+- 위아래 패딩은 `px`, 양쪽 패딩은 `py`, 에서 원하는 값을 넣어주면 됩니다.
+- px = `8` (default value)
+
+<Canvas>
+	<Story name="PaddingX">
+		<Button px={20}>Normal</Button>
+	</Story>
+</Canvas>
+
+<br />
+
+## 양쪽 패딩 (py)
+
+- 버튼의 패딩을 자유롭게 조절할 수 있습니다.
+- px단위로 계산됩니다.
+- 양쪽 패딩은 `py`, 에서 원하는 값을 넣어주면 됩니다.
+- py = `12` (default value)
+
+<Canvas>
+	<Story name="PaddingY">
+		<Button py={20}>Normal</Button>
+		<Button py={20}>Normal</Button>
+		<Button py={20}>Normal</Button>
+		<Button py={35}>Normal</Button>
+	</Story>
+</Canvas>
+
+<br />
+
+## 그림자
+
+- 버튼의 그림자를 설정할 수 있습니다.
+- `shadow`가 true 일 때,
+
+<Canvas>
+	<Story name="Shadow">
+		<Button shadow>Normal</Button>
+	</Story>
+</Canvas>
+
+<br />
+
+## 풀사이즈
+
+- 너비 100%를 갖는 버튼을 만들 수 있습니다.
+- `fullSize`가 true 일 때,
+
+<Canvas>
+	<Story name="fullSize">
+		<Button fullSize>로그인</Button>
+	</Story>
+</Canvas>
+
+<br />
+
+
+
+## 아이콘
+
+- 버튼의 아이콘을 넣을 수 있습니다.
+- `Icon` = &lt;SVGIcon /&gt;
+
+<Canvas>
+	<Story name="Icon">
+		<Button Icon={<GithubIcon />} fullSize bgColor="dark">Github 로그인</Button>
+	</Story>
+</Canvas>
+
+<br />
+
+## Playground
+
+자유롭게 컨트롤 해보세요!
+
+<Canvas>
+	<Story
+		name="Playground"
+		argTypes={{
+			onClick: {
+				table: {
+					disable: true
+				}
+			},
+			className: {
+				table: {
+					disable: true
+				}
+			},
+			type: {
+				table: {
+					disable: true
+				}
+			},
+			bgColor: {
+				description: '버튼 타입 (색상)'
+			},
+			fullSize: {
+				description: '크기 100% 여부'
+			},
+			px: {
+				description: 'padding-x 값'
+			},
+			py: {
+				description: 'padding-y 값'
+			},
+			shadow: {
+				description: '그림자 여부'
+			},
+			Icon: {
+				description: '버튼 아이콘'
+			},
+			children: {
+				description: '버튼 텍스트',
+				control: 'text'
+			}
+		}}
+	>
+		{Template.bind({})}
+	</Story>
+</Canvas>
+
+<ArgsTable story="Playground" />

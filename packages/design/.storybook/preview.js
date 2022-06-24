@@ -1,9 +1,13 @@
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
-}
+import React, { useMemo } from 'react'
+
+export const decorators = [
+	Story => {
+		const styled = useMemo(() => ({ display: 'flex', gap: '10px' }), [])
+
+		return (
+			<div style={styled}>
+				<Story />
+			</div>
+		)
+	}
+]

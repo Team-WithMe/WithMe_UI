@@ -25,9 +25,9 @@ const Button: FC<ButtonProps> = ({
 	children,
 	bgColor = 'primary',
 	fullSize = false,
-	px,
-	py,
-	shadow,
+	px = 8,
+	py = 12,
+	shadow = false,
 	Icon,
 	...props
 }) => {
@@ -39,15 +39,12 @@ const Button: FC<ButtonProps> = ({
 		{ [`${base}--shadow`]: shadow }
 	)
 
-	const paddingStyled = useMemo(() => {
-		const style = { padding: '8px 12px' }
-
-		if (px && !py) style.padding = `8px ${px}px`
-		else if (!px && py) style.padding = `${py}px 12px`
-		else if (px && py) style.padding = `${py}px ${px}px`
-
-		return style
-	}, [])
+	const paddingStyled = useMemo(
+		() => ({
+			padding: `${px}px ${py}px`
+		}),
+		[]
+	)
 
 	return (
 		<button className={className} style={paddingStyled} {...props}>
