@@ -11,6 +11,7 @@
 			"playground"
 		],
 		"nohoist": [
+			"**/classnames",
 			"**/normalize-scss",
 			"**/styled-components"
 		]
