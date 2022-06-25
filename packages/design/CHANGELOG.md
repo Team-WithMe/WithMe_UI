@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.1](https://github.com/Team-WithMe/WithMe_UI/compare/v0.3.0...v0.3.1) (2022-06-25)
+
+
+### Bug Fixes
+
+* module not found 해결 ([6749a94](https://github.com/Team-WithMe/WithMe_UI/commit/6749a94722469f322f12769a1dbb77351d54f4aa))
+
+
+
+
+
 # [0.3.0](https://github.com/Team-WithMe/WithMe_UI/compare/v0.2.0...v0.3.0) (2022-06-25)
 
 
