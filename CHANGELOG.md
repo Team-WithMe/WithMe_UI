@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.5](https://github.com/Team-WithMe/WithMe_UI/compare/v0.3.4...v0.3.5) (2022-06-25)
+
+
+### Bug Fixes
+
+* test 5 ([5a9a3cf](https://github.com/Team-WithMe/WithMe_UI/commit/5a9a3cfabdfd66879c61e2a4ff3e413269c6bfe7))
+
+
+
+
+
 ## [0.3.4](https://github.com/Team-WithMe/WithMe_UI/compare/v0.3.3...v0.3.4) (2022-06-25)
 
 
