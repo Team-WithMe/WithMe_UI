@@ -1,22 +1,22 @@
 import React, { FC, ReactNode } from 'react'
 import classNames from 'classnames'
 import { fontColor, fontWeight, titleSize } from '../../foundation'
-import '@with-me/styles/build/text.css'
+import '@with-me/styles/build/title.css'
 
-export interface TextProps {
+interface TitleProps {
 	children: ReactNode
 	color?: keyof typeof fontColor
 	size?: keyof typeof titleSize
 	weight?: keyof typeof fontWeight
 }
 
-const Text: FC<TextProps> = ({
+const Title: FC<TitleProps> = ({
 	color = 'deep-gray',
 	size = titleSize.middle,
 	weight = fontWeight.regular,
 	children
 }) => {
-	const base = 'wm-text'
+	const base = 'wm-title'
 	const className = classNames(
 		base,
 		`${base}--color-${color}`,
@@ -24,7 +24,9 @@ const Text: FC<TextProps> = ({
 		`${base}--weight-${weight}`
 	)
 
-	return <span className={className}>{children}</span>
+	if (size === 'large') return <h1 className={className}>{children}</h1>
+	else if (size === 'middle') return <h2 className={className}>{children}</h2>
+	else return <h3 className={className}>{children}</h3>
 }
 
-export default Text
+export default Title

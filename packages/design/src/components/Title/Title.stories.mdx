@@ -1,0 +1,115 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import Title, { TitleProps } from './Title'
+
+<Meta title="components/Title" component={Title} />
+
+export const Template = args => (
+	<Title {...args}>{args.children || 'Title'}</Title>
+)
+
+# 제목
+
+&lt;Title /&gt; 컴포넌트 사용법 정리
+
+<br />
+
+## 색상
+
+- 제목의 색상을 **color** 값으로 지정할 수 있습니다.
+- default 값은 deep-gray (#222) 입니다.
+- color = `primary` | `secondary` | `danger` | `success` | `deep-gray` | `greyish` | `light-gray` | `white` 
+
+<Canvas>
+	<Story name="Color">
+		<Title color="primary">primary</Title>
+		<Title color="secondary">secondary</Title>
+		<Title color="danger">danger</Title>
+		<Title color="success">success</Title>
+		<Title color="deep-gray">deepGray</Title>
+		<Title color="greyish">greyish</Title>
+		<Title color="light-gray">lightGray</Title>
+		<Title color="white">white</Title>
+	</Story>
+</Canvas>
+
+<br />
+
+## 사이즈
+
+- 제목의 사이즈를 **size** 값으로 지정할 수 있습니다.
+- default 값은 base (1rem = 16px) 입니다.
+- size = `large` | `middle` | `small`
+	- sm: **0.875rem = 14px**
+	- base: **1rem = 16px**
+	- lg: **1.125rem = 18px**
+	- xl: **1.25rem = 20px**
+	- xxl: **1.375rem = 22px**
+	- xxxl: **1.5rem = 24px**
+
+<Canvas>
+	<Story name="Size">
+		<Title size="large">40 글씨 / large</Title>
+		<Title size="middle">35 글씨 / middle</Title>
+		<Title size="small">30 글씨 / small</Title>
+	</Story>
+</Canvas>
+
+<br />
+
+## 두께
+
+- 제목의 두께를 **weight** 값으로 지정할 수 있습니다.
+- default 값은 regular (400) 입니다.
+- weight = `thin` | `light` | `regular` | `medium` | `bold`
+	- thin: **100**
+	- light: **300**
+	- regular: **400**
+	- medium: **500**
+	- bold: **700**
+
+<Canvas>
+	<Story name="Weight">
+		<Title weight="thin">40 글씨 / thin</Title>
+		<Title weight="light">40 글씨 / light</Title>
+		<Title weight="regular">40 글씨 / regular</Title>
+		<Title weight="medium">40 글씨 / medium</Title>
+		<Title weight="bold">40 글씨 / bold</Title>
+	</Story>
+</Canvas>
+
+<br />
+
+## Playground
+
+자유롭게 컨트롤 해보세요!
+
+<Canvas>
+	<Story
+		name="Playground"
+		argTypes={{
+			onClick: {
+				table: {
+					disable: true
+				}
+			},
+			className: {
+				table: {
+					disable: true
+				}
+			},
+			type: {
+				table: {
+					disable: true
+				}
+			},
+			children: {
+				description: '텍스트',
+				control: 'text'
+			}
+		}}
+	>
+		{Template.bind({})}
+	</Story>
+</Canvas>
+
+<ArgsTable story="Playground" />

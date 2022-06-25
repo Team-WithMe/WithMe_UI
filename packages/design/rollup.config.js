@@ -4,7 +4,8 @@ export default {
 	input: [
 		'src/index.ts',
 		'src/components/Button/index.ts',
-		'src/components/Text/index.ts'
+		'src/components/Text/index.ts',
+		'src/components/Title/index.ts'
 	],
 	output: {
 		dir: 'build',
@@ -16,6 +17,7 @@ export default {
 	external: [
 		'react',
 		'@with-me/styles/build/button.css',
-		'@with-me/styles/build/text.css'
+		'@with-me/styles/build/text.css',
+		'@with-me/styles/build/title.css'
 	]
 }
