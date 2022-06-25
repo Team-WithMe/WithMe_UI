@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.8](https://github.com/Team-WithMe/WithMe_UI/compare/v0.3.7...v0.3.8) (2022-06-25)
+
+
+### Bug Fixes
+
+* import error ([fc33552](https://github.com/Team-WithMe/WithMe_UI/commit/fc33552dd75ceacf61e5c64ca57d0ff853dacbc1))
+
+
+
+
+
 ## [0.3.7](https://github.com/Team-WithMe/WithMe_UI/compare/v0.3.6...v0.3.7) (2022-06-25)
 
 
