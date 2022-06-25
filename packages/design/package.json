@@ -1,6 +1,6 @@
 {
 	"name": "@with-me/design",
-	"version": "0.3.3",
+	"version": "0.3.2",
 	"main": "build/index.js",
 	"license": "MIT",
 	"files": [
@@ -16,6 +16,7 @@
 		"build-storybook": "build-storybook"
 	},
 	"dependencies": {
+		"@with-me/styles": "0.3.0",
 		"classnames": "^2.3.1"
 	},
 	"devDependencies": {
