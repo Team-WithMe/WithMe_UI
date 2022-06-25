@@ -15,11 +15,5 @@ export default {
 	},
 	plugins: [typescript()],
 	preserveModules: true,
-	external: [
-		'react',
-		'@with-me/styles/build/button.css',
-		'@with-me/styles/build/text.css',
-		'@with-me/styles/build/input.css',
-		'@with-me/styles/build/title.css'
-	]
+	external: ['react']
 }
