@@ -1,4 +1,4 @@
-import { Button, Input, Text, Title } from '@with-me/design'
+import { Input } from '@with-me/design'
 import styled from 'styled-components'
 import GithubIcon from './GithubIcon'
 
@@ -21,7 +21,7 @@ const Group = styled.div`
 const App = () => {
 	return (
 		<Container>
-			<Input prefix={<GithubIcon />} size="large" password />
+			<Input prefix={<span>test</span>} size="large" password />
 			<Input size="middle" suffix={'test'} />
 			<Input size="small" />
 		</Container>

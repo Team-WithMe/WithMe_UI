@@ -22,7 +22,11 @@ yarn
 yarn add @with-me/design @with-me/styles
 ```
 
-최상단 파일에 `import '@with-me/styles/build/global.css'` 을 해주세요!
+```js
+// 최상단 파일에서 import 해주세요!
+import '@with-me/styles/build/global.css'
+import '@with-me/styles/build/design.css'
+```
 
 <br />
 

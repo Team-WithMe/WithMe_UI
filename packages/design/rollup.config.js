@@ -10,7 +10,7 @@ export default {
 	],
 	output: {
 		dir: 'build',
-		format: 'cjs',
+		format: 'esm',
 		sourcemap: true
 	},
 	plugins: [typescript()],
