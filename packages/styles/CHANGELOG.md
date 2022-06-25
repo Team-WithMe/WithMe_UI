@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.3.0](https://github.com/Team-WithMe/WithMe_UI/compare/v0.2.0...v0.3.0) (2022-06-25)
+
+
+### Features
+
+* create text component and add text story ([26c8a2b](https://github.com/Team-WithMe/WithMe_UI/commit/26c8a2ba4e3893e7b8d0c64033ccfa8a5a39cba3))
+* create title component and title story ([7a012ed](https://github.com/Team-WithMe/WithMe_UI/commit/7a012eda177d9f95a0509f6bb04663a44b4770d8))
+* input component 작업 중 ([07300a9](https://github.com/Team-WithMe/WithMe_UI/commit/07300a9090a9c2ba1f627180b83085786f16b979))
+
+
+
+
+
 # [0.2.0](https://github.com/Team-WithMe/WithMe_UI/compare/v0.1.3...v0.2.0) (2022-06-25)
 
 
