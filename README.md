@@ -1,8 +1,6 @@
-<br />
+# 📚 With Me design-system
 
-# @with-me/design
-
-WithMe 디자인 시스템 입니다.
+with me 디자인 시스템 입니다.
 <br />
 
 ## 📝 Installation

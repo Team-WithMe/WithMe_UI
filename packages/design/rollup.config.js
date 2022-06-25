@@ -17,6 +17,7 @@ export default {
 	preserveModules: true,
 	external: [
 		'react',
+		'classnames',
 		'@with-me/styles/build/button.css',
 		'@with-me/styles/build/text.css',
 		'@with-me/styles/build/input.css',
