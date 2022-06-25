@@ -1,6 +1,8 @@
-# 📚 With Me design-system
+<br />
 
-with me 디자인 시스템 입니다.
+# @with-me/design
+
+WithMe 디자인 시스템 입니다.
 <br />
 
 ## 📝 Installation
@@ -17,8 +19,10 @@ npm i @with-me/design
 yarn
 
 ```
-yarn @with-me/design
+yarn add @with-me/design @with-me/styles
 ```
+
+최상단 파일에 `import '@with-me/styles/build/global.css'` 을 해주세요!
 
 <br />
 
@@ -27,8 +31,7 @@ yarn @with-me/design
 색상, 글꼴 등 커스텀이 필요한다면?
 
 ```
-yarn @with-me/styles
+yarn add @with-me/styles
 ```
 
-- styles 패키지를 받아 sass의 변수를 오버라이딩 하면 됩니다
-- 문서 작업 진행 중..
+- styles 패키지 안에 sass 변수를 오버라이딩 하면 됩니다
