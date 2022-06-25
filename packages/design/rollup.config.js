@@ -15,7 +15,6 @@ export default {
 	preserveModules: true,
 	external: [
 		'react',
-		'@with-me/styles/build/utilities.css',
 		'@with-me/styles/build/button.css',
 		'@with-me/styles/build/text.css'
 	]

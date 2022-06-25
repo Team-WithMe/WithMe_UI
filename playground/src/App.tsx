@@ -20,34 +20,30 @@ const Group = styled.div`
 const App = () => {
 	return (
 		<Container>
-			<div>Text</div>
-			<Group>
-				<Button bgColor="primary">App</Button>
-				<Button bgColor="secondary">App</Button>
-				<Button bgColor="danger">App</Button>
-				<Button bgColor="default">App</Button>
-				<Button bgColor="greyish">App</Button>
-			</Group>
-			<Group>
-				<Button shadow bgColor="primary">
-					App
-				</Button>
-				<Button shadow bgColor="secondary">
-					App
-				</Button>
-				<Button shadow bgColor="danger">
-					App
-				</Button>
-				<Button shadow bgColor="default">
-					App
-				</Button>
-				<Button shadow bgColor="greyish">
-					App
-				</Button>
-			</Group>
-			<Button bgColor="dark" fullSize Icon={<GithubIcon />}>
+			<Text size="xxxl" color="danger" weight="bold">
 				test
-			</Button>
+			</Text>
+			<Text size="xxxl" color="deep-gray" weight="light">
+				test
+			</Text>
+			<Text size="xxxl" color="greyish" weight="medium">
+				test
+			</Text>
+			<Text size="xxxl" color="light-gray" weight="regular">
+				test
+			</Text>
+			<Text size="xxxl" color="primary" weight="thin">
+				test
+			</Text>
+			<Text size="xxxl" color="secondary">
+				test
+			</Text>
+			<Text size="xxxl" color="success">
+				test
+			</Text>
+			<Text size="xxxl" color="white">
+				test
+			</Text>
 		</Container>
 	)
 }

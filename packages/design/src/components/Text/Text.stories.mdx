@@ -1,0 +1,118 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import Text, { TextProps } from './Text'
+
+<Meta title="components/Text" component={Text} />
+
+export const Template = args => (
+	<Text {...args}>{args.children || 'Text'}</Text>
+)
+
+# 텍스트
+
+&lt;Text /&gt; 컴포넌트 사용법 정리
+
+<br />
+
+## 색상
+
+- 텍스트의 색상을 **color** 값으로 지정할 수 있습니다.
+- default 값은 deep-gray (#222) 입니다.
+- color = `primary` | `secondary` | `danger` | `success` | `deep-gray` | `greyish` | `light-gray` | `white` 
+
+<Canvas>
+	<Story name="Color">
+		<Text color="primary">primary</Text>
+		<Text color="secondary">secondary</Text>
+		<Text color="danger">danger</Text>
+		<Text color="success">success</Text>
+		<Text color="deep-gray">deepGray</Text>
+		<Text color="greyish">greyish</Text>
+		<Text color="light-gray">lightGray</Text>
+		<Text color="white">white</Text>
+	</Story>
+</Canvas>
+
+<br />
+
+## 사이즈
+
+- 텍스트의 사이즈를 **size** 값으로 지정할 수 있습니다.
+- default 값은 base (1rem = 16px) 입니다.
+- size = `sm` | `base` | `lg` | `xl` | `xxl` | `xxxl`
+	- sm: **0.875rem = 14px**
+	- base: **1rem = 16px**
+	- lg: **1.125rem = 18px**
+	- xl: **1.25rem = 20px**
+	- xxl: **1.375rem = 22px**
+	- xxxl: **1.5rem = 24px**
+
+<Canvas>
+	<Story name="Size">
+		<Text size="sm">14 글씨 / sm</Text>
+		<Text size="base">16 글씨 / base</Text>
+		<Text size="lg">18 글씨 / lg</Text>
+		<Text size="xl">20 글씨 / xl</Text>
+		<Text size="xxl">22 글씨 / xxl</Text>
+		<Text size="xxxl">24 글씨 / xxxl</Text>
+	</Story>
+</Canvas>
+
+<br />
+
+## 두께
+
+- 텍스트의 두께를 **weight** 값으로 지정할 수 있습니다.
+- default 값은 regular (400) 입니다.
+- weight = `thin` | `light` | `regular` | `medium` | `bold`
+	- thin: **100**
+	- light: **300**
+	- regular: **400**
+	- medium: **500**
+	- bold: **700**
+
+<Canvas>
+	<Story name="Weight">
+		<Text weight="thin">16 글씨 / thin</Text>
+		<Text weight="light">16 글씨 / light</Text>
+		<Text weight="regular">16 글씨 / regular</Text>
+		<Text weight="medium">16 글씨 / medium</Text>
+		<Text weight="bold">16 글씨 / bold</Text>
+	</Story>
+</Canvas>
+
+<br />
+
+## Playground
+
+자유롭게 컨트롤 해보세요!
+
+<Canvas>
+	<Story
+		name="Playground"
+		argTypes={{
+			onClick: {
+				table: {
+					disable: true
+				}
+			},
+			className: {
+				table: {
+					disable: true
+				}
+			},
+			type: {
+				table: {
+					disable: true
+				}
+			},
+			children: {
+				description: '텍스트',
+				control: 'text'
+			}
+		}}
+	>
+		{Template.bind({})}
+	</Story>
+</Canvas>
+
+<ArgsTable story="Playground" />

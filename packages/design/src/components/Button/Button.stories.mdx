@@ -2,7 +2,7 @@ import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
 import GithubIcon from '../../assets/GithubIcon'
 import Button, { ButtonProps } from './Button'
 
-<Meta title="components/button" component={Button} />
+<Meta title="components/Button" component={Button} />
 
 export const Template = args => (
 	<Button {...args}>{args.children || 'Normal'}</Button>
@@ -21,7 +21,7 @@ export const Template = args => (
 - bgColor = `primary` | `secondary` | `danger` | `default` | `greyish` | `dark`
 
 <Canvas>
-	<Story name="bgColor">
+	<Story name="BgColor">
 		<Button bgColor="primary">Normal</Button>
 		<Button bgColor="secondary">Normal</Button>
 		<Button bgColor="danger">Normal</Button>
@@ -85,7 +85,7 @@ export const Template = args => (
 - `fullSize`가 true 일 때,
 
 <Canvas>
-	<Story name="fullSize">
+	<Story name="FullSize">
 		<Button fullSize>로그인</Button>
 	</Story>
 </Canvas>

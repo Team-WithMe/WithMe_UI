@@ -1,16 +1,30 @@
 import React, { FC, ReactNode } from 'react'
-import { fontSize } from '../../foundation'
+import classNames from 'classnames'
+import { fontColor, fontSize, fontWeight } from '../../foundation'
 import '@with-me/styles/build/text.css'
 
 export interface TextProps {
 	children: ReactNode
+	color?: keyof typeof fontColor
 	size?: keyof typeof fontSize
+	weight?: keyof typeof fontWeight
 }
 
-const Text: FC<TextProps> = ({ size = fontSize.base, children }) => {
-	const className = `wm-text wm-text-${size}`
+const Text: FC<TextProps> = ({
+	color = 'deep-gray',
+	size = fontSize.base,
+	weight = fontWeight.regular,
+	children
+}) => {
+	const base = 'wm-text'
+	const className = classNames(
+		base,
+		`${base}--color-${color}`,
+		`${base}--size-${size}`,
+		`${base}--weight-${weight}`
+	)
 
-	return <p className={className}>{children}</p>
+	return <span className={className}>{children}</span>
 }
 
 export default Text
