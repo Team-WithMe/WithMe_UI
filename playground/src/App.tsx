@@ -1,4 +1,4 @@
-import { Button, Text, Title } from '@with-me/design'
+import { Button, Input, Text, Title } from '@with-me/design'
 import styled from 'styled-components'
 import GithubIcon from './GithubIcon'
 
@@ -8,7 +8,8 @@ const Container = styled.div`
 	gap: 10px;
 	justify-content: center;
 	align-items: center;
-	width: 100%;
+	width: 80%;
+	margin: auto;
 	height: 100vh;
 `
 
@@ -20,15 +21,9 @@ const Group = styled.div`
 const App = () => {
 	return (
 		<Container>
-			<Title size="large" color="danger" weight="thin">
-				Title
-			</Title>
-			<Title size="middle" color="primary" weight="medium">
-				Title
-			</Title>
-			<Title size="small" color="success" weight="bold">
-				Title
-			</Title>
+			<Input prefix={<GithubIcon />} size="large" password />
+			<Input size="middle" suffix={'test'} />
+			<Input size="small" />
 		</Container>
 	)
 }

@@ -1,6 +1,6 @@
 import React, { FC, ReactNode } from 'react'
 import classNames from 'classnames'
-import { fontColor, fontWeight, titleSize } from '../../foundation'
+import { fontColor, fontWeight, size as titleSize } from '../../foundation'
 import '@with-me/styles/build/title.css'
 
 interface TitleProps {

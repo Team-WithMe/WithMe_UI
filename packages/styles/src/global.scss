@@ -2,25 +2,12 @@
 @import 'base/all';
 
 //* 폰트 설정
-@include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Black.otf', 900, null, otf);
-@include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Bold.otf', 700, null, otf);
-@include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Medium.otf', 500, null, otf);
-@include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Regular.otf', 400, null, otf);
-@include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Light.otf', 300, null, otf);
-@include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Thin.otf', 100, null, otf);
-
-* {
-  padding: 0;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
+// @include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Black.otf', 900, null, otf);
+// @include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Bold.otf', 700, null, otf);
+// @include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Medium.otf', 500, null, otf);
+// @include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Regular.otf', 400, null, otf);
+// @include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Light.otf', 300, null, otf);
+// @include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Thin.otf', 100, null, otf);
 
 body {
 	*{

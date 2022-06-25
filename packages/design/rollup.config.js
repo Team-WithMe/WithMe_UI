@@ -5,6 +5,7 @@ export default {
 		'src/index.ts',
 		'src/components/Button/index.ts',
 		'src/components/Text/index.ts',
+		'src/components/Input/index.ts',
 		'src/components/Title/index.ts'
 	],
 	output: {
@@ -18,6 +19,7 @@ export default {
 		'react',
 		'@with-me/styles/build/button.css',
 		'@with-me/styles/build/text.css',
+		'@with-me/styles/build/input.css',
 		'@with-me/styles/build/title.css'
 	]
 }

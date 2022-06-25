@@ -1,6 +1,6 @@
 import fontColor from './fontColor'
 import fontSize from './fontSize'
 import fontWeight from './fontWeight'
-import titleSize from './titleSize'
+import size from './size'
 
-export { fontColor, fontSize, fontWeight, titleSize }
+export { fontColor, fontSize, fontWeight, size }
