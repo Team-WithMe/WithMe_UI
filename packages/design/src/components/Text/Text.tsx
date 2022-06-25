@@ -1,7 +1,6 @@
 import React, { FC, ReactNode } from 'react'
 import classNames from 'classnames'
 import { fontColor, fontWeight, fontSize } from '../../foundation'
-import '@with-me/styles/build/text.css'
 
 export interface TextProps {
 	children: ReactNode

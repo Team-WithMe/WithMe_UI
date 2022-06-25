@@ -8,7 +8,6 @@ import React, {
 } from 'react'
 import classNames from 'classnames'
 import { size as inputSize } from '../../foundation'
-import '@with-me/styles/build/input.css'
 
 interface InputProps
 	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'prefix' | 'size'> {

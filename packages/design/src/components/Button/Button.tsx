@@ -1,6 +1,5 @@
 import React, { ButtonHTMLAttributes, FC, ReactNode, useMemo } from 'react'
 import classNames from 'classnames'
-import '@with-me/styles/build/button.css'
 
 type ButtonBgColorType =
 	| 'primary'
