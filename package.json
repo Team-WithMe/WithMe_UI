@@ -12,6 +12,7 @@
 		],
 		"nohoist": [
 			"**/classnames",
+			"**/@with-me/styles",
 			"**/normalize-scss",
 			"**/styled-components"
 		]
