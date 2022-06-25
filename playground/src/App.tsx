@@ -20,6 +20,7 @@ const Group = styled.div`
 const App = () => {
 	return (
 		<Container>
+			<div>Text</div>
 			<Group>
 				<Button bgColor="primary">App</Button>
 				<Button bgColor="secondary">App</Button>
