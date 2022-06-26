@@ -7,13 +7,12 @@ WithMe 디자인 시스템 입니다.
 
 ## 📝 Installation
 
-- [npm](https://www.npmjs.com/package/@with-me/design)
 - [storybook](https://with-me-ui.netlify.app)
 
 npm
 
 ```
-npm i @with-me/design
+npm i @with-me/design @with-me/styles
 ```
 
 yarn

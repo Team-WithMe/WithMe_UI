@@ -49,7 +49,6 @@ const Input: FC<InputProps> = ({
 		<span className={className}>
 			{prefix && <div className={`${base}__prefix`}>{prefix}</div>}
 			<input
-				placeholder={'test'}
 				onFocus={onFocus}
 				onBlur={onBlur}
 				type={hidePassword ? 'password' : 'text'}

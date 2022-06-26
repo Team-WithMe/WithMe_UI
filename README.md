@@ -11,7 +11,7 @@ with me 디자인 시스템 입니다.
 npm
 
 ```
-npm i @with-me/design
+npm i @with-me/design @with-me/styles
 ```
 
 yarn
