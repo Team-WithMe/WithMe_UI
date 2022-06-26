@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.4.0](https://github.com/Team-WithMe/WithMe_UI/compare/v0.3.8...v0.4.0) (2022-06-26)
+
+
+### Features
+
+* input 컴포넌트 및 스토리 작성 완료 ([f8cffbb](https://github.com/Team-WithMe/WithMe_UI/commit/f8cffbb3b8c6fc43da8a4697a00e44d14827d87d))
+
+
+
+
+
 ## [0.3.6](https://github.com/Team-WithMe/WithMe_UI/compare/v0.3.5...v0.3.6) (2022-06-25)
 
 
