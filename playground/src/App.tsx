@@ -1,4 +1,5 @@
-import { Input } from '@with-me/design'
+import { Button, Input } from '@with-me/design'
+import { useState } from 'react'
 import styled from 'styled-components'
 import GithubIcon from './GithubIcon'
 
@@ -19,10 +20,16 @@ const Group = styled.div`
 `
 
 const App = () => {
+	const [error, setError] = useState(false)
+
+	const onClick = () => setError(prev => !prev)
+
 	return (
 		<Container>
+			<Button fullSize>testseet</Button>
+			<Button onClick={onClick}>teste</Button>
 			<Input prefix={<span>test</span>} size="large" password />
-			<Input size="middle" suffix={'test'} />
+			<Input size="middle" suffix={'test'} error={error} />
 			<Input size="small" />
 		</Container>
 	)

@@ -11,12 +11,15 @@ $bg-colors: (
 );
 
 .wm-btn {
+	align-items: center;
 	border-radius: 4px;
 	cursor: pointer;
+	display: flex;
 	font-weight: 400;
+	justify-content: center;
 	padding: 8px 12px;
 	position: relative;
-	transition: all 300ms ease;
+	transition: all 100ms ease;
 
 	&--icon {
 		display: flex;
@@ -28,7 +31,12 @@ $bg-colors: (
 
 	&--fullSize {
 		width: 100%;
+
+		&:active {
+			transform: scale(1.025) !important;
+		}
 	}
+
 
 	&--shadow {
 		box-shadow: 3px 3px 6px 0 $gray-c4;
@@ -39,8 +47,7 @@ $bg-colors: (
 	}
 
 	&:active {
-		filter: brightness(85%);
-		transform: scale(1.025);
+		transform: scale(1.1);
 	}
 }
 

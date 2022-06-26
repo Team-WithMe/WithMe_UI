@@ -1,0 +1,113 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import UserIcon from '../../assets/UserIcon'
+import Input, { InputProps } from './Input'
+import '@with-me/styles/build/design.css'
+
+<Meta title="components/Input" component={Input} />
+
+export const Template = args => (
+	<Input placeholder='Normal' {...args} />
+)
+
+# Input
+
+&lt;Input /&gt; 컴포넌트 사용법 정리
+
+<br />
+
+## 사이즈
+
+- Input의 사이즈(높이) 를 **size** 값으로 지정할 수 있습니다.
+- default 값은 middle (32px) 입니다.
+- size = `large` | `middle` | `small`
+	- large: **40px**
+	- middle: **32px**
+	- small: **24px**
+
+<Canvas>
+	<Story name="Size">
+		<Input size="large" />
+		<Input size="middle" />
+		<Input size="small" />
+	</Story>
+</Canvas>
+
+<br />
+
+## prefix와 suffix
+
+- **prefix**, **suffix**를 이용해서 접두사와 접미사를 만들 수 있습니다.
+- `type: ReactNode`
+
+<Canvas>
+	<Story name="PrefixAndSuffix">
+		<Input prefix={<span>test</span>} />
+		<Input suffix={<span>test</span>} />
+		<Input prefix={<span>prefix</span>} suffix={<span>suffix</span>} />
+		<Input prefix={<UserIcon />} />
+		<Input suffix={<UserIcon />} />
+	</Story>
+</Canvas>
+
+<br />
+
+## password 모드
+
+- **password**를 설정하면 password 모드가 적용됩니다.
+- 오른쪽 아이콘을 이용해서 가려진 비밀번호를 볼 수 있습니다.
+- `password`가 true 일 때,
+
+<Canvas>
+	<Story name="Prefix / Suffix">
+		<Input password placeholder="패스워드를 입력해주세요."  />
+	</Story>
+</Canvas>
+
+<br />
+
+## error
+
+- **error**가 발생할 때 input의 상태를 error로 변경할 수 있습니다.
+- `error`가 true 일 때,
+
+<Canvas>
+	<Story name="Error">
+		<Input error placeholder="에러입니다."  />
+	</Story>
+</Canvas>
+
+## Playground
+
+자유롭게 컨트롤 해보세요!
+
+<Canvas>
+	<Story
+		name="Playground"
+		argTypes={{
+			onClick: {
+				table: {
+					disable: true
+				}
+			},
+			className: {
+				table: {
+					disable: true
+				}
+			},
+			type: {
+				table: {
+					disable: true
+				}
+			},
+			placeholder: {
+				description: 'placeholder',
+				type: 'string',
+				control: 'text'
+			}
+		}}
+	>
+		{Template.bind({})}
+	</Story>
+</Canvas>
+
+<ArgsTable story="Playground" />
