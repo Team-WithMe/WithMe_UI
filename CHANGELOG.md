@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.5.0](https://github.com/Team-WithMe/WithMe_UI/compare/v0.4.0...v0.5.0) (2022-06-26)
+
+
+### Bug Fixes
+
+* input 스타일 수정 ([2fea0f4](https://github.com/Team-WithMe/WithMe_UI/commit/2fea0f43ca45ab677cd1a57fa0f2df3f87b8b5ff))
+
+
+### Features
+
+* 테스트 플레이스홀더 제거 ([b9b8f17](https://github.com/Team-WithMe/WithMe_UI/commit/b9b8f17741e3b0f758b6e9e5e171dd56190527db))
+
+
+
+
+
 # [0.4.0](https://github.com/Team-WithMe/WithMe_UI/compare/v0.3.8...v0.4.0) (2022-06-26)
 
 
