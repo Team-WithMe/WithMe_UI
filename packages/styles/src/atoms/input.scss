@@ -12,7 +12,7 @@ $sizes: (
   border: 1px solid $wm-gray-700;
   border-radius: 3px;
   display: flex;
-  transition: all 250ms ease;
+  transition: border 250ms ease;
   width: 100%;
 
   &:hover {
@@ -38,8 +38,13 @@ $sizes: (
     animation-delay: 0.25s;
     animation-duration: .5s;
     animation-name: error-bounce;
+    background-color: $wm-danger-bg;
     border: 1px solid $wm-danger;
     box-shadow: 0 0 0 1px $wm-danger-outline;
+
+    > input {
+      background-color: $wm-danger-bg;
+    }
 
     &:hover {
       border: 1px solid $wm-danger;

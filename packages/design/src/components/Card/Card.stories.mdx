@@ -1,0 +1,169 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import Card, { CardProps } from './Card'
+import Text from '../Text'
+import MacIcon from '../../assets/MacIcon'
+import WinIcon from '../../assets/WinIcon'
+import '@with-me/styles/build/design.css'
+
+<Meta title="components/Card" component={Card} />
+
+export const Template = args => (
+	<Card {...args}>{args.children || 'Normal'}</Card>
+)
+
+# Card
+
+&lt;Card /&gt; 컴포넌트 사용법 정리
+
+<br />
+
+## border
+
+- 카드의 형태를 `border`로 지정할 수 있습니다.
+- default 값은 greyish (#c4c4c4) 입니다.
+- `no-border`은 태두리가 없어지며 그림자가 생기게 됩니다.
+- border = `primary` | `deep-gray` | `greyish` | `light-gray` | `no-border` 
+
+<Canvas>
+	<Story name="Border">
+		<Card border="primary">primary</Card>
+		<Card border="deep-gray">deep-gray</Card>
+		<Card border="greyish">greyish</Card>
+		<Card border="light-gray">light-gray</Card>
+		<Card border="no-border">no-border</Card>
+	</Story>
+</Canvas>
+
+<br />
+
+## borderRadius
+
+- 카드 테두리의 둥글기 정도를 설정할 수 있습니다.
+- default 값은 5 (px 단위) 입니다.
+- borderRadius: `number`
+
+<Canvas>
+	<Story name="BorderRadius">
+		<Card borderRadius="0">Normal</Card>
+		<Card borderRadius="10">Normal</Card>
+		<Card borderRadius="20">Normal</Card>
+		<Card borderRadius="30">Normal</Card>
+		<Card borderRadius="40">Normal</Card>
+		<Card borderRadius="50">Normal</Card>
+	</Story>
+</Canvas>
+
+<br />
+
+## hover
+
+- 카드의 `hover`를 설정할 수 있습니다.
+- `cursor: pointer;`가 자동으로 설정됩니다.
+- `hover`가 true 일 때,
+
+<Canvas>
+	<Story name="Hover">
+		<Card hover>Normal</Card>
+	</Story>
+</Canvas>
+
+<br />
+
+## shadow
+
+- 카드의 `shadow`를 설정할 수 있습니다.
+- `shadow`가 true 일 때,
+
+<Canvas>
+	<Story name="Shadow">
+		<Card shadow>Normal</Card>
+	</Story>
+</Canvas>
+
+<br />
+
+## 위아래 패딩 (px)
+
+- 카드의 패딩을 자유롭게 조절할 수 있습니다.
+- px단위로 계산됩니다.
+- 위아래 패딩은 `px`, 양쪽 패딩은 `py`, 에서 원하는 값을 넣어주면 됩니다.
+- px = `8` (default value)
+
+<Canvas>
+	<Story name="PaddingX">
+		<Card px={20}>Normal</Card>
+	</Story>
+</Canvas>
+
+<br />
+
+## 양쪽 패딩 (py)
+
+- 카드의 패딩을 자유롭게 조절할 수 있습니다.
+- px단위로 계산됩니다.
+- 양쪽 패딩은 `py`, 에서 원하는 값을 넣어주면 됩니다.
+- py = `12` (default value)
+
+<Canvas>
+	<Story name="PaddingY">
+		<Card py={15}>Normal</Card>
+		<Card py={20}>Normal</Card>
+		<Card py={25}>Normal</Card>
+		<Card py={35}>Normal</Card>
+	</Story>
+</Canvas>
+
+<br />
+
+## 사용 예시
+
+<Canvas>
+	<Story name="Example">
+		<Card px={25} py={20} hover>
+			<WinIcon />
+			<Text size="xxxl" weight="bold">Window</Text>
+			<Text size="lg" weight="light">윈도우</Text>
+		</Card>
+		<Card px={25} py={20} hover>
+			<MacIcon />
+			<Text size="xxxl" weight="bold">Mac</Text>
+			<Text size="lg" weight="light">맥</Text>
+		</Card>
+	</Story>
+</Canvas>
+
+<br />
+
+## Playground
+
+자유롭게 컨트롤 해보세요!
+
+<Canvas>
+	<Story
+		name="Playground"
+		argTypes={{
+			onClick: {
+				table: {
+					disable: true
+				}
+			},
+			className: {
+				table: {
+					disable: true
+				}
+			},
+			type: {
+				table: {
+					disable: true
+				}
+			},
+			children: {
+				description: 'ReactNode',
+			}
+		}}
+	>
+		{Template.bind({})}
+	</Story>
+</Canvas>
+
+<ArgsTable story="Playground" />

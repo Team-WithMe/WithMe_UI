@@ -1,0 +1,43 @@
+@import 'foundation/all';
+
+$types: (
+  primary: $wm-primary,
+	deep-gray: $wm-gray-500,
+	greyish: $wm-gray-700,
+	light-gray: $wm-gray-900,
+  no-border: 0
+);
+
+.wm-card {
+  align-items: center;
+  background-color: $wm-white;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  position: relative;
+
+  &--hover {
+    cursor: pointer;
+    transition: all 250ms ease;
+
+    &:hover {
+      border: 1px solid $wm-primary;
+      box-shadow: 0 0 0 1px $wm-primary-outline;
+    }
+  }
+
+  &--shadow {
+    box-shadow: 3px 3px 6px 0 $wm-gray-800;
+  }
+}
+
+@each $type, $value in $types {
+  .wm-card--border-#{$type} {
+    @if ($type == 'no-border') {
+      border: $value;
+      box-shadow: 3px 3px 6px 0 $wm-gray-800;
+    } @else {
+      border: 1px solid $value;
+    }
+  }
+}
