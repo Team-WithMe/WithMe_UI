@@ -1,6 +1,7 @@
 import React, {
 	FC,
 	HTMLInputTypeAttribute,
+	InputHTMLAttributes,
 	ReactNode,
 	useCallback,
 	useState
@@ -8,13 +9,15 @@ import React, {
 import classNames from 'classnames'
 import { size as inputSize } from '../../foundation'
 
-interface InputProps {
+interface InputProps
+	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> {
 	error?: boolean
 	password?: boolean
 	prefix?: ReactNode
 	size?: keyof typeof inputSize
 	suffix?: ReactNode
 	type?: HTMLInputTypeAttribute
+	value?: string
 }
 
 const Input: FC<InputProps> = ({
@@ -23,7 +26,8 @@ const Input: FC<InputProps> = ({
 	prefix,
 	size = 'middle',
 	suffix,
-	type = password ? 'password' : 'text',
+	type,
+	value,
 	...props
 }) => {
 	const [hidePassword, setHidePassword] = useState(true)
@@ -49,9 +53,10 @@ const Input: FC<InputProps> = ({
 		<span className={className}>
 			{prefix && <div className={`${base}__prefix`}>{prefix}</div>}
 			<input
+				value={value}
 				onFocus={onFocus}
 				onBlur={onBlur}
-				type={hidePassword ? 'password' : 'text'}
+				type={password && hidePassword ? 'password' : type}
 				{...props}
 			/>
 

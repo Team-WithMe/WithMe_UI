@@ -1,5 +1,5 @@
 import { Button, Input } from '@with-me/design'
-import { useState } from 'react'
+import { ChangeEvent, useState } from 'react'
 import styled from 'styled-components'
 import GithubIcon from './GithubIcon'
 
@@ -21,6 +21,10 @@ const Group = styled.div`
 
 const App = () => {
 	const [error, setError] = useState(false)
+	const [value, setValue] = useState('')
+
+	const onChange = (e: ChangeEvent<HTMLInputElement>) =>
+		setValue(e.target.value)
 
 	const onClick = () => setError(prev => !prev)
 
@@ -28,9 +32,9 @@ const App = () => {
 		<Container>
 			<Button fullSize>testseet</Button>
 			<Button onClick={onClick}>teste</Button>
-			<Input prefix={<span>test</span>} size="large" password />
-			<Input size="middle" suffix={'test'} error={error} />
-			<Input size="small" />
+			<Input value={value} onChange={onChange} type="text" password />
+			<Input value={value} onChange={onChange} type="text" />
+			{value}
 		</Container>
 	)
 }
