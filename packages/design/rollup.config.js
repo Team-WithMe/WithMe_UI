@@ -6,6 +6,7 @@ export default {
 		'src/components/Button/index.ts',
 		'src/components/Card/index.ts',
 		'src/components/Text/index.ts',
+		'src/components/Textarea/index.ts',
 		'src/components/Input/index.ts',
 		'src/components/Title/index.ts'
 	],

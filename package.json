@@ -36,9 +36,11 @@
 		"dev": "yarn lerna run dev",
 		"build": "yarn lerna run build",
 		"build:storybook": "yarn build && yarn lerna run build-storybook",
+		"clean:logs": "bash ./scripts/clean-error-log.sh",
+		"clean:modules": "bash ./scripts/clean-node-modules.sh",
+		"commit": "git add . && yarn git-cz",
 		"test": "yarn lerna run test",
-		"publish": "yarn test && yarn build && yarn lerna publish",
-		"commit": "git add . && yarn git-cz"
+		"publish": "yarn test && yarn build && yarn lerna publish"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.2",
