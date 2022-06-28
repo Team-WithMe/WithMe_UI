@@ -7,14 +7,19 @@ import React, {
 	useState
 } from 'react'
 import classNames from 'classnames'
-import { size as inputSize } from '../../foundation'
+
+type SizeType = {
+	large: 'large'
+	middle: 'middle'
+	small: 'small'
+}
 
 interface InputProps
 	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> {
 	error?: boolean
 	password?: boolean
 	prefix?: ReactNode
-	size?: keyof typeof inputSize
+	size?: SizeType
 	suffix?: ReactNode
 	type?: HTMLInputTypeAttribute
 	value?: string

@@ -26,25 +26,3 @@ $wm-gray-600: var(--wm-gray-600, $gray-b0) !default;
 $wm-gray-700: var(--wm-gray-700, $gray-c4) !default;
 $wm-gray-800: var(--wm-gray-800, $gray-dd) !default;
 $wm-gray-900: var(--wm-gray-900, $gray-ed) !default;
-
-/* ----- scss use -----*/
-
-//* text colors
-$text-color-primary: var(--wm-text-color-primary, $wm-primary) !default;
-$text-color-white: var(--wm-text-color-white, $wm-white) !default;
-$text-color-base: var(--wm-text-color-base, $wm-gray-100) !default;
-
-//* button colors
-$btn-color-primary: var(--wm-btn-color-primary, $wm-primary) !default;
-$btn-color-secondary: var(--wm-btn-color-secondary, $wm-secondary) !default;
-$btn-color-danger: var(--wm-btn-color-danger, $wm-danger) !default;
-$btn-color-success: var(--wm-btn-color-success, $wm-success) !default;
-$btn-color-greyish: var(--wm-btn-color-greyish, $wm-gray-900) !default;
-$btn-color-dark: var(--wm-btn-color-dark, $gray-22) !default;
-
-//* forms colors
-$form-bg-color: var(--form-bg-color, $white) !default;
-$form-bg-color-hover: var(--form-bg-color-hover, $bg-color) !default;
-$form-bg-option-active: var(--form-bg-option-active, $secondary) !default;
-$form-color-option-active: var(--form-color-option-active, $secondary) !default;
-$form-border-color: var(--form-border-color, $line-color) !default;

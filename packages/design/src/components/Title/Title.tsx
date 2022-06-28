@@ -1,18 +1,42 @@
 import React, { FC, ReactNode } from 'react'
 import classNames from 'classnames'
-import { fontColor, fontWeight, size as titleSize } from '../../foundation'
+
+type ColorType = {
+	primary: 'primary'
+	secondary: 'secondary'
+	danger: 'danger'
+	success: 'success'
+	'deep-gray': 'deep-gray'
+	greyish: 'greyish'
+	'light-gray': 'light-gray'
+	white: 'white'
+}
+
+type WeightType = {
+	thin: 'thin'
+	light: 'light'
+	regular: 'regular'
+	medium: 'medium'
+	bold: 'bold'
+}
+
+type SizeType = {
+	large: 'large'
+	middle: 'middle'
+	small: 'small'
+}
 
 interface TitleProps {
 	children: ReactNode
-	color?: keyof typeof fontColor
-	size?: keyof typeof titleSize
-	weight?: keyof typeof fontWeight
+	color?: ColorType
+	weight?: WeightType
+	size?: SizeType
 }
 
 const Title: FC<TitleProps> = ({
 	color = 'deep-gray',
-	size = titleSize.middle,
-	weight = fontWeight.regular,
+	size = 'middle',
+	weight = 'regular',
 	children
 }) => {
 	const base = 'wm-title'

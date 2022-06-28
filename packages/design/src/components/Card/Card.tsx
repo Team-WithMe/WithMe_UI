@@ -1,9 +1,16 @@
 import React, { FC, HTMLAttributes, ReactNode, useMemo } from 'react'
 import classNames from 'classnames'
-import { borderColor as color } from '../../foundation'
+
+type BorderType = {
+	primary: 'primary'
+	'deep-gray': 'deep-gray'
+	greyish: 'greyish'
+	'light-gray': 'light-gray'
+	'no-border': 'no-border'
+}
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
-	border?: keyof typeof color
+	border?: BorderType
 	borderRadius?: number
 	children: ReactNode
 	hover?: boolean

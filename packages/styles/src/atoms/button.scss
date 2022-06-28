@@ -1,13 +1,13 @@
 @import 'foundation/all';
 
 $bg-colors: (
-	primary: $btn-color-primary,
-	secondary: $btn-color-secondary,
-	danger: $btn-color-danger,
-	success: $btn-color-success,
+	primary: $wm-primary,
+	secondary: $wm-secondary,
+	danger: $wm-danger,
+	success: $wm-success,
 	default: transparent,
-	greyish: $btn-color-greyish,
-	dark: $btn-color-dark
+	greyish: $wm-gray-900,
+	dark: $gray-22
 );
 
 .wm-btn {
@@ -37,7 +37,6 @@ $bg-colors: (
 		}
 	}
 
-
 	&--shadow {
 		box-shadow: 3px 3px 6px 0 $wm-gray-800;
 	}
@@ -55,11 +54,11 @@ $bg-colors: (
 @each $color, $value in $bg-colors {
 	.wm-btn--color-#{$color} {
 		background-color: $value;
-		border: if($color == 'default', 1px solid $text-color-primary, 0);
+		border: if($color == 'default', 1px solid $wm-primary, 0);
 		color: if(
 			$color == 'default',
-			$text-color-primary,
-			if($color == 'greyish', $text-color-base, $text-color-white)
+			$wm-primary,
+			if($color == 'greyish', $wm-gray-100, $wm-white)
 		);
 	}
 }

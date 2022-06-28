@@ -1,12 +1,20 @@
 :root {
+	//* colors
 	--wm-primary: #{$primary};
+	--wm-primary-outline: #{$primary-outline};
 	--wm-secondary: #{$secondary};
+
 	--wm-danger: #{$danger};
+	--wm-danger-outline: #{$danger-outline};
+	--wm-danger-bg: #{$danger-bg};
 	--wm-success: #{$success};
+	--wm-white: #{$white};
+	
 	--wm-error-bg: #{$error-bg};
 	--wm-line-color: #{$line-color};
 	--wm-body-color: #{$gray-22};
 	--wm-body-bg: #{$bg-color};
+
 	--wm-gray-100: #{$gray-22};
 	--wm-gray-200: #{$gray-48};
 	--wm-gray-300: #{$gray-71};
@@ -16,13 +24,7 @@
 	--wm-gray-700: #{$gray-c4};
 	--wm-gray-800: #{$gray-dd};
 	--wm-gray-900: #{$gray-ed};
-	--wm-white: #{$white};
 
-	--wm-white: #{$white};
-
+	//* font family
 	--wm-body-font-family: #{$noto-sans};
-
-	--wm-body-font-size: #{$fs-base};
-	--wm-body-font-height: #{$fh-base};
-	--wm-body-font-weight: #{$fw-regular};
 }

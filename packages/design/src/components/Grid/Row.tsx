@@ -24,7 +24,7 @@ const Row: FC<RowProps> = ({
 	})
 
 	return (
-		<GridContext.Provider value={{ gutter, wrap }}>
+		<GridContext.Provider value={{ gutter }}>
 			<div className={className} {...props}>
 				{children}
 			</div>

@@ -33,7 +33,7 @@ $white: #fff;
  * 1. Noto Sans: https://fonts.googleapis.com/css?family=Noto+Sans
  * 2. Noto Sans KR: https://fonts.googleapis.com/css?family=Noto+Sans+KR
 */
-$noto-sans: 'NotoSansCJKkr', sans-serif;
+$noto-sans: 'Noto Sans KR', sans-serif;
 
 //* font sizes
 $fs-sm: 0.875rem; //* 14px
@@ -87,14 +87,4 @@ $spacing: (
 /* ----- Shadows ----- */
 $shadows: (
 	base: 0 4px 11px rgba(157, 157, 157, 0.21)
-);
-
-/* ----- Breakpoints ----- */
-$breakpoints: (
-	xs: 320px,
-	sm: 375px,
-	md: 425px,
-	lg: 768px,
-	xl: 1024px,
-	xxl: 1440px
 );
