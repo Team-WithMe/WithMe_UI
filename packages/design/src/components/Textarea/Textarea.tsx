@@ -7,7 +7,11 @@ interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
 }
 
 const Textarea: FC<TextareaProps> = ({ row, suffix, ...props }) => {
-	return <textarea rows={row}>Textarea</textarea>
+	return (
+		<textarea rows={row} {...props}>
+			Textarea
+		</textarea>
+	)
 }
 
 export default Textarea

@@ -1,4 +1,4 @@
-import { Button, Card, Input } from '@with-me/design'
+import { Button, Card, Input, Row, Col } from '@with-me/design'
 import { ChangeEvent, useState } from 'react'
 import styled from 'styled-components'
 import GithubIcon from './GithubIcon'
@@ -30,19 +30,33 @@ const App = () => {
 
 	return (
 		<Container>
-			<Button fullSize>testseet</Button>
-			<Button onClick={onClick}>teste</Button>
-			<Input value={value} onChange={onChange} error={error} />
-			{value}
-			<Card border="primary" hover>
-				test
-			</Card>
-			<Card hover border="deep-gray" onClick={() => console.log('test')}>
-				test
-			</Card>
-			<Card border="greyish">test</Card>
-			<Card border="light-gray">test</Card>
-			<Card border="no-border">test</Card>
+			<Row gutter={[12, 6]}>
+				<Col>
+					<Card hover>1</Card>
+				</Col>
+				<Col>
+					<Card hover>1</Card>
+				</Col>
+				<Col>
+					<Card hover>1</Card>
+				</Col>
+				<Col>
+					<Card hover>1</Card>
+				</Col>
+			</Row>
+
+			<br />
+			<br />
+			<br />
+
+			<Row>
+				<Col xl={8} lg={6} md={4} sm={2} xs={12}>
+					<Card hover>1</Card>
+				</Col>
+				<Col xl={4} lg={6} md={8} sm={10} xs={12}>
+					<Card hover>1</Card>
+				</Col>
+			</Row>
 		</Container>
 	)
 }

@@ -1,17 +1,33 @@
-import React, { FC, HTMLAttributes } from 'react'
+import React, { FC, HTMLAttributes, ReactNode } from 'react'
+import classNames from 'classnames'
 import GridContext from './GridContext'
 
 interface RowProps extends HTMLAttributes<HTMLDivElement> {
-	gutter?: number | [number, number]
+	align?: 'top' | 'middle' | 'bottom'
+	children?: ReactNode
+	gutter?: [number, number]
 	justify?: 'start' | 'center' | 'end' | 'space-between'
-	align?: 'top' | 'mid' | 'bottom'
 	wrap?: boolean
 }
 
-const Row: FC<RowProps> = ({ align, gutter, justify, wrap, ...props }) => {
+const Row: FC<RowProps> = ({
+	align = 'top',
+	children,
+	gutter = [8, 8],
+	justify = 'start',
+	wrap = true,
+	...props
+}) => {
+	const base = 'wm-row'
+	const className = classNames(base, `${base}--${align}-${justify}`, {
+		[`${base}--wrap`]: wrap
+	})
+
 	return (
-		<GridContext.Provider value={{}}>
-			<div {...props}></div>
+		<GridContext.Provider value={{ gutter, wrap }}>
+			<div className={className} {...props}>
+				{children}
+			</div>
 		</GridContext.Provider>
 	)
 }

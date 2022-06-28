@@ -88,3 +88,13 @@ $spacing: (
 $shadows: (
 	base: 0 4px 11px rgba(157, 157, 157, 0.21)
 );
+
+/* ----- Breakpoints ----- */
+$breakpoints: (
+	xs: 320px,
+	sm: 375px,
+	md: 425px,
+	lg: 768px,
+	xl: 1024px,
+	xxl: 1440px
+);

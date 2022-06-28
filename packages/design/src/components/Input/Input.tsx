@@ -50,7 +50,7 @@ const Input: FC<InputProps> = ({
 	)
 
 	return (
-		<span className={className}>
+		<div className={className}>
 			{prefix && <div className={`${base}__prefix`}>{prefix}</div>}
 			<input
 				value={value}
@@ -69,7 +69,7 @@ const Input: FC<InputProps> = ({
 				</div>
 			)}
 			{suffix && <div className={`${base}__suffix`}>{suffix}</div>}
-		</span>
+		</div>
 	)
 }
 
