@@ -1,7 +1,5 @@
-import { Button, Card, Input, Row, Col } from '@with-me/design'
-import { ChangeEvent, useState } from 'react'
 import styled from 'styled-components'
-import GithubIcon from './GithubIcon'
+import { Card, Row, Col } from '@with-me/design'
 
 const Container = styled.div`
 	display: flex;
@@ -14,33 +12,34 @@ const Container = styled.div`
 	height: 100vh;
 `
 
-const Group = styled.div`
-	display: flex;
-	gap: 10px;
-`
-
 const App = () => {
-	const [error, setError] = useState(false)
-	const [value, setValue] = useState('')
-
-	const onChange = (e: ChangeEvent<HTMLInputElement>) =>
-		setValue(e.target.value)
-
-	const onClick = () => setError(prev => !prev)
-
 	return (
 		<Container>
-			<Row gutter={[12, 6]}>
-				<Col>
+			<Row gutter={[12, 60]}>
+				<Col xl={6}>
+					<Row>
+						<Col xl={12}>
+							<Card>1</Card>
+						</Col>
+
+						<Col xl={12}>
+							<Card>1</Card>
+						</Col>
+
+						<Col xl={12}>
+							<Card>1</Card>
+						</Col>
+					</Row>
+
 					<Card hover>1</Card>
 				</Col>
-				<Col>
+				<Col xl={6}>
 					<Card hover>1</Card>
 				</Col>
-				<Col>
+				<Col xl={6}>
 					<Card hover>1</Card>
 				</Col>
-				<Col>
+				<Col xl={6}>
 					<Card hover>1</Card>
 				</Col>
 			</Row>

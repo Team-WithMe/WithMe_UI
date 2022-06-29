@@ -1,0 +1,64 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import Row from './Row'
+import Col from './Col'
+import Card from '../Card/Card'
+import '@with-me/styles/build/design.css'
+
+<Meta 
+  title="components/Grid" 
+  decorators={[storyFn => <div style={{ width: '100%' }}>{storyFn()}</div>]} 
+  component={Row} />
+
+export const Template = args => (
+	<Row {...args}>
+    <Col>{args.children || 'Text'}</Col>
+  </Row>
+)
+
+# 그리드
+
+12 그리드 시스템 입니다.
+
+<br />
+
+## 기본 사용법
+기본 그리드 `Row`를 기반으로 그리드 시스템을 사용할 수 있으며 `Col`을 이용해 배치할 수 있습니다.
+
+<Canvas>
+	<Story name="Basic">
+    <Row>
+      <Col xxl={12}><Card>col-12</Card></Col>
+    </Row>
+    <Row>
+      <Col xxl={6}><Card>col-6</Card></Col>
+      <Col xxl={6}><Card>col-6</Card></Col>
+    </Row>
+    <Row>
+      <Col xxl={4}><Card>col-4</Card></Col>
+      <Col xxl={4}><Card>col-4</Card></Col>
+      <Col xxl={4}><Card>col-4</Card></Col>
+    </Row>
+    <Row>
+      <Col xxl={3}><Card>col-3</Card></Col>
+      <Col xxl={3}><Card>col-3</Card></Col>
+      <Col xxl={3}><Card>col-3</Card></Col>
+      <Col xxl={3}><Card>col-3</Card></Col>
+    </Row>
+	</Story>
+</Canvas>
+
+## Gutter
+
+- `gutter`를 이용해 그리드 아이템들의 수평, 수직의 간격을 설정할 수 있습니다.
+- defalut = [8, 8] ([x 간격, y 간격], px단위)
+
+<Canvas>
+	<Story name="Gutter">
+    <Row gutter={[24, 12]}>
+      <Col xxl={3}><Card>col-3</Card></Col>
+      <Col xxl={3}><Card>col-3</Card></Col>
+      <Col xxl={3}><Card>col-3</Card></Col>
+      <Col xxl={3}><Card>col-3</Card></Col>
+    </Row>
+	</Story>
+</Canvas>

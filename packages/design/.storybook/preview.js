@@ -1,9 +1,18 @@
 import React, { useMemo } from 'react'
 
+{
+	/* <Meta title="components/Grid" component={Row} /> */
+}
+
 export const decorators = [
 	Story => {
 		const styled = useMemo(
-			() => ({ display: 'flex', alignItems: 'center', gap: '15px' }),
+			() => ({
+				width: 'auto',
+				display: 'flex',
+				alignItems: 'center',
+				gap: '15px'
+			}),
 			[]
 		)
 
