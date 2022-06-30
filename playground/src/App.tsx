@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Card, Row, Col } from '@with-me/design'
+import { Card, Row, Col, Avatar } from '@with-me/design'
 
 const Container = styled.div`
 	display: flex;
@@ -15,6 +15,21 @@ const Container = styled.div`
 const App = () => {
 	return (
 		<Container>
+			<Avatar
+				src="https://avatars.githubusercontent.com/u/80776262?v=4"
+				size="large"
+				cursor
+				shape="circle"
+			>
+				박제봉
+			</Avatar>
+			<Avatar cursor shape="circle" size={50}>
+				박제봉
+			</Avatar>
+			<Avatar shape="square">박제봉</Avatar>
+			<br />
+			<br />
+			<br />
 			<Row gutter={[12, 60]}>
 				<Col xl={6}>
 					<Row>
@@ -40,19 +55,6 @@ const App = () => {
 					<Card hover>1</Card>
 				</Col>
 				<Col xl={6}>
-					<Card hover>1</Card>
-				</Col>
-			</Row>
-
-			<br />
-			<br />
-			<br />
-
-			<Row>
-				<Col xl={8} lg={6} md={4} sm={2} xs={12}>
-					<Card hover>1</Card>
-				</Col>
-				<Col xl={4} lg={6} md={8} sm={10} xs={12}>
 					<Card hover>1</Card>
 				</Col>
 			</Row>

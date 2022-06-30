@@ -23,11 +23,23 @@
 	}
 }
 
-@mixin padding($space) {
-	padding: map-get($spacing, $space);
+@mixin rem($key, $size) {
+	$value: ($size / 16) + rem;
+
+	@if $key == 'width' {
+		width: $value;
+	}
+	@else if $key == 'height' {
+		height: $value;
+	}
+	@else if $key == 'font-size' {
+		font-size: $value;
+	}
 }
 
-@mixin margin($space) {
-	margin: map-get($spacing, $space);
+@mixin flex-center {
+	align-items: center;
+	display: flex;
+	justify-content: center;
 }
 

@@ -1,6 +1,6 @@
 # 📚 With Me design-system
 
-[![빌드 CI](https://github.com/Team-WithMe/WithMe_UI/actions/workflows/ci.yml/badge.svg)](https://github.com/Team-WithMe/WithMe_UI/actions/workflows/ci.yml) <br />
+[![build CI](https://github.com/Team-WithMe/WithMe_UI/actions/workflows/ci.yml/badge.svg)](https://github.com/Team-WithMe/WithMe_UI/actions/workflows/ci.yml) <br />
 
 with me 디자인 시스템 입니다.
 

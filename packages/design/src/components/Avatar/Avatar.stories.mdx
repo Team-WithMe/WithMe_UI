@@ -1,0 +1,111 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import Avatar, { AvatarProps } from './Avatar'
+import '@with-me/styles/build/design.css'
+
+<Meta title="components/Avatar" component={Avatar} />
+
+export const Template = args => (
+	<Avatar {...args}>{args.children || '여찬규'}</Avatar>
+)
+
+# Avatar
+
+&lt;Avatar /&gt; 컴포넌트 사용법 정리
+
+<br />
+<br />
+
+## 기본 사용법
+
+- `Avatar`는 기본적으로 children을 `string 타입`으로 받습니다.
+- **src** 속성을 통해 이미지 정보를 받을 수 있습니다.
+- 이미지 정보가 있다면 해당 이미지를 없다면 children에 입력했던 내용 중 첫 번째 글씨를 보여줍니다.
+
+<Canvas>
+	<Story name="Basic">
+		<Avatar>여찬규</Avatar>
+		<Avatar src="https://avatars.githubusercontent.com/u/80776262?v=4" alt="profile">여찬규</Avatar>
+	</Story>
+</Canvas>
+
+<br />
+
+## size
+
+- `size` 속성을 이용해서 원하는 크기로 설정할 수 있습니다.
+- size: number | 'large' | 'small' (default: large)
+- 크기를 디테일하게 조정하고 싶다면 원하는 수치를 size에 적용하면 됩니다. (px 단위)
+
+<Canvas>
+	<Story name="Size">
+		<Avatar size={20} src="https://avatars.githubusercontent.com/u/88377392?v=4" alt="profile">김요셉</Avatar>
+		<Avatar size="small" src="https://avatars.githubusercontent.com/u/88377392?v=4" alt="profile">김요셉</Avatar>
+		<Avatar size="large" src="https://avatars.githubusercontent.com/u/88377392?v=4" alt="profile">김요셉</Avatar>
+		<Avatar size={100} src="https://avatars.githubusercontent.com/u/88377392?v=4" alt="profile">김요셉</Avatar>
+	</Story>
+</Canvas>
+
+<br />
+
+## cursor
+
+- avatar에 클릭이벤트가 있을 때 cursor를 설정해 주면 유용합니다.
+- cursor: pointer 설정과 hover 애니메이션이 설정되어 있습니다.
+
+<Canvas>
+	<Story name="Cursor">
+		<Avatar cursor src="https://avatars.githubusercontent.com/u/88377392?v=4" alt="profile">김요셉</Avatar>
+	</Story>
+</Canvas>
+
+<br />
+
+## shape
+
+- avatar에 모양을 shape 속성을 통해서 지정할 수 있습니다.
+- shape: 'circle' | 'square' (default: circle)
+
+<Canvas>
+	<Story name="Shape">
+		<Avatar shape='circle' src="https://avatars.githubusercontent.com/u/88377392?v=4" alt="profile">김요셉</Avatar>
+		<Avatar shape='square' src="https://avatars.githubusercontent.com/u/88377392?v=4" alt="profile">김요셉</Avatar>
+		<Avatar shape='square'>김요셉</Avatar>
+	</Story>
+</Canvas>
+
+<br />
+
+## Playground
+
+자유롭게 컨트롤 해보세요!
+
+<Canvas>
+	<Story
+		name="Playground"
+		argTypes={{
+			onClick: {
+				table: {
+					disable: true
+				}
+			},
+			className: {
+				table: {
+					disable: true
+				}
+			},
+			type: {
+				table: {
+					disable: true
+				}
+			},
+			children: {
+				description: 'name',
+				control: 'text'
+			}
+		}}
+	>
+		{Template.bind({})}
+	</Story>
+</Canvas>
+
+<ArgsTable story="Playground" />
