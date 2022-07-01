@@ -15,14 +15,14 @@ $weights: (
 );
 
 $colors: (
-	primary: $primary,
-	secondary: $secondary,
-	danger: $danger,
-	success: $success,
-	deep-gray: $gray-22,
-	greyish: $gray-71,
-	light-gray: $gray-b0,
-	white: $white,
+	primary: $wm-primary,
+	secondary: $wm-secondary,
+	danger: $wm-danger,
+	success: $wm-success,
+	deep-gray: $wm-gray-100,
+	greyish: $wm-gray-300,
+	light-gray: $wm-gray-600,
+	white: $wm-white,
 );
 
 .wm-title {

@@ -7,12 +7,7 @@ import React, {
 	useState
 } from 'react'
 import classNames from 'classnames'
-
-type SizeType = {
-	large: 'large'
-	middle: 'middle'
-	small: 'small'
-}
+import { SizeType } from '../../types/props.types'
 
 interface InputProps
 	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> {

@@ -1,36 +1,14 @@
 import React, { FC, ReactNode } from 'react'
 import classNames from 'classnames'
+import { BreakpointType, ColorType, WeightType } from '../../types/props.types'
 
-type ColorType = {
-	primary: 'primary'
-	secondary: 'secondary'
-	danger: 'danger'
-	success: 'success'
-	'deep-gray': 'deep-gray'
-	greyish: 'greyish'
-	'light-gray': 'light-gray'
-	white: 'white'
-}
-
-type WeightType = {
-	thin: 'thin'
-	light: 'light'
-	regular: 'regular'
-	medium: 'medium'
-	bold: 'bold'
-}
-
-type SizeType = {
-	large: 'large'
-	middle: 'middle'
-	small: 'small'
-}
+type TextColorType = keyof Omit<ColorType, 'dark'>
 
 interface TitleProps {
 	children: ReactNode
-	color?: ColorType
+	color?: TextColorType
 	weight?: WeightType
-	size?: SizeType
+	size?: BreakpointType
 }
 
 const Title: FC<TitleProps> = ({

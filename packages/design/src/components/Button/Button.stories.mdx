@@ -42,8 +42,12 @@ export const Template = args => (
 - px = `8` (default value)
 
 <Canvas>
-	<Story name="PaddingX">
-		<Button px={20}>Normal</Button>
+	<Story name="PaddingX" >
+		<Button px={10} bgColor="primary">Normal</Button>
+		<Button px={15} bgColor="primary">Normal</Button>
+		<Button px={20} bgColor="primary">Normal</Button>
+		<Button px={25} bgColor="primary">Normal</Button>
+		<Button px={30} bgColor="primary">Normal</Button>
 	</Story>
 </Canvas>
 
@@ -58,10 +62,10 @@ export const Template = args => (
 
 <Canvas>
 	<Story name="PaddingY">
-		<Button py={20}>Normal</Button>
-		<Button py={20}>Normal</Button>
-		<Button py={20}>Normal</Button>
-		<Button py={35}>Normal</Button>
+		<Button py={20} bgColor="primary">Normal</Button>
+		<Button py={20} bgColor="primary">Normal</Button>
+		<Button py={20} bgColor="primary">Normal</Button>
+		<Button py={35} bgColor="primary">Normal</Button>
 	</Story>
 </Canvas>
 
@@ -74,7 +78,7 @@ export const Template = args => (
 
 <Canvas>
 	<Story name="Shadow">
-		<Button shadow>Normal</Button>
+		<Button shadow bgColor="primary">Normal</Button>
 	</Story>
 </Canvas>
 
@@ -87,7 +91,7 @@ export const Template = args => (
 
 <Canvas>
 	<Story name="FullSize">
-		<Button fullSize>로그인</Button>
+		<Button fullSize bgColor="primary">로그인</Button>
 	</Story>
 </Canvas>
 

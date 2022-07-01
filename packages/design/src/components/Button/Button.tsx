@@ -1,17 +1,20 @@
-import React, { ButtonHTMLAttributes, FC, ReactNode, useMemo } from 'react'
+import React, {
+	ButtonHTMLAttributes,
+	CSSProperties,
+	FC,
+	ReactNode,
+	useMemo
+} from 'react'
 import classNames from 'classnames'
+import { ColorType } from '../../types/props.types'
 
-type ButtonBgColorType =
-	| 'primary'
-	| 'secondary'
-	| 'danger'
+type BgColorType =
+	| keyof Omit<ColorType, 'deep-gray' | 'light-gray' | 'white'>
 	| 'default'
-	| 'greyish'
-	| 'dark'
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	children: ReactNode
-	bgColor?: ButtonBgColorType
+	bgColor?: BgColorType
 	fullSize?: boolean
 	px?: number
 	py?: number
@@ -21,7 +24,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button: FC<ButtonProps> = ({
 	children,
-	bgColor = 'primary',
+	bgColor = 'default',
 	fullSize = false,
 	px = 8,
 	py = 12,
@@ -37,7 +40,7 @@ const Button: FC<ButtonProps> = ({
 		{ [`${base}--shadow`]: shadow }
 	)
 
-	const paddingStyled = useMemo(
+	const paddingStyled: CSSProperties = useMemo(
 		() => ({
 			padding: `${px}px ${py}px`
 		}),

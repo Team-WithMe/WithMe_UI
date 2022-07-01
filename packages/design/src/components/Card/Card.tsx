@@ -1,13 +1,16 @@
-import React, { FC, HTMLAttributes, ReactNode, useMemo } from 'react'
+import React, {
+	CSSProperties,
+	FC,
+	HTMLAttributes,
+	ReactNode,
+	useMemo
+} from 'react'
 import classNames from 'classnames'
+import { ColorType } from '../../types/props.types'
 
-type BorderType = {
-	primary: 'primary'
-	'deep-gray': 'deep-gray'
-	greyish: 'greyish'
-	'light-gray': 'light-gray'
-	'no-border': 'no-border'
-}
+type BorderType =
+	| keyof Pick<ColorType, 'primary' | 'deep-gray' | 'greyish' | 'light-gray'>
+	| 'no-border'
 
 interface CardProps extends HTMLAttributes<HTMLDivElement> {
 	border?: BorderType
@@ -37,7 +40,7 @@ const Card: FC<CardProps> = ({
 		{ [`${base}--shadow`]: shadow }
 	)
 
-	const paddingStyled = useMemo(
+	const paddingStyled: CSSProperties = useMemo(
 		() => ({
 			padding: `${px}px ${py}px`,
 			borderRadius: `${borderRadius}px`

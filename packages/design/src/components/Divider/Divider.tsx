@@ -1,14 +1,8 @@
 import React, { FC } from 'react'
 import classNames from 'classnames'
+import { ColorType } from '../../types/props.types'
 
-type DividerColorType =
-	| 'primary'
-	| 'secondary'
-	| 'danger'
-	| 'success'
-	| 'deep-gray'
-	| 'greyish'
-	| 'light-gray'
+type DividerColorType = keyof Omit<ColorType, 'dark' | 'white'> | 'success'
 
 interface DividerProps {
 	color?: DividerColorType

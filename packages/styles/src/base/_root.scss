@@ -1,20 +1,27 @@
 :root {
-	//* colors
+	/* ---- colors ----- */
+	//* brand colors
 	--wm-primary: #{$primary};
 	--wm-primary-outline: #{$primary-outline};
 	--wm-secondary: #{$secondary};
 
+	--wm-purple: #{$purple};
+	--wm-bluebell: #{$bluebell};
+
+	//* utility colors
 	--wm-danger: #{$danger};
 	--wm-danger-outline: #{$danger-outline};
 	--wm-danger-bg: #{$danger-bg};
 	--wm-success: #{$success};
 	--wm-white: #{$white};
 	
+	//* sub colors
 	--wm-error-bg: #{$error-bg};
 	--wm-line-color: #{$line-color};
 	--wm-body-color: #{$gray-22};
 	--wm-body-bg: #{$bg-color};
 
+	//* gray colors
 	--wm-gray-100: #{$gray-22};
 	--wm-gray-200: #{$gray-48};
 	--wm-gray-300: #{$gray-71};

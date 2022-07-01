@@ -1,5 +1,8 @@
 import React, { CSSProperties, FC, HTMLAttributes, useMemo } from 'react'
 import classNames from 'classnames'
+import { SizeType } from '../../types/props.types'
+
+type AvatarSizeType = keyof Omit<SizeType, 'middle'> | number
 
 interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
 	alt?: string
@@ -7,7 +10,7 @@ interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
 	children: string
 	src?: string | null
 	shape?: 'circle' | 'square'
-	size?: number | 'large' | 'small'
+	size?: AvatarSizeType
 }
 
 const Avatar: FC<AvatarProps> = ({
@@ -16,7 +19,8 @@ const Avatar: FC<AvatarProps> = ({
 	children,
 	src = null,
 	shape = 'circle',
-	size = 'large'
+	size = 'large',
+	...props
 }) => {
 	const base = 'wm-avatar'
 	const className = classNames(
@@ -31,7 +35,7 @@ const Avatar: FC<AvatarProps> = ({
 	}, [])
 
 	return (
-		<div className={base}>
+		<div className={base} {...props}>
 			{src ? (
 				<img src={src} alt={alt} className={className} style={sizeStyled} />
 			) : (
