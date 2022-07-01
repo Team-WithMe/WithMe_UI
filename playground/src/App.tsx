@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { Card, Row, Col, Avatar } from '@with-me/design'
+import { Card, Row, Col, Avatar, Divider } from '@with-me/design'
 
 const Container = styled.div`
 	display: flex;
@@ -28,7 +28,11 @@ const App = () => {
 			</Avatar>
 			<Avatar shape="square">박제봉</Avatar>
 			<br />
+			<Divider color="deep-gray" />
 			<br />
+			<Divider color="greyish" />
+			<br />
+			<Divider color="light-gray" />
 			<br />
 			<Row gutter={[12, 60]}>
 				<Col xl={6}>

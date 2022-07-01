@@ -1,0 +1,85 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import Divider, { DividerProps } from './Divider'
+import '@with-me/styles/build/design.css'
+
+<Meta
+	title="components/Color"
+	decorators={
+		[storyFn => 
+			<div style={{
+				width: '100%',
+				display: 'flex',
+				flexDirection: 'column',
+				gap: '20px',
+				margin: '20px'
+			}}>
+				{storyFn()}
+			</div>
+		]
+	} 
+	component={Divider} />
+
+export const Template = args => <Divider {...args} />
+
+# Divider
+
+- &lt;Divider /&gt; 컴포넌트 사용법 정리
+- 일직선을 그어주며, 섹션을 나눌 때 유용합니다.
+
+<br />
+<br />
+
+## color
+
+- `Divider`의 색상을 color 속성으로 지정할 수 있습니다. 
+- 기본적으로 color값은 `greyish` 입니다.
+- color: 'primary' | 'secondary' | 'danger' | 'success' | 'deep-gray' | 'greyish' | 'light-gray'
+
+<Canvas>
+	<Story name="Basic">
+		<Divider color='primary' />
+		<Divider color='secondary' />
+		<Divider color='danger' />
+		<Divider color='success' />
+		<Divider color='deep-gray' />
+		<Divider color='greyish' />
+		<Divider color='light-gray' />
+	</Story>
+</Canvas>
+
+<br />
+
+## Playground
+
+자유롭게 컨트롤 해보세요!
+
+<Canvas>
+	<Story
+		name="Playground"
+		argTypes={{
+			onClick: {
+				table: {
+					disable: true
+				}
+			},
+			className: {
+				table: {
+					disable: true
+				}
+			},
+			type: {
+				table: {
+					disable: true
+				}
+			},
+			children: {
+				description: 'name',
+				control: 'text'
+			}
+		}}
+	>
+		{Template.bind({})}
+	</Story>
+</Canvas>
+
+<ArgsTable story="Playground" />

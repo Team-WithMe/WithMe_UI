@@ -1,7 +1,24 @@
-import React from 'react'
+import React, { FC } from 'react'
+import classNames from 'classnames'
 
-const Divider = () => {
-	return <div>Divider</div>
+type DividerColorType =
+	| 'primary'
+	| 'secondary'
+	| 'danger'
+	| 'success'
+	| 'deep-gray'
+	| 'greyish'
+	| 'light-gray'
+
+interface DividerProps {
+	color?: DividerColorType
+}
+
+const Divider: FC<DividerProps> = ({ color = 'greyish' }) => {
+	const base = 'wm-divider'
+	const className = classNames(base, `${base}--color-${color}`)
+
+	return <hr className={className} />
 }
 
 export default Divider
