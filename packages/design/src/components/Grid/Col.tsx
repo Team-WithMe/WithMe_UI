@@ -6,6 +6,7 @@ type SpanType = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12
 
 interface ColProps {
 	children: ReactNode
+	className?: string
 	xs?: SpanType
 	sm?: SpanType
 	md?: SpanType
@@ -14,11 +15,21 @@ interface ColProps {
 	xxl?: SpanType
 }
 
-const Col: FC<ColProps> = ({ children, xs, sm, md, lg, xl, xxl, ...props }) => {
+const Col: FC<ColProps> = ({
+	children,
+	className,
+	xs,
+	sm,
+	md,
+	lg,
+	xl,
+	xxl,
+	...props
+}) => {
 	const { gutter } = useContext(GridContext)
 
 	const base = 'wm-col'
-	const className = classNames(
+	const cx = classNames(
 		base,
 		{ [`${base}--xs-${xs}`]: xs },
 		{ [`${base}--sm-${sm}`]: sm },
@@ -46,7 +57,11 @@ const Col: FC<ColProps> = ({ children, xs, sm, md, lg, xl, xxl, ...props }) => {
 	}
 
 	return (
-		<div className={className} style={{ ...gutterStyled }} {...props}>
+		<div
+			className={`${cx} ${className}`}
+			style={{ ...gutterStyled }}
+			{...props}
+		>
 			{children}
 		</div>
 	)

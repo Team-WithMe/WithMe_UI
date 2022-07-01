@@ -16,6 +16,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
 	border?: BorderType
 	borderRadius?: number
 	children: ReactNode
+	className?: string
 	hover?: boolean
 	shadow?: boolean
 	px?: number
@@ -26,6 +27,7 @@ const Card: FC<CardProps> = ({
 	border = 'greyish',
 	borderRadius = 5,
 	children,
+	className,
 	hover = false,
 	shadow = false,
 	px = 8,
@@ -33,7 +35,7 @@ const Card: FC<CardProps> = ({
 	...props
 }) => {
 	const base = 'wm-card'
-	const className = classNames(
+	const cx = classNames(
 		base,
 		`${base}--border-${border}`,
 		{ [`${base}--hover`]: hover },
@@ -49,7 +51,7 @@ const Card: FC<CardProps> = ({
 	)
 
 	return (
-		<div className={className} style={paddingStyled} {...props}>
+		<div className={`${cx} ${className}`} style={paddingStyled} {...props}>
 			{children}
 		</div>
 	)

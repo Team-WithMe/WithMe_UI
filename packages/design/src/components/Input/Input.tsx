@@ -11,16 +11,18 @@ import { SizeType } from '../../types/props.types'
 
 interface InputProps
 	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> {
+	className?: string
 	error?: boolean
 	password?: boolean
 	prefix?: ReactNode
-	size?: SizeType
+	size?: keyof SizeType
 	suffix?: ReactNode
 	type?: HTMLInputTypeAttribute
 	value?: string
 }
 
 const Input: FC<InputProps> = ({
+	className,
 	error = false,
 	password = false,
 	prefix,
@@ -42,7 +44,7 @@ const Input: FC<InputProps> = ({
 	const onBlur = useCallback(() => setIsFocus(false), [])
 
 	const base = 'wm-input'
-	const className = classNames(
+	const cx = classNames(
 		base,
 		`${base}--size-${size}`,
 		{ [`${base}--focus`]: isFocus },
@@ -50,7 +52,7 @@ const Input: FC<InputProps> = ({
 	)
 
 	return (
-		<div className={className}>
+		<div className={`${cx} ${className}`}>
 			{prefix && <div className={`${base}__prefix`}>{prefix}</div>}
 			<input
 				value={value}

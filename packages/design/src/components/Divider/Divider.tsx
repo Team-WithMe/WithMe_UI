@@ -6,13 +6,14 @@ type DividerColorType = keyof Omit<ColorType, 'dark' | 'white'> | 'success'
 
 interface DividerProps {
 	color?: DividerColorType
+	className?: string
 }
 
-const Divider: FC<DividerProps> = ({ color = 'greyish' }) => {
+const Divider: FC<DividerProps> = ({ color = 'greyish', className }) => {
 	const base = 'wm-divider'
-	const className = classNames(base, `${base}--color-${color}`)
+	const cx = classNames(base, `${base}--color-${color}`)
 
-	return <hr className={className} />
+	return <hr className={`${cx} ${className}`} />
 }
 
 export default Divider

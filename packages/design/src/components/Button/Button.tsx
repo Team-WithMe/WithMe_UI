@@ -14,6 +14,7 @@ type BgColorType =
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 	children: ReactNode
+	className?: string
 	bgColor?: BgColorType
 	fullSize?: boolean
 	px?: number
@@ -24,6 +25,7 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button: FC<ButtonProps> = ({
 	children,
+	className,
 	bgColor = 'default',
 	fullSize = false,
 	px = 8,
@@ -33,7 +35,7 @@ const Button: FC<ButtonProps> = ({
 	...props
 }) => {
 	const base = 'wm-btn'
-	const className = classNames(
+	const cx = classNames(
 		base,
 		`${base}--color-${bgColor}`,
 		{ [`${base}--fullSize`]: fullSize },
@@ -48,7 +50,7 @@ const Button: FC<ButtonProps> = ({
 	)
 
 	return (
-		<button className={className} style={paddingStyled} {...props}>
+		<button className={`${cx} ${className}`} style={paddingStyled} {...props}>
 			{children}
 			{Icon && <div className={`${base}--icon`}>{Icon}</div>}
 		</button>

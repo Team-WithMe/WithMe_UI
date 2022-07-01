@@ -5,6 +5,7 @@ import GridContext from './GridContext'
 interface RowProps extends HTMLAttributes<HTMLDivElement> {
 	align?: 'top' | 'middle' | 'bottom'
 	children?: ReactNode
+	className?: string
 	gutter?: [number, number]
 	justify?: 'start' | 'center' | 'end' | 'space-between'
 	wrap?: boolean
@@ -13,19 +14,20 @@ interface RowProps extends HTMLAttributes<HTMLDivElement> {
 const Row: FC<RowProps> = ({
 	align = 'top',
 	children,
+	className,
 	gutter = [8, 8],
 	justify = 'start',
 	wrap = true,
 	...props
 }) => {
 	const base = 'wm-row'
-	const className = classNames(base, `${base}--${align}-${justify}`, {
+	const cx = classNames(base, `${base}--${align}-${justify}`, {
 		[`${base}--wrap`]: wrap
 	})
 
 	return (
 		<GridContext.Provider value={{ gutter }}>
-			<div className={className} {...props}>
+			<div className={`${cx} ${className}`} {...props}>
 				{children}
 			</div>
 		</GridContext.Provider>

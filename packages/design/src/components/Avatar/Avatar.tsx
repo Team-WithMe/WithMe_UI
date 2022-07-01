@@ -8,6 +8,7 @@ interface AvatarProps extends HTMLAttributes<HTMLDivElement> {
 	alt?: string
 	cursor?: boolean
 	children: string
+	className?: string
 	src?: string | null
 	shape?: 'circle' | 'square'
 	size?: AvatarSizeType
@@ -17,13 +18,14 @@ const Avatar: FC<AvatarProps> = ({
 	alt = '',
 	cursor = false,
 	children,
+	className,
 	src = null,
 	shape = 'circle',
 	size = 'large',
 	...props
 }) => {
 	const base = 'wm-avatar'
-	const className = classNames(
+	const cx = classNames(
 		`${base}--shape-${shape}`,
 		{ [`${base}--cursor-point`]: cursor },
 		{ [`${base}--size-${size}`]: typeof size !== 'number' }
@@ -35,11 +37,11 @@ const Avatar: FC<AvatarProps> = ({
 	}, [])
 
 	return (
-		<div className={base} {...props}>
+		<div className={`${base} ${className}`} {...props}>
 			{src ? (
-				<img src={src} alt={alt} className={className} style={sizeStyled} />
+				<img src={src} alt={alt} className={cx} style={sizeStyled} />
 			) : (
-				<div className={`${className} ${base}--default`} style={sizeStyled}>
+				<div className={`${cx} ${base}--default`} style={sizeStyled}>
 					{children[0]}
 				</div>
 			)}
