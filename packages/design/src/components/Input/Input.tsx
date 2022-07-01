@@ -7,10 +7,14 @@ import React, {
 	useState
 } from 'react'
 import classNames from 'classnames'
-import { SizeType } from '../../types/props.types'
+import { SizeType } from '@/typings/props.types'
 
-interface InputProps
-	extends Omit<InputHTMLAttributes<HTMLInputElement>, 'size' | 'prefix'> {
+type InputAttributesType = Omit<
+	InputHTMLAttributes<HTMLInputElement>,
+	'size' | 'prefix'
+>
+
+interface InputProps extends InputAttributesType {
 	className?: string
 	error?: boolean
 	password?: boolean
