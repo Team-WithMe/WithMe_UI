@@ -1,6 +1,6 @@
 import React, { FC } from 'react'
 import classNames from 'classnames'
-import { ColorType } from '../../types/props.types'
+import { ColorType } from '../../typings/props.types'
 
 type DividerColorType = keyof Omit<ColorType, 'dark' | 'white'> | 'success'
 

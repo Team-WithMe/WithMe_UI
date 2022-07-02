@@ -6,7 +6,7 @@ import React, {
 	useMemo
 } from 'react'
 import classNames from 'classnames'
-import { ColorType } from '../../types/props.types'
+import { ColorType } from '../../typings/props.types'
 
 type BgColorType =
 	| keyof Omit<ColorType, 'deep-gray' | 'light-gray' | 'white'>

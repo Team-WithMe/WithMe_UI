@@ -1,24 +1,25 @@
 import typescript from 'rollup-plugin-typescript2'
+import dts from 'rollup-plugin-dts'
+import { uglify } from 'rollup-plugin-uglify'
+import commonjs from '@rollup/plugin-commonjs'
 
-export default {
-	input: [
-		'src/index.ts',
-		'src/components/Avatar/index.ts',
-		'src/components/Button/index.ts',
-		'src/components/Card/index.ts',
-		'src/components/Divider/index.ts',
-		'src/components/Grid/index.ts',
-		'src/components/Input/index.ts',
-		'src/components/Text/index.ts',
-		'src/components/Textarea/index.ts',
-		'src/components/Title/index.ts'
-	],
-	output: {
-		dir: 'build',
-		format: 'esm',
-		sourcemap: true
+export default [
+	// js 번들링
+	{
+		input: 'src/index.ts',
+		output: {
+			dir: 'build',
+			format: 'esm',
+			sourcemap: true
+		},
+		plugins: [commonjs(), uglify(), typescript()],
+		preserveModules: true,
+		external: ['react', 'classnames']
 	},
-	plugins: [typescript()],
-	preserveModules: true,
-	external: ['react']
-}
+	// d.ts (타입 정의 파일) 번들링
+	{
+		input: 'src/typings/props.types.d.ts',
+		output: [{ file: 'build/typings/props.types.d.ts', format: 'es' }],
+		plugins: [dts()]
+	}
+]

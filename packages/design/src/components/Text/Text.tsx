@@ -1,6 +1,10 @@
 import React, { FC, ReactNode } from 'react'
 import classNames from 'classnames'
-import { BreakpointType, ColorType, WeightType } from '../../types/props.types'
+import {
+	BreakpointType,
+	ColorType,
+	WeightType
+} from '../../typings/props.types'
 
 type TextColorType = keyof Omit<ColorType, 'dark'>
 
