@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.6.0](https://github.com/Team-WithMe/WithMe_UI/compare/v0.5.1...v0.6.0) (2022-07-02)
+
+
+### Features
+
+* 그리드 시스템 스토리 작성 ([159ae68](https://github.com/Team-WithMe/WithMe_UI/commit/159ae68a080a9678d8253adbe9fca813b5686989))
+* 그리드 시스템 완료 ([7a67a64](https://github.com/Team-WithMe/WithMe_UI/commit/7a67a641f11296089978165ac5022d3720dbac0f))
+* avatar 컴포넌트 생성 및 스토리 작성 ([a3f32c5](https://github.com/Team-WithMe/WithMe_UI/commit/a3f32c5fbdcde21db3a20aedaa5b163956790ca6))
+* card 컴포넌트 생성 및 스토리 작성 ([1d87d86](https://github.com/Team-WithMe/WithMe_UI/commit/1d87d860b34ad8e0ca19010ddc89d2f4a26b3fcd))
+* divider 컴포넌트 추가 및 스토리 작성 ([2ea0af7](https://github.com/Team-WithMe/WithMe_UI/commit/2ea0af7fc3cb8e46ecb320ead2b07c5f47445801))
+* textarea 컴포넌트 완성 및 스토리작성, 문서 추가 수정 ([ddff3f8](https://github.com/Team-WithMe/WithMe_UI/commit/ddff3f8b0edb8695f1c2bd231f116db229f5eb11))
+
+
+
+
+
 ## [0.5.1](https://github.com/Team-WithMe/WithMe_UI/compare/v0.5.0...v0.5.1) (2022-06-26)
 
 
