@@ -12,10 +12,8 @@
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"declaration": true,
-		"moduleResolution": "node",
-		"typeRoots": ["src/typings"]
+		"moduleResolution": "node"
 	},
-	"include": ["src/components"],
-	"exclude": ["node_modules", "build"],
-	"extends": "./tsconfig.paths.json"
+	"include": ["src"],
+	"exclude": ["node_modules", "build"]
 }

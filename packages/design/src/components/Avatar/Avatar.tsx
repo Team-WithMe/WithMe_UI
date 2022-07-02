@@ -1,6 +1,6 @@
 import React, { CSSProperties, FC, HTMLAttributes, useMemo } from 'react'
 import classNames from 'classnames'
-import { SizeType } from '@/typings/props.types'
+import { SizeType } from '../../types/props.types'
 
 type AvatarSizeType = keyof Omit<SizeType, 'middle'> | number
 
