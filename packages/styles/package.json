@@ -19,7 +19,9 @@
 	},
 	"devDependencies": {
 		"node-sass": "^7.0.1",
-		"nodemon": "^2.0.16"
+		"nodemon": "^2.0.16",
+		"stylelint-config-sass-guidelines": "^9.0.1",
+		"stylelint-prettier": "^2.0.0"
 	},
 	"gitHead": "7a64d6b79e367ae4707f02f24197ab1b14a84e17"
 }

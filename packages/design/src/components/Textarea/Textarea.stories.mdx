@@ -1,0 +1,153 @@
+import { Meta, Story, Canvas, ArgsTable, Source } from '@storybook/addon-docs'
+import UserIcon from '../../assets/UserIcon'
+import Textarea, { TextareaProps } from './Textarea'
+import '@with-me/styles/build/design.css'
+
+<Meta title="components/Textarea" component={Textarea} />
+
+export const Template = args => (
+	<Textarea placeholder="긴 컨텐츠를 입력해보세요!" {...args} />
+)
+
+# Textarea
+
+&lt;Textarea /&gt; 컴포넌트 사용법 정리
+
+<br />
+
+## autoSize
+
+- textarea의 크기(높이) 를 자동으로 설정합니다.
+- 긴 컨텐츠를 textarea로 받을 때 유용합니다.
+- `autoSize`가 true 일 때,
+<br />
+
+> 스토리북에서는 적용이 잘 안되는 경우가 있습니다. <br />
+> 프로젝트에서 사용하시면 정상적으로 작동합니다.
+
+<Canvas>
+	<Story name="AutoSize">
+		<Textarea autoSize placeholder="긴 컨텐츠를 입력해보세요!" />
+	</Story>
+</Canvas>
+
+<br />
+
+## maxHeight
+
+- textarea가 **autoSize**를 설정했을 때, **maxHeight** 속성을 이용해 크기를 자동으로 조절하되 최대 높이를 지정할 수 있게 할 수 있습니다.
+- maxHeight는 숫자형으로 데이터를 받으며 기본단위는 px 입니다.
+- `maxHeight`: number
+<br />
+
+> 스토리북에서는 적용이 잘 안되는 경우가 있습니다. <br />
+> 프로젝트에서 사용하시면 정상적으로 작동합니다.
+
+<Canvas>
+	<Story name="MaxHeight">
+		<Textarea autoSize maxHeight={96} placeholder="긴 컨텐츠를 입력해보세요. 최대 조절 높이는 96px 입니다!" />
+	</Story>
+</Canvas>
+
+<br />
+
+## error
+
+- **error**가 발생할 때 input의 상태를 error로 변경할 수 있습니다.
+- `error`가 true 일 때,
+
+<Canvas>
+	<Story name="Error">
+		<Textarea error placeholder="에러입니다."  />
+	</Story>
+</Canvas>
+
+<br />
+
+## row
+
+- textarea의 기본 줄높이를 설정할 수 있습니다.
+- `row`: number
+
+<Canvas>
+	<Story name="Row">
+		<Textarea row={5} placeholder="긴 컨텐츠를 입력해보세요!"  />
+	</Story>
+</Canvas>
+
+<br />
+
+## resize
+
+- textarea의 resize 속성을 활성화 할 수 있습니다.
+- 사용시 크기를 조절할 수 있는 모양이 생깁니다.
+- `resize`가 true 일 때,
+
+<Canvas>
+	<Story name="Resize">
+		<Textarea resize placeholder="자유롭게 크기조정을 해보세요!"  />
+	</Story>
+</Canvas>
+
+## suffix
+
+- **suffix**를 이용해서 접두사와 접미사를 만들 수 있습니다.
+- `suffix`: ReactNode
+
+<Canvas>
+	<Story name="Suffix">
+		<Textarea suffix={<UserIcon />} placeholder="긴 컨텐츠를 입력해보세요." />
+	</Story>
+</Canvas>
+
+<br />
+
+## maxLength
+
+- textarea의 최대 입력 수를 **maxLength** 속성을 이용해서 설정할 수 있습니다.
+- `maxLength`: number
+
+<Canvas>
+	<Story name="MaxLength">
+		<Textarea maxLength={30} placeholder="긴 컨텐츠를 입력해보세요. 30자 이내" />
+	</Story>
+</Canvas>
+
+<br />
+
+
+
+## Playground
+
+자유롭게 컨트롤 해보세요!
+
+<Canvas>
+	<Story
+		name="Playground"
+		argTypes={{
+			onClick: {
+				table: {
+					disable: true
+				}
+			},
+			className: {
+				table: {
+					disable: true
+				}
+			},
+			type: {
+				table: {
+					disable: true
+				}
+			},
+			children: {
+				description: '텍스트',
+				control: 'Textarea'
+			}
+		}}
+	>
+		{Template.bind({})}
+	</Story>
+</Canvas>
+
+<ArgsTable story="Playground" />

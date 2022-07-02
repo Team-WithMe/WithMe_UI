@@ -1,15 +1,14 @@
-# 📚 With Me design-system
-
-[![build CI](https://github.com/Team-WithMe/WithMe_UI/actions/workflows/ci.yml/badge.svg)](https://github.com/Team-WithMe/WithMe_UI/actions/workflows/ci.yml) <br />
+## With Me design-system
 
 with me 디자인 시스템 입니다.
 
 <br />
 
-## 📝 Installation
+[![build CI](https://github.com/Team-WithMe/WithMe_UI/actions/workflows/ci.yml/badge.svg)](https://github.com/Team-WithMe/WithMe_UI/actions/workflows/ci.yml)
 
-- [npm](https://www.npmjs.com/package/@with-me/design)
-- [storybook](https://with-me-ui.netlify.app)
+<br />
+
+## 📕 Installation
 
 npm
 
@@ -23,20 +22,48 @@ yarn
 yarn add @with-me/design @with-me/styles
 ```
 
-```js
-// 최상단 파일에서 import 해주세요!
-import '@with-me/styles/build/global.css'
-import '@with-me/styles/build/design.css'
+<br />
+
+## 📗 Usage
+
+최상단 파일에 해당 style 들을 import 해주세요!
+
+```tsx
+import '@with-me/styles/build/global.css' // 기본 설정 style
+import '@with-me/styles/build/design.css' // component의 style
 ```
 
 <br />
 
-### 📌 커스텀이 필요할 때
+스토리북을 참고해서 사용하시면 됩니다!
 
-색상, 글꼴 등 커스텀이 필요한다면?
+```tsx
+import { Button } from '@with-me/design'
 
+const App = () => (
+	<>
+		<Button bgColor="primary">버튼</Button>
+	</>
+)
 ```
-yarn add @with-me/styles
+
+<br />
+
+### Next.js 에서 사용 시
+
+next.config.js 에서 다음과 같이 설정해주세요!
+
+```js
+const withTM = require('next-transpile-modules')(['@with-me/design']);
+
+/** @type {import('next').NextConfig} */
+module.exports = withTM({ ... });
 ```
 
-- styles 패키지 안에 sass 변수를 오버라이딩 하면 됩니다
+<br />
+
+## 📘 Links
+
+- [npm](https://www.npmjs.com/package/@with-me/design)
+- [storybook](https://with-me-ui.netlify.app)
+- [github](https://github.com/Team-WithMe/WithMe_UI)

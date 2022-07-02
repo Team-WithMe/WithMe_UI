@@ -1,1 +1,66 @@
 @import 'foundation/all';
+
+.wm-textarea {
+  align-items: center;
+  background-color: $wm-white;
+  border: 1px solid $wm-gray-700;
+  border-radius: 3px;
+  display: flex;
+  position: relative;
+  transition: border 250ms ease;
+  width: 100%;
+
+  > textarea {
+    border: 0;
+    border-radius: 3px;
+    font-size: $fs-base;
+    margin: 8px;
+    outline: none;
+    resize: none;
+    white-space: pre-line;
+    // white-space: pre-wrap;
+    width: 100%;
+    
+    &::placeholder {
+      font-size: $fs-sm;
+    }
+  }
+
+  &:hover {
+    border: 1px solid $wm-primary;
+  }
+
+  &--resize {
+    > textarea {
+      resize: vertical
+    }
+  }
+
+  &--focus {
+    border: 1px solid $wm-primary;
+    box-shadow: 0 0 0 1px $wm-primary-outline;
+  }
+
+  &--error {
+    animation-delay: 0.25s;
+    animation-duration: .5s;
+    animation-name: error-bounce;
+    background-color: $wm-danger-bg;
+    border: 1px solid $wm-danger;
+    box-shadow: 0 0 0 1px $wm-danger-outline;
+
+    > textarea {
+      background-color: $wm-danger-bg;
+    }
+
+    &:hover {
+      border: 1px solid $wm-danger;
+    }
+  }
+
+  &__suffix {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+  }
+}
