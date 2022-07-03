@@ -1,6 +1,5 @@
 import typescript from 'rollup-plugin-typescript2'
 import dts from 'rollup-plugin-dts'
-import { uglify } from 'rollup-plugin-uglify'
 import commonjs from '@rollup/plugin-commonjs'
 
 export default [
@@ -12,7 +11,7 @@ export default [
 			format: 'esm',
 			sourcemap: true
 		},
-		plugins: [commonjs(), uglify(), typescript()],
+		plugins: [commonjs(), typescript()],
 		preserveModules: true,
 		external: ['react', 'classnames']
 	},
