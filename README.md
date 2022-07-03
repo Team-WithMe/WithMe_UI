@@ -8,6 +8,19 @@ with me 디자인 시스템 입니다.
 
 <br />
 
+<details>
+<summary>Todo List</summary>
+<div markdown="1">
+
+- [x] Card Title 추가
+- [ ] Loading Spinner 만들기
+- [ ] Button Loading 상태 추가
+
+</div>
+</details>
+
+<br />
+
 ## 📕 Installation
 
 npm
