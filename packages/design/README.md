@@ -40,11 +40,7 @@ import '@with-me/styles/build/design.css' // component의 style
 ```tsx
 import { Button } from '@with-me/design'
 
-const App = () => (
-	<>
-		<Button bgColor="primary">버튼</Button>
-	</>
-)
+const App = () => <Button bgColor="primary">버튼</Button>
 ```
 
 <br />
@@ -64,6 +60,5 @@ module.exports = withTM({ ... });
 
 ## 📘 Links
 
-- [npm](https://www.npmjs.com/package/@with-me/design)
-- [storybook](https://with-me-ui.netlify.app)
 - [github](https://github.com/Team-WithMe/WithMe_UI)
+- [storybook](https://with-me-ui.netlify.app)

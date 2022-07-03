@@ -40,11 +40,7 @@ import '@with-me/styles/build/design.css' // component의 style
 ```tsx
 import { Button } from '@with-me/design'
 
-const App = () => (
-	<>
-		<Button bgColor="primary">버튼</Button>
-	</>
-)
+const App = () => <Button bgColor="primary">버튼</Button>
 ```
 
 <br />

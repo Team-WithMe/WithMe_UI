@@ -15,6 +15,12 @@
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook"
 	},
+	"keywords": [
+		"react",
+		"typescript",
+		"design-system",
+		"with-me"
+	],
 	"dependencies": {
 		"classnames": "^2.3.1"
 	},

@@ -32,23 +32,9 @@ const App = () => {
 	return (
 		<Container>
 			<MyButton onClick={() => setError(prev => !prev)}>test</MyButton>
-			<Textarea
-				placeholder="test"
-				value={value}
-				onChange={e => setValue(e.target.value)}
-				autoSize
-				row={2}
-				maxLength={30}
-				// maxHeight={96}
-			/>
-			<Textarea
-				placeholder="test"
-				value={'test'}
-				error={error}
-				row={3}
-				resize
-				suffix={<span>test</span>}
-			/>
+			<Card title={<h1>test</h1>}>
+				<span>test1</span>
+			</Card>
 		</Container>
 	)
 }
