@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.1](https://github.com/Team-WithMe/WithMe_UI/compare/v0.7.0...v0.7.1) (2022-07-03)
+
+
+### Bug Fixes
+
+* rollup-plugin-uglify 제거 ([d25a3e2](https://github.com/Team-WithMe/WithMe_UI/commit/d25a3e23f4b2bb5edfc7a352509b8e0c12e57cc7))
+
+
+
+
+
 # [0.7.0](https://github.com/Team-WithMe/WithMe_UI/compare/v0.6.0...v0.7.0) (2022-07-03)
 
 
