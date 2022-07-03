@@ -10,6 +10,9 @@
 // @include font-face('NotoSansCJKkr', '../fonts/NotoSansCJKkr-Thin.otf', 100, null, otf);
 
 body {
+  background-color: $wm-body-bg;
+  overflow-x: hidden;
+
 	* {
     font-family: $wm-body-font-family;
     font-size: $fs-base;
