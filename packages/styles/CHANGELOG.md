@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.7.0](https://github.com/Team-WithMe/WithMe_UI/compare/v0.6.0...v0.7.0) (2022-07-03)
+
+
+### Features
+
+* card title 추가 및 스토리 수정 ([a0fbff2](https://github.com/Team-WithMe/WithMe_UI/commit/a0fbff2c6d5d368922917927dd1a68d4df35e683))
+
+
+
+
+
 # [0.6.0](https://github.com/Team-WithMe/WithMe_UI/compare/v0.5.1...v0.6.0) (2022-07-02)
 
 
