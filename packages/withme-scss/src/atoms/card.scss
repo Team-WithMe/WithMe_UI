@@ -1,0 +1,54 @@
+@import 'foundation/all';
+
+$types: (
+	primary: $wm-primary,
+	deep-gray: $wm-gray-500,
+	greyish: $wm-gray-700,
+	light-gray: $wm-gray-900,
+	no-border: 0
+);
+
+.wm-card {
+	background-color: $wm-white;
+	position: relative;
+
+	&__title {
+		border-bottom: 1px solid $wm-gray-700;
+		box-sizing: border-box;
+		padding: 8px 12px;
+		width: 100%;
+	}
+
+	&__content {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		gap: 4px;
+		padding: 8px 12px;
+	}
+
+	&--hover {
+		cursor: pointer;
+		transition: all 250ms ease;
+
+		&:hover {
+			border: 1px solid $wm-primary;
+			box-shadow: 0 0 0 1px $wm-primary-outline;
+		}
+	}
+
+	&--shadow {
+		box-shadow: 3px 3px 6px 0 $wm-gray-800;
+	}
+}
+
+@each $type, $value in $types {
+	.wm-card--border-#{$type} {
+		@if ($type == 'no-border') {
+			border: $value;
+			box-shadow: 3px 3px 6px 0 $wm-gray-800;
+		} @else {
+			border: 1px solid $value;
+		}
+	}
+}

@@ -1,8 +1,8 @@
 {
-	"name": "@with-me/core",
+	"name": "@with-me/design-system",
 	"version": "1.0.0",
 	"main": "index.js",
-	"author": "changyuyeo <wry5533@gmail.com>",
+	"author": "여찬규 <wry5533@gmail.com>",
 	"license": "MIT",
 	"private": true,
 	"workspaces": {
@@ -11,17 +11,7 @@
 			"playground"
 		],
 		"nohoist": [
-			"**/classnames",
-			"**/normalize-scss",
-			"**/styled-components"
-		]
-	},
-	"lint-staged": {
-		"**/*.scss": [
-			"yarn lint:fix"
-		],
-		"**/*.{ts,tsx}": [
-			"prettier --write"
+			"**/classnames"
 		]
 	},
 	"config": {
@@ -29,24 +19,44 @@
 			"path": "cz-conventional-changelog"
 		}
 	},
+	"lint-staged": {
+		"**/*.scss": [
+			"yarn lint:scss-fix"
+		],
+		"**/*.{ts,tsx}": [
+			"eslint --fix",
+			"prettier --write",
+			"git add ."
+		]
+	},
 	"scripts": {
-		"lint": "stylelint '**/*.scss'",
-		"lint:fix": "yarn lint --fix",
-		"prepare": "husky install",
+		"lint": "yarn lerna run lint",
+		"lint:fix": "yarn lerna run lint:fix",
+		"lint:scss": "stylelint '**/*.scss'",
+		"lint:scss-fix": "yarn lint:scss --fix",
 		"dev": "yarn lerna run dev",
 		"build": "yarn lerna run build",
-		"build:storybook": "yarn build && yarn lerna run build-storybook",
-		"clean:logs": "bash ./scripts/clean-error-log.sh",
-		"clean:modules": "bash ./scripts/clean-node-modules.sh",
+		"build:sb": "yarn lerna run build-storybook",
+		"clean": "bash ./scripts/clean-modules.sh",
 		"commit": "git add . && yarn git-cz",
-		"test": "yarn lerna run test",
-		"publish": "yarn test && yarn build && yarn lerna publish"
+		"prepare": "husky install",
+		"publish": "yarn lerna publish"
 	},
 	"devDependencies": {
 		"@commitlint/cli": "^17.0.2",
 		"@commitlint/config-conventional": "^17.0.2",
+		"@typescript-eslint/eslint-plugin": "^5.30.7",
+		"@typescript-eslint/parser": "^5.30.7",
 		"commitizen": "^4.2.4",
 		"cz-conventional-changelog": "^3.3.0",
+		"eslint": "^8.20.0",
+		"eslint-config-airbnb-typescript": "^17.0.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsx-a11y": "^6.6.1",
+		"eslint-plugin-prettier": "^4.2.1",
+		"eslint-plugin-react": "^7.30.1",
+		"eslint-plugin-react-hooks": "^4.6.0",
 		"husky": "^8.0.1",
 		"lerna": "^5.1.0",
 		"lint-staged": "^13.0.0",

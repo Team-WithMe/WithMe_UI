@@ -1,0 +1,55 @@
+@import 'foundation/all';
+
+// row
+$aligns: (
+	top: flex-start,
+	middle: center,
+	bottom: flex-end
+);
+
+$justifies: (
+	start: flex-start,
+	center: center,
+	end: flex-end,
+	space-between: space-between
+);
+
+.wm-row {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+
+	&--wrap {
+		flex-wrap: wrap;
+	}
+}
+
+@each $align, $align-value in $aligns {
+	@each $justify, $justify-value in $justifies {
+		.wm-row--#{$align}-#{$justify} {
+			align-items: $align-value;
+			justify-content: $justify-value;
+		}
+	}
+}
+
+// col
+$points: 'xs', 'sm', 'md', 'lg', 'xl', 'xxl';
+$sizes: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+
+.wm-col {
+	box-sizing: border-box;
+	flex-grow: 1;
+}
+
+@each $point in $points {
+	@include media-query($point) {
+		.wm-col--#{$point} {
+			@each $size in $sizes {
+				&-#{$size} {
+					width: (100% * $size) / 12;
+				}
+			}
+		}
+	}
+}

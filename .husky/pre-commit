@@ -1,6 +1,5 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-echo '커밋을 진행합니다!'
+echo "\033[32m"커밋을 진행합니다!"\033[m"
 npx lint-staged
-

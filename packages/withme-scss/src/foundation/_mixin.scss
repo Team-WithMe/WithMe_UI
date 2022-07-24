@@ -1,0 +1,42 @@
+//* 폰트 세팅 (폰트이름, 경로, 굵기, 스타일, 종류 - otf | ttf)
+// @mixin font-face($name, $path, $weight: null, $style: null, $exts: otf ttf) {
+// 	$src: null;
+// 	$formats: (
+// 		otf: 'opentype',
+// 		ttf: 'truetype'
+// 	);
+// 	@each $ext in $exts {
+// 		$format: map-get($formats, $ext);
+// 		$src: append($src, url(quote($path)) format(quote($format)), comma);
+// 	}
+// 	@font-face {
+// 		font-family: quote($name);
+// 		font-style: $style;
+// 		font-weight: $weight;
+// 		src: $src;
+// 	}
+// }
+
+@mixin media-query($size) {
+	@media (min-width: map-get($breakpoints, $size)) {
+		@content;
+	}
+}
+
+@mixin rem($key, $size) {
+	$value: ($size / 16) + rem;
+
+	@if $key == 'width' {
+		width: $value;
+	} @else if $key == 'height' {
+		height: $value;
+	} @else if $key == 'font-size' {
+		font-size: $value;
+	}
+}
+
+@mixin flex-center {
+	align-items: center;
+	display: flex;
+	justify-content: center;
+}

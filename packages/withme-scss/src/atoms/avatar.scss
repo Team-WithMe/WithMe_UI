@@ -1,0 +1,57 @@
+@import 'foundation/all';
+
+$sizes: (
+	large: 40,
+	small: 32
+);
+
+.wm-avatar {
+	@include flex-center;
+
+	&--default {
+		@include flex-center;
+		animation: gradient-animation 10s ease infinite;
+		background: linear-gradient(-45deg, $wm-purple, $wm-primary, $wm-secondary);
+		background-size: 200% 200%;
+		cursor: default;
+	}
+
+	&--cursor-point {
+		cursor: pointer;
+		transition: 350ms;
+	}
+
+	&--cursor-point:hover {
+		filter: brightness(70%);
+		transform: scale(1.1);
+	}
+
+	&--shape-circle {
+		border-radius: 50%;
+	}
+
+	&--shape-square {
+		border-radius: 4px;
+	}
+}
+
+@each $size, $value in $sizes {
+	.wm-avatar--size-#{$size} {
+		@include rem('width', $value);
+		@include rem('height', $value);
+	}
+}
+
+@keyframes gradient-animation {
+	0% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
+
+	100% {
+		background-position: 0% 50%;
+	}
+}

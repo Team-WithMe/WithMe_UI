@@ -1,0 +1,8 @@
+{
+	"extends": ["../../.eslintrc", "../../.eslintrc.react.json", "../../.eslintrc.a11y.json"],
+	"rules": {
+		"@typescript-eslint/comma-dangle": "off",
+		"@typescript-eslint/indent": "off",
+		"react/react-in-jsx-scope": "off"
+	}
+}

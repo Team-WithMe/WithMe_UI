@@ -1,0 +1,37 @@
+:root {
+	/* ---- colors ----- */
+	//* brand colors
+	--wm-primary: #{$primary};
+	--wm-primary-outline: #{$primary-outline};
+	--wm-secondary: #{$secondary};
+
+	--wm-purple: #{$purple};
+	--wm-bluebell: #{$bluebell};
+
+	//* utility colors
+	--wm-danger: #{$danger};
+	--wm-danger-outline: #{$danger-outline};
+	--wm-danger-bg: #{$danger-bg};
+	--wm-success: #{$success};
+	--wm-white: #{$white};
+
+	//* sub colors
+	--wm-error-bg: #{$error-bg};
+	--wm-line-color: #{$line-color};
+	--wm-body-color: #{$gray-22};
+	--wm-body-bg: #{$bg-color};
+
+	//* gray colors
+	--wm-gray-100: #{$gray-22};
+	--wm-gray-200: #{$gray-48};
+	--wm-gray-300: #{$gray-71};
+	--wm-gray-400: #{$gray-80};
+	--wm-gray-500: #{$gray-aa};
+	--wm-gray-600: #{$gray-b0};
+	--wm-gray-700: #{$gray-c4};
+	--wm-gray-800: #{$gray-dd};
+	--wm-gray-900: #{$gray-ed};
+
+	//* font family
+	--wm-body-font-family: #{$noto-sans};
+}

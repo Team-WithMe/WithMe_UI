@@ -1,0 +1,53 @@
+{
+	"name": "@with-me/ui",
+	"description": "withme design-system ui package",
+	"version": "0.7.2",
+	"main": "build/index.js",
+	"license": "MIT",
+	"files": [
+		"build"
+	],
+	"engines": {
+		"node": ">=16"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"scripts": {
+		"dev": "yarn build --watch",
+		"build": "rollup -c",
+		"storybook": "start-storybook -p 6006",
+		"build-storybook": "build-storybook",
+		"lint": "eslint './src/**/*.{ts,tsx}'",
+		"lint:fix": "eslint --fix './src/**/*.{ts,tsx}'"
+	},
+	"keywords": [
+		"with-me",
+		"design-system",
+		"react",
+		"typescript"
+	],
+	"dependencies": {
+		"classnames": "^2.3.1",
+		"react": "^18.2.0"
+	},
+	"devDependencies": {
+		"@rollup/plugin-commonjs": "^22.0.1",
+		"@storybook/addon-actions": "^6.5.9",
+		"@storybook/addon-docs": "^6.5.9",
+		"@storybook/addon-essentials": "^6.5.9",
+		"@storybook/addon-interactions": "^6.5.9",
+		"@storybook/addon-links": "^6.5.9",
+		"@storybook/builder-webpack4": "^6.5.9",
+		"@storybook/manager-webpack4": "^6.5.9",
+		"@storybook/react": "^6.5.9",
+		"@storybook/testing-library": "^0.0.13",
+		"@types/react": "^18.0.12",
+		"babel-loader": "^8.2.5",
+		"rollup": "^2.75.6",
+		"rollup-plugin-dts": "^4.2.2",
+		"rollup-plugin-typescript2": "^0.32.1",
+		"typescript": "^4.7.3"
+	},
+	"gitHead": "7a64d6b79e367ae4707f02f24197ab1b14a84e17"
+}

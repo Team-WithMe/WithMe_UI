@@ -1,0 +1,19 @@
+{
+	"extends": [
+		"plugin:react/recommended",
+		"plugin:import/recommended",
+		"plugin:react-hooks/recommended",
+		"airbnb-typescript"
+	],
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		}
+	},
+	"plugins": ["react"],
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	}
+}

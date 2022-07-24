@@ -1,0 +1,48 @@
+@import 'foundation/all';
+
+$sizes: (
+	large: $h-1,
+	middle: $h-2,
+	small: $h-3
+);
+
+$weights: (
+	thin: $fw-thin,
+	light: $fw-light,
+	regular: $fw-regular,
+	medium: $fw-medium,
+	bold: $fw-bold
+);
+
+$colors: (
+	primary: $wm-primary,
+	secondary: $wm-secondary,
+	danger: $wm-danger,
+	success: $wm-success,
+	deep-gray: $wm-gray-100,
+	greyish: $wm-gray-300,
+	light-gray: $wm-gray-600,
+	white: $wm-white
+);
+
+.wm-title {
+	margin: 0;
+}
+
+@each $size, $value in $sizes {
+	.wm-title--size-#{$size} {
+		font-size: $value;
+	}
+}
+
+@each $weight, $value in $weights {
+	.wm-title--weight-#{$weight} {
+		font-weight: $value;
+	}
+}
+
+@each $color, $value in $colors {
+	.wm-title--color-#{$color} {
+		color: $value;
+	}
+}
