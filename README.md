@@ -12,6 +12,14 @@
 <summary>Todo List</summary>
 <div markdown="1">
 
+- [ ] scss 구조 다시잡기
+- [ ] 각 패키지 name 수정
+- [ ] rollup 설정 변경
+- [ ] css var 사용
+- [ ] 색상팔레트 생성하기
+
+---
+
 - [x] Card Title 추가
 - [ ] Loading Spinner 만들기
 - [ ] Button Loading 상태 추가
@@ -42,8 +50,8 @@ yarn add @with-me/design @with-me/styles
 최상단 파일에 해당 style 들을 import 해주세요! (ex: App.tsx, \_app.tsx)
 
 ```tsx
-import '@with-me/styles/build/global.css' // 기본 설정 style
-import '@with-me/styles/build/design.css' // component의 style
+import '@with-me/styles/build/global.css'; // 기본 설정 style
+import '@with-me/styles/build/design.css'; // component의 style
 ```
 
 <br />
@@ -51,9 +59,9 @@ import '@with-me/styles/build/design.css' // component의 style
 스토리북을 참고해서 사용하시면 됩니다!
 
 ```tsx
-import { Button } from '@with-me/design'
+import { Button } from '@with-me/design';
 
-const App = () => <Button bgColor="primary">버튼</Button>
+const App = () => <Button bgColor="primary">버튼</Button>;
 ```
 
 <br />
